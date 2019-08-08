@@ -1,0 +1,27 @@
+\form#0:$1/R$
+\form#1:$\sqrt{3}$
+\form#2:$\sqrt{3}/6$
+\form#3:$\pm$
+\form#4:$\sqrt{6}$
+\form#5:$\sqrt{3}/3$
+\form#6:$\sqrt{6}/3$
+\form#7:$1/R^{a}$
+\form#8:$H$
+\form#9:$R=||\mathbf{x}-\mathbf{c}||$
+\form#10:$R$
+\form#11:$R^{-1}$
+\form#12:$R^{-2}$
+\form#13:$\partial^{m+n+k}R^{-a}/\partial x^{m}\partial y^{n}\partial z^{k}$
+\form#14:$1/R^{q}$
+\form#15:$-1\leq q\leq a$
+\form#16:$1\leq q\leq a$
+\form#17:$R=||\mathbf{r}||$
+\form#18:$\/R^{4}$
+\form#19:$\rho=3\rho_{in}/\rho_{out}$
+\form#20:$I(\mathbf{x})=\int_{V} f(\mathbf{x}_{1})/R^{a}\mathrm{d}V$
+\form#21:$f(\mathbf{x})$
+\form#22:$I(\mathbf{x})=\int_{V}f(\mathbf{x}_{1})/R^{a}\mathrm{d}V$
+\form#23:$I(\mathbf{x})=\int_{V}\mathbf{f}(\mathbf{x}_{1})\times\mathbf{r} /R^{a}\mathrm{d}V$
+\form#24:$f$
+\form#25:$\mathbf{f}$
+\form#26:$f(\mathbf{x}_{1})$

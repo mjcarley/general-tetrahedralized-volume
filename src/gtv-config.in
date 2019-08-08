@@ -1,0 +1,131 @@
+#!/bin/sh
+# @configure_input@
+
+# GTV - Library for the manipulation of tetrahedralized volumes
+# Copyright (C) 2007, 2008 Michael Carley
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Library General Public
+# License as published by the Free Software Foundation; either
+# version 2 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the GNU
+# Library General Public License for more details.
+#
+# You should have received a copy of the GNU Library General Public
+# License along with this library; if not, write to the
+# Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+# Boston, MA 02111-1307, USA.
+
+gts_libs="@gts_libs@"
+gts_cflags="@gts_cflags@"
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+includedir=@includedir@
+
+usage()
+{
+	cat <<EOF
+Usage: gtv-config [OPTIONS] [LIBRARIES]
+Options:
+	[--prefix[=DIR]]
+	[--exec-prefix[=DIR]]
+	[--version]
+	[--libs]
+	[--cflags]
+	[--check]
+Libraries:
+	gtv
+EOF
+	exit $1
+}
+
+uniquify()
+{
+    echo $1 | awk '{
+	for (i = 1; i <= NF; i++) {
+	    unique = 1;
+	    for (j = i + 1; j <= NF && unique; j++)
+		if ($i == $j)
+		    unique = 0;
+            if (unique)
+		printf ("%s ", $i);
+	}
+    }'
+}
+
+if test $# -eq 0; then
+	usage 1 1>&2
+fi
+
+while test $# -gt 0; do
+  case "$1" in
+  -*=*) optarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+  *) optarg= ;;
+  esac
+
+  case $1 in
+    --prefix=*)
+      prefix=$optarg
+      if test $exec_prefix_set = no ; then
+        exec_prefix=$optarg
+      fi
+      ;;
+    --prefix)
+      echo_prefix=yes
+      ;;
+    --exec-prefix=*)
+      exec_prefix=$optarg
+      exec_prefix_set=yes
+      ;;
+    --exec-prefix)
+      echo_exec_prefix=yes
+      ;;
+    --version)
+      echo @GTV_VERSION@
+      exit 0
+      ;;
+    --cflags)
+      echo_cflags=yes
+      ;;
+    --libs)
+      echo_libs=yes
+      ;;
+    --check)
+      echo_check=yes
+      ;;
+    gtv)
+      lib_gtv=yes
+      ;;
+    gmodule)
+      lib_gmodule=yes
+      ;;
+    gthread)
+      lib_gthread=yes
+      ;;
+    *)
+      usage 1 1>&2
+      ;;
+  esac
+  shift
+done
+
+if test "$echo_prefix" = "yes"; then
+	echo $prefix
+fi
+if test "$echo_exec_prefix" = "yes"; then
+	echo $exec_prefix
+fi
+if test "$echo_cflags" = "yes"; then
+	gtv_cflags="$gts_cflags -I${prefix}/include"
+	gtv_cflags=`uniquify "$gtv_cflags"`
+	echo $gtv_cflags
+fi
+if test "$echo_libs" = "yes"; then
+	gtv_libs="-L${exec_prefix}/lib -lgtv @LDFLAGS@  $gts_libs -lm"
+	gtv_libs=`uniquify "$gtv_libs"`
+	echo -L${exec_prefix}/lib -lgtv @LIBS@
+fi

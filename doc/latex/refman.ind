@@ -1,0 +1,302 @@
+\begin{theindex}
+
+  \item {Cell}, 5
+  \item {cell}
+    \subitem {gtv\_\-cell\_\-class}, 5
+    \subitem {gtv\_\-cell\_\-neighbours}, 5
+    \subitem {gtv\_\-cell\_\-new}, 6
+    \subitem {gtv\_\-cell\_\-new\_\-from\_\-vertices}, 6
+    \subitem {gtv\_\-edge\_\-cells}, 6
+    \subitem {gtv\_\-vertex\_\-cells}, 7
+
+  \indexspace
+
+  \item {delaunay}
+    \subitem {gtv\_\-delaunay\_\-add\_\-vertex\_\-to\_\-cell}, 8
+    \subitem {gtv\_\-delaunay\_\-check}, 8
+    \subitem {gtv\_\-delaunay\_\-remove\_\-vertex}, 8
+    \subitem {gtv\_\-facet\_\-is\_\-regular}, 8
+  \item {Delaunay tetrahedralization}, 8
+
+  \indexspace
+
+  \item {facet}
+    \subitem {gtv\_\-edge\_\-is\_\-boundary}, 10
+    \subitem {gtv\_\-facet\_\-from\_\-vertices}, 10
+    \subitem {gtv\_\-facet\_\-has\_\-edge}, 10
+    \subitem {gtv\_\-facet\_\-has\_\-vertex}, 11
+    \subitem {gtv\_\-facet\_\-is\_\-boundary}, 11
+    \subitem {gtv\_\-facet\_\-new}, 11
+    \subitem {gtv\_\-facet\_\-tetrahedra}, 11
+    \subitem {gtv\_\-facet\_\-tetrahedra\_\-vertices}, 12
+  \item {Facets}, 10
+
+  \indexspace
+
+  \item {Geometric tests}, 13
+  \item {geometry}
+    \subitem {gtv\_\-point\_\-in\_\-sphere}, 13
+    \subitem {gtv\_\-points\_\-are\_\-collinear}, 13
+  \item {GTV tetrahedra}, 19
+  \item {gtv\_\-cell\_\-class}
+    \subitem {cell}, 5
+  \item {gtv\_\-cell\_\-has\_\-parent\_\-volume}
+    \subitem {parent}, 17
+  \item {gtv\_\-cell\_\-neighbours}
+    \subitem {cell}, 5
+  \item {gtv\_\-cell\_\-new}
+    \subitem {cell}, 6
+  \item {gtv\_\-cell\_\-new\_\-from\_\-vertices}
+    \subitem {cell}, 6
+  \item {GTV\_\-COINCIDENT\_\-VERTEX}
+    \subitem {status}, 15
+  \item {gtv\_\-delaunay\_\-add\_\-vertex\_\-to\_\-cell}
+    \subitem {delaunay}, 8
+  \item {gtv\_\-delaunay\_\-check}
+    \subitem {delaunay}, 8
+  \item {gtv\_\-delaunay\_\-remove\_\-vertex}
+    \subitem {delaunay}, 8
+  \item {gtv\_\-edge\_\-cells}
+    \subitem {cell}, 6
+  \item {gtv\_\-edge\_\-facet\_\-number}
+    \subitem {parent}, 17
+  \item {gtv\_\-edge\_\-has\_\-parent\_\-volume}
+    \subitem {parent}, 17
+  \item {gtv\_\-edge\_\-is\_\-boundary}
+    \subitem {facet}, 10
+  \item {gtv\_\-facet\_\-cell\_\-number}
+    \subitem {parent}, 17
+  \item {gtv\_\-facet\_\-from\_\-vertices}
+    \subitem {facet}, 10
+  \item {gtv\_\-facet\_\-has\_\-edge}
+    \subitem {facet}, 10
+  \item {gtv\_\-facet\_\-has\_\-parent\_\-volume}
+    \subitem {parent}, 18
+  \item {gtv\_\-facet\_\-has\_\-vertex}
+    \subitem {facet}, 11
+  \item {gtv\_\-facet\_\-is\_\-boundary}
+    \subitem {facet}, 11
+  \item {gtv\_\-facet\_\-is\_\-regular}
+    \subitem {delaunay}, 8
+  \item {gtv\_\-facet\_\-new}
+    \subitem {facet}, 11
+  \item {gtv\_\-facet\_\-tetrahedra}
+    \subitem {facet}, 11
+  \item {gtv\_\-facet\_\-tetrahedra\_\-vertices}
+    \subitem {facet}, 12
+  \item {GTV\_\-FAILURE}
+    \subitem {status}, 15
+  \item {GTV\_\-IN}
+    \subitem {status}, 15
+  \item {gtv\_\-logging\_\-init}
+    \subitem {logging}, 14
+  \item {GTV\_\-NULL\_\-PARAMETER}
+    \subitem {status}, 15
+  \item {GTV\_\-ON}
+    \subitem {status}, 15
+  \item {GTV\_\-ON\_\-EDGE}
+    \subitem {status}, 15
+  \item {GTV\_\-ON\_\-FACET}
+    \subitem {status}, 15
+  \item {GTV\_\-ON\_\-VERTEX}
+    \subitem {status}, 15
+  \item {gtv\_\-point\_\-in\_\-sphere}
+    \subitem {geometry}, 13
+  \item {gtv\_\-point\_\-in\_\-tetrahedron}
+    \subitem {tetrahedron}, 19
+  \item {gtv\_\-point\_\-in\_\-tetrahedron\_\-facet}
+    \subitem {tetrahedron}, 20
+  \item {gtv\_\-point\_\-in\_\-tetrahedron\_\-sphere}
+    \subitem {tetrahedron}, 20
+  \item {gtv\_\-point\_\-locate\_\-slow}
+    \subitem {locate}, 16
+  \item {gtv\_\-points\_\-are\_\-collinear}
+    \subitem {geometry}, 13
+  \item {GTV\_\-REPEATED\_\-PARAMETER}
+    \subitem {status}, 15
+  \item {GTV\_\-SUCCESS}
+    \subitem {status}, 15
+  \item {gtv\_\-tetrahedra\_\-common\_\-facet}
+    \subitem {tetrahedron}, 20
+  \item {gtv\_\-tetrahedron\_\-class}
+    \subitem {tetrahedron}, 20
+  \item {gtv\_\-tetrahedron\_\-facet\_\-opposite}
+    \subitem {tetrahedron}, 21
+  \item {gtv\_\-tetrahedron\_\-facets}
+    \subitem {tetrahedron}, 21
+  \item {gtv\_\-tetrahedron\_\-from\_\-facets}
+    \subitem {tetrahedron}, 21
+  \item {gtv\_\-tetrahedron\_\-has\_\-facet}
+    \subitem {tetrahedron}, 21
+  \item {gtv\_\-tetrahedron\_\-invert}
+    \subitem {tetrahedron}, 22
+  \item {gtv\_\-tetrahedron\_\-is\_\-duplicate}
+    \subitem {tetrahedron}, 22
+  \item {gtv\_\-tetrahedron\_\-is\_\-okay}
+    \subitem {tetrahedron}, 22
+  \item {gtv\_\-tetrahedron\_\-large}
+    \subitem {tetrahedron}, 22
+  \item {gtv\_\-tetrahedron\_\-new}
+    \subitem {tetrahedron}, 23
+  \item {gtv\_\-tetrahedron\_\-new\_\-from\_\-vertices}
+    \subitem {tetrahedron}, 23
+  \item {gtv\_\-tetrahedron\_\-opposite}
+    \subitem {tetrahedron}, 23
+  \item {gtv\_\-tetrahedron\_\-opposite\_\-vertices}
+    \subitem {tetrahedron}, 24
+  \item {gtv\_\-tetrahedron\_\-orient}
+    \subitem {tetrahedron}, 24
+  \item {gtv\_\-tetrahedron\_\-orientation}
+    \subitem {tetrahedron}, 24
+  \item {gtv\_\-tetrahedron\_\-set}
+    \subitem {tetrahedron}, 25
+  \item {gtv\_\-tetrahedron\_\-vertex\_\-opposite}
+    \subitem {tetrahedron}, 25
+  \item {gtv\_\-tetrahedron\_\-vertices}
+    \subitem {tetrahedron}, 25
+  \item {gtv\_\-tetrahedron\_\-volume}
+    \subitem {tetrahedron}, 26
+  \item {gtv\_\-vertex\_\-cells}
+    \subitem {cell}, 7
+  \item {GTV\_\-VERTEX\_\-NOT\_\-IN\_\-CELL}
+    \subitem {status}, 15
+  \item {GTV\_\-VERTEX\_\-ON\_\-HULL}
+    \subitem {status}, 15
+  \item {GTV\_\-VERTEX\_\-PRESENT}
+    \subitem {status}, 15
+  \item {gtv\_\-volume\_\-add\_\-cell}
+    \subitem {volume}, 27
+  \item {gtv\_\-volume\_\-boundary}
+    \subitem {volume}, 27
+  \item {gtv\_\-volume\_\-class}
+    \subitem {volume}, 28
+  \item {gtv\_\-volume\_\-foreach\_\-cell}
+    \subitem {volume}, 28
+  \item {gtv\_\-volume\_\-foreach\_\-edge}
+    \subitem {volume}, 28
+  \item {gtv\_\-volume\_\-foreach\_\-facet}
+    \subitem {volume}, 28
+  \item {gtv\_\-volume\_\-foreach\_\-vertex}
+    \subitem {volume}, 28
+  \item {gtv\_\-volume\_\-nearest\_\-vertex}
+    \subitem {volume}, 29
+  \item {gtv\_\-volume\_\-new}
+    \subitem {volume}, 29
+  \item {gtv\_\-volume\_\-print\_\-stats}
+    \subitem {volume}, 29
+  \item {gtv\_\-volume\_\-read}
+    \subitem {volume}, 30
+  \item {gtv\_\-volume\_\-remove\_\-cell}
+    \subitem {volume}, 30
+  \item {gtv\_\-volume\_\-stats}
+    \subitem {volume}, 30
+  \item {gtv\_\-volume\_\-volume}
+    \subitem {volume}, 30
+  \item {gtv\_\-volume\_\-write}
+    \subitem {volume}, 31
+  \item {gtv\_\-volume\_\-write\_\-tetgen}
+    \subitem {volume}, 31
+  \item {GTV\_\-WRONG\_\-TYPE}
+    \subitem {status}, 15
+  \item {GtvCell}, 33
+  \item {GtvCellClass}, 34
+  \item {GtvFacet}, 35
+  \item {GtvFacetClass}, 36
+  \item {GtvIntersect}
+    \subitem {status}, 15
+  \item {GtvStatus}
+    \subitem {status}, 15
+  \item {GtvTetrahedron}, 37
+  \item {GtvTetrahedronClass}, 38
+  \item {GtvVolume}, 39
+  \item {GtvVolumeClass}, 40
+
+  \indexspace
+
+  \item {locate}
+    \subitem {gtv\_\-point\_\-locate\_\-slow}, 16
+  \item {logging}
+    \subitem {gtv\_\-logging\_\-init}, 14
+  \item {Logging functions}, 14
+
+  \indexspace
+
+  \item {parent}
+    \subitem {gtv\_\-cell\_\-has\_\-parent\_\-volume}, 17
+    \subitem {gtv\_\-edge\_\-facet\_\-number}, 17
+    \subitem {gtv\_\-edge\_\-has\_\-parent\_\-volume}, 17
+    \subitem {gtv\_\-facet\_\-cell\_\-number}, 17
+    \subitem {gtv\_\-facet\_\-has\_\-parent\_\-volume}, 18
+  \item {Parent entities}, 17
+  \item {Point location in a volume}, 16
+
+  \indexspace
+
+  \item {status}
+    \subitem {GTV\_\-COINCIDENT\_\-VERTEX}, 15
+    \subitem {GTV\_\-FAILURE}, 15
+    \subitem {GTV\_\-IN}, 15
+    \subitem {GTV\_\-NULL\_\-PARAMETER}, 15
+    \subitem {GTV\_\-ON}, 15
+    \subitem {GTV\_\-ON\_\-EDGE}, 15
+    \subitem {GTV\_\-ON\_\-FACET}, 15
+    \subitem {GTV\_\-ON\_\-VERTEX}, 15
+    \subitem {GTV\_\-REPEATED\_\-PARAMETER}, 15
+    \subitem {GTV\_\-SUCCESS}, 15
+    \subitem {GTV\_\-VERTEX\_\-NOT\_\-IN\_\-CELL}, 15
+    \subitem {GTV\_\-VERTEX\_\-ON\_\-HULL}, 15
+    \subitem {GTV\_\-VERTEX\_\-PRESENT}, 15
+    \subitem {GTV\_\-WRONG\_\-TYPE}, 15
+    \subitem {GtvIntersect}, 15
+    \subitem {GtvStatus}, 15
+  \item {Status codes}, 15
+
+  \indexspace
+
+  \item {tetrahedron}
+    \subitem {gtv\_\-point\_\-in\_\-tetrahedron}, 19
+    \subitem {gtv\_\-point\_\-in\_\-tetrahedron\_\-facet}, 20
+    \subitem {gtv\_\-point\_\-in\_\-tetrahedron\_\-sphere}, 20
+    \subitem {gtv\_\-tetrahedra\_\-common\_\-facet}, 20
+    \subitem {gtv\_\-tetrahedron\_\-class}, 20
+    \subitem {gtv\_\-tetrahedron\_\-facet\_\-opposite}, 21
+    \subitem {gtv\_\-tetrahedron\_\-facets}, 21
+    \subitem {gtv\_\-tetrahedron\_\-from\_\-facets}, 21
+    \subitem {gtv\_\-tetrahedron\_\-has\_\-facet}, 21
+    \subitem {gtv\_\-tetrahedron\_\-invert}, 22
+    \subitem {gtv\_\-tetrahedron\_\-is\_\-duplicate}, 22
+    \subitem {gtv\_\-tetrahedron\_\-is\_\-okay}, 22
+    \subitem {gtv\_\-tetrahedron\_\-large}, 22
+    \subitem {gtv\_\-tetrahedron\_\-new}, 23
+    \subitem {gtv\_\-tetrahedron\_\-new\_\-from\_\-vertices}, 23
+    \subitem {gtv\_\-tetrahedron\_\-opposite}, 23
+    \subitem {gtv\_\-tetrahedron\_\-opposite\_\-vertices}, 24
+    \subitem {gtv\_\-tetrahedron\_\-orient}, 24
+    \subitem {gtv\_\-tetrahedron\_\-orientation}, 24
+    \subitem {gtv\_\-tetrahedron\_\-set}, 25
+    \subitem {gtv\_\-tetrahedron\_\-vertex\_\-opposite}, 25
+    \subitem {gtv\_\-tetrahedron\_\-vertices}, 25
+    \subitem {gtv\_\-tetrahedron\_\-volume}, 26
+
+  \indexspace
+
+  \item {Volume}, 27
+  \item {volume}
+    \subitem {gtv\_\-volume\_\-add\_\-cell}, 27
+    \subitem {gtv\_\-volume\_\-boundary}, 27
+    \subitem {gtv\_\-volume\_\-class}, 28
+    \subitem {gtv\_\-volume\_\-foreach\_\-cell}, 28
+    \subitem {gtv\_\-volume\_\-foreach\_\-edge}, 28
+    \subitem {gtv\_\-volume\_\-foreach\_\-facet}, 28
+    \subitem {gtv\_\-volume\_\-foreach\_\-vertex}, 28
+    \subitem {gtv\_\-volume\_\-nearest\_\-vertex}, 29
+    \subitem {gtv\_\-volume\_\-new}, 29
+    \subitem {gtv\_\-volume\_\-print\_\-stats}, 29
+    \subitem {gtv\_\-volume\_\-read}, 30
+    \subitem {gtv\_\-volume\_\-remove\_\-cell}, 30
+    \subitem {gtv\_\-volume\_\-stats}, 30
+    \subitem {gtv\_\-volume\_\-volume}, 30
+    \subitem {gtv\_\-volume\_\-write}, 31
+    \subitem {gtv\_\-volume\_\-write\_\-tetgen}, 31
+
+\end{theindex}

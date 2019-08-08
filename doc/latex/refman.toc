@@ -1,0 +1,110 @@
+\contentsline {chapter}{\numberline {1}GTV Module Index}{1}
+\contentsline {section}{\numberline {1.1}GTV Modules}{1}
+\contentsline {chapter}{\numberline {2}GTV Data Structure Index}{3}
+\contentsline {section}{\numberline {2.1}GTV Data Structures}{3}
+\contentsline {chapter}{\numberline {3}GTV Module Documentation}{5}
+\contentsline {section}{\numberline {3.1}Cell}{5}
+\contentsline {subsection}{\numberline {3.1.1}Function Documentation}{5}
+\contentsline {subsubsection}{\numberline {3.1.1.1}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvCellClass}$\ast $ gtv\_\discretionary {-}{}{}cell\_\discretionary {-}{}{}class (void)}{5}
+\contentsline {subsubsection}{\numberline {3.1.1.2}\setlength {\rightskip }{0pt plus 5cm}GSList$\ast $ gtv\_\discretionary {-}{}{}cell\_\discretionary {-}{}{}neighbours ({\bf GtvCell} $\ast $ {\em c}, {\bf GtvVolume} $\ast $ {\em v})}{5}
+\contentsline {subsubsection}{\numberline {3.1.1.3}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvCell}$\ast $ gtv\_\discretionary {-}{}{}cell\_\discretionary {-}{}{}new ({\bf GtvCellClass} $\ast $ {\em klass}, {\bf GtvFacet} $\ast $ {\em f1}, {\bf GtvFacet} $\ast $ {\em f2}, {\bf GtvFacet} $\ast $ {\em f3}, {\bf GtvFacet} $\ast $ {\em f4})}{6}
+\contentsline {subsubsection}{\numberline {3.1.1.4}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvCell}$\ast $ gtv\_\discretionary {-}{}{}cell\_\discretionary {-}{}{}new\_\discretionary {-}{}{}from\_\discretionary {-}{}{}vertices ({\bf GtvCellClass} $\ast $ {\em klass}, {\bf GtvFacetClass} $\ast $ {\em facet\_\discretionary {-}{}{}class}, GtsEdgeClass $\ast $ {\em edge\_\discretionary {-}{}{}class}, GtsVertex $\ast $ {\em v1}, GtsVertex $\ast $ {\em v2}, GtsVertex $\ast $ {\em v3}, GtsVertex $\ast $ {\em v4})}{6}
+\contentsline {subsubsection}{\numberline {3.1.1.5}\setlength {\rightskip }{0pt plus 5cm}GSList$\ast $ gtv\_\discretionary {-}{}{}edge\_\discretionary {-}{}{}cells (GtsEdge $\ast $ {\em e}, {\bf GtvVolume} $\ast $ {\em v})}{6}
+\contentsline {subsubsection}{\numberline {3.1.1.6}\setlength {\rightskip }{0pt plus 5cm}GSList$\ast $ gtv\_\discretionary {-}{}{}vertex\_\discretionary {-}{}{}cells (GtsVertex $\ast $ {\em p}, {\bf GtvVolume} $\ast $ {\em v})}{7}
+\contentsline {section}{\numberline {3.2}Delaunay tetrahedralization}{8}
+\contentsline {subsection}{\numberline {3.2.1}Function Documentation}{8}
+\contentsline {subsubsection}{\numberline {3.2.1.1}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}delaunay\_\discretionary {-}{}{}add\_\discretionary {-}{}{}vertex\_\discretionary {-}{}{}to\_\discretionary {-}{}{}cell ({\bf GtvVolume} $\ast $ {\em v}, GtsVertex $\ast $ {\em p}, {\bf GtvCell} $\ast $ {\em c})}{8}
+\contentsline {subsubsection}{\numberline {3.2.1.2}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvCell}$\ast $ gtv\_\discretionary {-}{}{}delaunay\_\discretionary {-}{}{}check ({\bf GtvVolume} $\ast $ {\em v})}{8}
+\contentsline {subsubsection}{\numberline {3.2.1.3}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}delaunay\_\discretionary {-}{}{}remove\_\discretionary {-}{}{}vertex ({\bf GtvVolume} $\ast $ {\em v}, GtsVertex $\ast $ {\em p})}{8}
+\contentsline {subsubsection}{\numberline {3.2.1.4}\setlength {\rightskip }{0pt plus 5cm}gboolean gtv\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}is\_\discretionary {-}{}{}regular ({\bf GtvFacet} $\ast $ {\em f})}{9}
+\contentsline {section}{\numberline {3.3}Facets}{10}
+\contentsline {subsection}{\numberline {3.3.1}Function Documentation}{10}
+\contentsline {subsubsection}{\numberline {3.3.1.1}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvCell}$\ast $ gtv\_\discretionary {-}{}{}edge\_\discretionary {-}{}{}is\_\discretionary {-}{}{}boundary (GtsEdge $\ast $ {\em e}, {\bf GtvVolume} $\ast $ {\em v})}{10}
+\contentsline {subsubsection}{\numberline {3.3.1.2}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvFacet}$\ast $ gtv\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}from\_\discretionary {-}{}{}vertices (GtsVertex $\ast $ {\em v1}, GtsVertex $\ast $ {\em v2}, GtsVertex $\ast $ {\em v3})}{10}
+\contentsline {subsubsection}{\numberline {3.3.1.3}\setlength {\rightskip }{0pt plus 5cm}gboolean gtv\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}has\_\discretionary {-}{}{}edge ({\bf GtvFacet} $\ast $ {\em f}, GtsEdge $\ast $ {\em e})}{11}
+\contentsline {subsubsection}{\numberline {3.3.1.4}\setlength {\rightskip }{0pt plus 5cm}gboolean gtv\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}has\_\discretionary {-}{}{}vertex ({\bf GtvFacet} $\ast $ {\em f}, GtsVertex $\ast $ {\em v})}{11}
+\contentsline {subsubsection}{\numberline {3.3.1.5}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvCell}$\ast $ gtv\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}is\_\discretionary {-}{}{}boundary ({\bf GtvFacet} $\ast $ {\em f}, {\bf GtvVolume} $\ast $ {\em v})}{11}
+\contentsline {subsubsection}{\numberline {3.3.1.6}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvFacet}$\ast $ gtv\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}new ({\bf GtvFacetClass} $\ast $ {\em klass}, GtsEdge $\ast $ {\em e1}, GtsEdge $\ast $ {\em e2}, GtsEdge $\ast $ {\em e3})}{11}
+\contentsline {subsubsection}{\numberline {3.3.1.7}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}tetrahedra ({\bf GtvFacet} $\ast $ {\em f}, {\bf GtvTetrahedron} $\ast $$\ast $ {\em t1}, {\bf GtvTetrahedron} $\ast $$\ast $ {\em t2})}{12}
+\contentsline {subsubsection}{\numberline {3.3.1.8}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}tetrahedra\_\discretionary {-}{}{}vertices ({\bf GtvFacet} $\ast $ {\em f}, GtsVertex $\ast $$\ast $ {\em v1}, GtsVertex $\ast $$\ast $ {\em v2}, GtsVertex $\ast $$\ast $ {\em v3}, GtsVertex $\ast $$\ast $ {\em v4}, GtsVertex $\ast $$\ast $ {\em v5})}{12}
+\contentsline {section}{\numberline {3.4}Geometric tests}{13}
+\contentsline {subsection}{\numberline {3.4.1}Function Documentation}{13}
+\contentsline {subsubsection}{\numberline {3.4.1.1}\setlength {\rightskip }{0pt plus 5cm}gdouble gtv\_\discretionary {-}{}{}point\_\discretionary {-}{}{}in\_\discretionary {-}{}{}sphere (GtsPoint $\ast $ {\em p}, GtsPoint $\ast $ {\em p1}, GtsPoint $\ast $ {\em p2}, GtsPoint $\ast $ {\em p3}, GtsPoint $\ast $ {\em p4})}{13}
+\contentsline {subsubsection}{\numberline {3.4.1.2}\setlength {\rightskip }{0pt plus 5cm}gboolean gtv\_\discretionary {-}{}{}points\_\discretionary {-}{}{}are\_\discretionary {-}{}{}collinear (GtsPoint $\ast $ {\em p1}, GtsPoint $\ast $ {\em p2}, GtsPoint $\ast $ {\em p3})}{13}
+\contentsline {section}{\numberline {3.5}Logging functions}{14}
+\contentsline {subsection}{\numberline {3.5.1}Function Documentation}{14}
+\contentsline {subsubsection}{\numberline {3.5.1.1}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}logging\_\discretionary {-}{}{}init (FILE $\ast $ {\em f}, gchar $\ast $ {\em p}, GLogLevelFlags {\em log\_\discretionary {-}{}{}level}, gpointer {\em exit\_\discretionary {-}{}{}func})}{14}
+\contentsline {section}{\numberline {3.6}Status codes}{15}
+\contentsline {subsection}{\numberline {3.6.1}Enumeration Type Documentation}{15}
+\contentsline {subsubsection}{\numberline {3.6.1.1}\setlength {\rightskip }{0pt plus 5cm}enum {\bf GtvIntersect}}{15}
+\contentsline {subsubsection}{\numberline {3.6.1.2}\setlength {\rightskip }{0pt plus 5cm}enum {\bf GtvStatus}}{15}
+\contentsline {section}{\numberline {3.7}Point location in a volume}{16}
+\contentsline {subsection}{\numberline {3.7.1}Function Documentation}{16}
+\contentsline {subsubsection}{\numberline {3.7.1.1}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvCell}$\ast $ gtv\_\discretionary {-}{}{}point\_\discretionary {-}{}{}locate\_\discretionary {-}{}{}slow (GtsPoint $\ast $ {\em p}, {\bf GtvVolume} $\ast $ {\em volume}, {\bf GtvCell} $\ast $ {\em guess})}{16}
+\contentsline {section}{\numberline {3.8}Parent entities}{17}
+\contentsline {subsection}{\numberline {3.8.1}Function Documentation}{17}
+\contentsline {subsubsection}{\numberline {3.8.1.1}\setlength {\rightskip }{0pt plus 5cm}gboolean gtv\_\discretionary {-}{}{}cell\_\discretionary {-}{}{}has\_\discretionary {-}{}{}parent\_\discretionary {-}{}{}volume ({\bf GtvCell} $\ast $ {\em c}, {\bf GtvVolume} $\ast $ {\em v})}{17}
+\contentsline {subsubsection}{\numberline {3.8.1.2}\setlength {\rightskip }{0pt plus 5cm}guint gtv\_\discretionary {-}{}{}edge\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}number (GtsEdge $\ast $ {\em e}, {\bf GtvVolume} $\ast $ {\em v})}{17}
+\contentsline {subsubsection}{\numberline {3.8.1.3}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvFacet}$\ast $ gtv\_\discretionary {-}{}{}edge\_\discretionary {-}{}{}has\_\discretionary {-}{}{}parent\_\discretionary {-}{}{}volume (GtsEdge $\ast $ {\em e}, {\bf GtvVolume} $\ast $ {\em v})}{17}
+\contentsline {subsubsection}{\numberline {3.8.1.4}\setlength {\rightskip }{0pt plus 5cm}guint gtv\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}cell\_\discretionary {-}{}{}number ({\bf GtvFacet} $\ast $ {\em f}, {\bf GtvVolume} $\ast $ {\em v})}{18}
+\contentsline {subsubsection}{\numberline {3.8.1.5}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvCell}$\ast $ gtv\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}has\_\discretionary {-}{}{}parent\_\discretionary {-}{}{}volume ({\bf GtvFacet} $\ast $ {\em f}, {\bf GtvVolume} $\ast $ {\em v})}{18}
+\contentsline {section}{\numberline {3.9}GTV tetrahedra}{19}
+\contentsline {subsection}{\numberline {3.9.1}Function Documentation}{19}
+\contentsline {subsubsection}{\numberline {3.9.1.1}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvIntersect} gtv\_\discretionary {-}{}{}point\_\discretionary {-}{}{}in\_\discretionary {-}{}{}tetrahedron (GtsPoint $\ast $ {\em p}, {\bf GtvTetrahedron} $\ast $ {\em t}, gpointer $\ast $ {\em s})}{19}
+\contentsline {subsubsection}{\numberline {3.9.1.2}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvFacet}$\ast $ gtv\_\discretionary {-}{}{}point\_\discretionary {-}{}{}in\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}facet ({\bf GtvTetrahedron} $\ast $ {\em t}, GtsPoint $\ast $ {\em p})}{20}
+\contentsline {subsubsection}{\numberline {3.9.1.3}\setlength {\rightskip }{0pt plus 5cm}gdouble gtv\_\discretionary {-}{}{}point\_\discretionary {-}{}{}in\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}sphere (GtsPoint $\ast $ {\em p}, {\bf GtvTetrahedron} $\ast $ {\em t})}{20}
+\contentsline {subsubsection}{\numberline {3.9.1.4}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvFacet}$\ast $ gtv\_\discretionary {-}{}{}tetrahedra\_\discretionary {-}{}{}common\_\discretionary {-}{}{}facet ({\bf GtvTetrahedron} $\ast $ {\em t1}, {\bf GtvTetrahedron} $\ast $ {\em t2})}{20}
+\contentsline {subsubsection}{\numberline {3.9.1.5}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvTetrahedronClass}$\ast $ gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}class (void)}{21}
+\contentsline {subsubsection}{\numberline {3.9.1.6}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvFacet}$\ast $ gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}facet\_\discretionary {-}{}{}opposite ({\bf GtvTetrahedron} $\ast $ {\em t}, GtsVertex $\ast $ {\em v})}{21}
+\contentsline {subsubsection}{\numberline {3.9.1.7}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}facets ({\bf GtvTetrahedron} $\ast $ {\em t}, {\bf GtvFacet} $\ast $$\ast $ {\em f1}, {\bf GtvFacet} $\ast $$\ast $ {\em f2}, {\bf GtvFacet} $\ast $$\ast $ {\em f3}, {\bf GtvFacet} $\ast $$\ast $ {\em f4})}{21}
+\contentsline {subsubsection}{\numberline {3.9.1.8}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvTetrahedron}$\ast $ gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}from\_\discretionary {-}{}{}facets ({\bf GtvFacet} $\ast $ {\em f1}, {\bf GtvFacet} $\ast $ {\em f2}, {\bf GtvFacet} $\ast $ {\em f3}, {\bf GtvFacet} $\ast $ {\em f4})}{21}
+\contentsline {subsubsection}{\numberline {3.9.1.9}\setlength {\rightskip }{0pt plus 5cm}gboolean gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}has\_\discretionary {-}{}{}facet ({\bf GtvTetrahedron} $\ast $ {\em t}, {\bf GtvFacet} $\ast $ {\em f})}{22}
+\contentsline {subsubsection}{\numberline {3.9.1.10}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}invert ({\bf GtvTetrahedron} $\ast $ {\em t})}{22}
+\contentsline {subsubsection}{\numberline {3.9.1.11}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvTetrahedron}$\ast $ gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}is\_\discretionary {-}{}{}duplicate ({\bf GtvTetrahedron} $\ast $ {\em t})}{22}
+\contentsline {subsubsection}{\numberline {3.9.1.12}\setlength {\rightskip }{0pt plus 5cm}gboolean gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}is\_\discretionary {-}{}{}okay ({\bf GtvTetrahedron} $\ast $ {\em t})}{22}
+\contentsline {subsubsection}{\numberline {3.9.1.13}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvTetrahedron}$\ast $ gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}large ({\bf GtvTetrahedronClass} $\ast $ {\em klass}, gdouble {\em len})}{23}
+\contentsline {subsubsection}{\numberline {3.9.1.14}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvTetrahedron}$\ast $ gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}new ({\bf GtvTetrahedronClass} $\ast $ {\em klass}, {\bf GtvFacet} $\ast $ {\em f1}, {\bf GtvFacet} $\ast $ {\em f2}, {\bf GtvFacet} $\ast $ {\em f3}, {\bf GtvFacet} $\ast $ {\em f4})}{23}
+\contentsline {subsubsection}{\numberline {3.9.1.15}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvTetrahedron}$\ast $ gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}new\_\discretionary {-}{}{}from\_\discretionary {-}{}{}vertices ({\bf GtvTetrahedronClass} $\ast $ {\em klass}, {\bf GtvFacetClass} $\ast $ {\em facet\_\discretionary {-}{}{}class}, GtsEdgeClass $\ast $ {\em edge\_\discretionary {-}{}{}class}, GtsVertex $\ast $ {\em v1}, GtsVertex $\ast $ {\em v2}, GtsVertex $\ast $ {\em v3}, GtsVertex $\ast $ {\em v4})}{23}
+\contentsline {subsubsection}{\numberline {3.9.1.16}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvTetrahedron}$\ast $ gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}opposite ({\bf GtvTetrahedron} $\ast $ {\em t}, {\bf GtvFacet} $\ast $ {\em f})}{24}
+\contentsline {subsubsection}{\numberline {3.9.1.17}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}opposite\_\discretionary {-}{}{}vertices ({\bf GtvTetrahedron} $\ast $ {\em t}, GtsVertex $\ast $ {\em v}, GtsVertex $\ast $$\ast $ {\em v1}, GtsVertex $\ast $$\ast $ {\em v2}, GtsVertex $\ast $$\ast $ {\em v3})}{24}
+\contentsline {subsubsection}{\numberline {3.9.1.18}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}orient ({\bf GtvTetrahedron} $\ast $ {\em t})}{24}
+\contentsline {subsubsection}{\numberline {3.9.1.19}\setlength {\rightskip }{0pt plus 5cm}gdouble gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}orientation ({\bf GtvTetrahedron} $\ast $ {\em t})}{24}
+\contentsline {subsubsection}{\numberline {3.9.1.20}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}set ({\bf GtvTetrahedron} $\ast $ {\em tetrahedron}, {\bf GtvFacet} $\ast $ {\em f1}, {\bf GtvFacet} $\ast $ {\em f2}, {\bf GtvFacet} $\ast $ {\em f3}, {\bf GtvFacet} $\ast $ {\em f4})}{25}
+\contentsline {subsubsection}{\numberline {3.9.1.21}\setlength {\rightskip }{0pt plus 5cm}GtsVertex$\ast $ gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}vertex\_\discretionary {-}{}{}opposite ({\bf GtvTetrahedron} $\ast $ {\em t}, {\bf GtvFacet} $\ast $ {\em f})}{25}
+\contentsline {subsubsection}{\numberline {3.9.1.22}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}vertices ({\bf GtvTetrahedron} $\ast $ {\em t}, GtsVertex $\ast $$\ast $ {\em v1}, GtsVertex $\ast $$\ast $ {\em v2}, GtsVertex $\ast $$\ast $ {\em v3}, GtsVertex $\ast $$\ast $ {\em v4})}{25}
+\contentsline {subsubsection}{\numberline {3.9.1.23}\setlength {\rightskip }{0pt plus 5cm}gdouble gtv\_\discretionary {-}{}{}tetrahedron\_\discretionary {-}{}{}volume ({\bf GtvTetrahedron} $\ast $ {\em t})}{26}
+\contentsline {section}{\numberline {3.10}Volume}{27}
+\contentsline {subsection}{\numberline {3.10.1}Function Documentation}{27}
+\contentsline {subsubsection}{\numberline {3.10.1.1}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}add\_\discretionary {-}{}{}cell ({\bf GtvVolume} $\ast $ {\em v}, {\bf GtvCell} $\ast $ {\em c})}{27}
+\contentsline {subsubsection}{\numberline {3.10.1.2}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}boundary ({\bf GtvVolume} $\ast $ {\em v}, GtsSurface $\ast $ {\em s})}{27}
+\contentsline {subsubsection}{\numberline {3.10.1.3}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvVolumeClass}$\ast $ gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}class (void)}{28}
+\contentsline {subsubsection}{\numberline {3.10.1.4}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}foreach\_\discretionary {-}{}{}cell ({\bf GtvVolume} $\ast $ {\em v}, GtsFunc {\em func}, gpointer {\em data})}{28}
+\contentsline {subsubsection}{\numberline {3.10.1.5}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}foreach\_\discretionary {-}{}{}edge ({\bf GtvVolume} $\ast $ {\em v}, GtsFunc {\em func}, gpointer {\em data})}{28}
+\contentsline {subsubsection}{\numberline {3.10.1.6}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}foreach\_\discretionary {-}{}{}facet ({\bf GtvVolume} $\ast $ {\em v}, GtsFunc {\em func}, gpointer {\em data})}{28}
+\contentsline {subsubsection}{\numberline {3.10.1.7}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}foreach\_\discretionary {-}{}{}vertex ({\bf GtvVolume} $\ast $ {\em v}, GtsFunc {\em func}, gpointer {\em data})}{29}
+\contentsline {subsubsection}{\numberline {3.10.1.8}\setlength {\rightskip }{0pt plus 5cm}GtsVertex$\ast $ gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}nearest\_\discretionary {-}{}{}vertex ({\bf GtvVolume} $\ast $ {\em v}, GtsPoint $\ast $ {\em p})}{29}
+\contentsline {subsubsection}{\numberline {3.10.1.9}\setlength {\rightskip }{0pt plus 5cm}{\bf GtvVolume}$\ast $ gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}new ({\bf GtvVolumeClass} $\ast $ {\em klass}, {\bf GtvCellClass} $\ast $ {\em cell\_\discretionary {-}{}{}class}, {\bf GtvFacetClass} $\ast $ {\em facet\_\discretionary {-}{}{}class}, GtsEdgeClass $\ast $ {\em edge\_\discretionary {-}{}{}class}, GtsVertexClass $\ast $ {\em vertex\_\discretionary {-}{}{}class})}{29}
+\contentsline {subsubsection}{\numberline {3.10.1.10}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}print\_\discretionary {-}{}{}stats ({\bf GtvVolume} $\ast $ {\em v}, FILE $\ast $ {\em f})}{29}
+\contentsline {subsubsection}{\numberline {3.10.1.11}\setlength {\rightskip }{0pt plus 5cm}guint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}read ({\bf GtvVolume} $\ast $ {\em v}, GtsFile $\ast $ {\em f})}{30}
+\contentsline {subsubsection}{\numberline {3.10.1.12}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}remove\_\discretionary {-}{}{}cell ({\bf GtvVolume} $\ast $ {\em v}, {\bf GtvCell} $\ast $ {\em c})}{30}
+\contentsline {subsubsection}{\numberline {3.10.1.13}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}stats ({\bf GtvVolume} $\ast $ {\em v}, GtvVolumeStats $\ast $ {\em s})}{30}
+\contentsline {subsubsection}{\numberline {3.10.1.14}\setlength {\rightskip }{0pt plus 5cm}gdouble gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}volume ({\bf GtvVolume} $\ast $ {\em v})}{31}
+\contentsline {subsubsection}{\numberline {3.10.1.15}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}write ({\bf GtvVolume} $\ast $ {\em v}, FILE $\ast $ {\em f})}{31}
+\contentsline {subsubsection}{\numberline {3.10.1.16}\setlength {\rightskip }{0pt plus 5cm}gint gtv\_\discretionary {-}{}{}volume\_\discretionary {-}{}{}write\_\discretionary {-}{}{}tetgen ({\bf GtvVolume} $\ast $ {\em v}, gchar $\ast $ {\em stub})}{31}
+\contentsline {chapter}{\numberline {4}GTV Data Structure Documentation}{33}
+\contentsline {section}{\numberline {4.1}GtvCell Struct Reference}{33}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{33}
+\contentsline {section}{\numberline {4.2}GtvCellClass Struct Reference}{34}
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{34}
+\contentsline {section}{\numberline {4.3}GtvFacet Struct Reference}{35}
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{35}
+\contentsline {section}{\numberline {4.4}GtvFacetClass Struct Reference}{36}
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{36}
+\contentsline {section}{\numberline {4.5}GtvTetrahedron Struct Reference}{37}
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{37}
+\contentsline {section}{\numberline {4.6}GtvTetrahedronClass Struct Reference}{38}
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{38}
+\contentsline {section}{\numberline {4.7}GtvVolume Struct Reference}{39}
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{39}
+\contentsline {section}{\numberline {4.8}GtvVolumeClass Struct Reference}{40}
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{40}

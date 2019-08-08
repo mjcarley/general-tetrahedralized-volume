@@ -1,0 +1,6 @@
+Michael Carley: all code unless otherwise stated
+
+Stephane Popinet: code taken from GTS (predicates_init.[ch])
+
+Jonathan Shewchuk: robust, arbitrary precision predicates (public
+domain code in predicates.c)

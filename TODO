@@ -1,0 +1,9 @@
+A function to generate an equilateral tetrahedron enclosing a list of vertices.
+
+Generate quality statistics including quality measures for tetrahedra.
+
+Allow for user-specified near-field calculation functions based on
+list of tetrahedra in an octtree box.
+
+Implement ray-tracing and Suh/Newman type quadrature methods for near
+field calculations.

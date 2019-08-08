@@ -1,0 +1,40 @@
+\section{Point location in a volume}
+\label{group__locate}\index{Point location in a volume@{Point location in a volume}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\bf GtvCell} $\ast$ {\bf gtv\_\-point\_\-locate\_\-slow} (GtsPoint $\ast$p, {\bf GtvVolume} $\ast$volume, {\bf GtvCell} $\ast$guess)
+\item 
+{\bf GtvCell} $\ast$ {\bf gtv\_\-point\_\-locate} (GtsPoint $\ast$p, {\bf GtvVolume} $\ast$volume, {\bf GtvCell} $\ast$guess)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{locate@{locate}!gtv_point_locate@{gtv\_\-point\_\-locate}}
+\index{gtv_point_locate@{gtv\_\-point\_\-locate}!locate@{locate}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-point\_\-locate (GtsPoint $\ast$ {\em p}, {\bf GtvVolume} $\ast$ {\em volume}, {\bf GtvCell} $\ast$ {\em guess})}\label{group__locate_gdf51c0d369beced1cd73c1196f0ad08a}
+
+
+Locate a point in a triangulation using a remembering stochastic walk (Olivier Devillers, Sylvain Pion and Monique Teillaud, 2002, {\tt `Walking in a triangulation'}, International Journal of Foundations in Computer Science, 13:181--199). Note that at present this will not work for volumes with holes in their interior.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]a GtsPoint to locate; \item[{\em volume}]a \doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em guess}]a \doxyref{GtvCell}{p.}{structGtvCell} which is an initial guess for a cell containing {\em p\/} or NULL.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a \doxyref{GtvCell}{p.}{structGtvCell} containing {\em p\/} or NULL if {\em p\/} is not in {\em volume\/}. \end{Desc}
+\index{locate@{locate}!gtv_point_locate_slow@{gtv\_\-point\_\-locate\_\-slow}}
+\index{gtv_point_locate_slow@{gtv\_\-point\_\-locate\_\-slow}!locate@{locate}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-point\_\-locate\_\-slow (GtsPoint $\ast$ {\em p}, {\bf GtvVolume} $\ast$ {\em volume}, {\bf GtvCell} $\ast$ {\em guess})}\label{group__locate_g16a258eeb1c5bfb9c53ff0a162fa2684}
+
+
+Find a \doxyref{GtvCell}{p.}{structGtvCell} in a given volume which encloses a GtsPoint by sequentially testing the cells. This is not a very good way of locating a point but it does work and can be used in testing other point location methods.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]a GtsPoint; \item[{\em volume}]a \doxyref{GtvVolume}{p.}{structGtvVolume} to search for the location of {\em p\/}; \item[{\em guess}]ignored, included for compatibility with other location functions.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a \doxyref{GtvCell}{p.}{structGtvCell} containing {\em p\/} or NULL if {\em p\/} is not in {\em v\/}. \end{Desc}

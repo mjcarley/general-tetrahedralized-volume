@@ -1,0 +1,90 @@
+\section{Status codes}
+\label{group__status}\index{Status codes@{Status codes}}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum {\bf GtvStatus} \{ \par
+{\bf GTV\_\-FAILURE} =  -1, 
+{\bf GTV\_\-SUCCESS} =  0, 
+{\bf GTV\_\-NULL\_\-ARGUMENT} =  1, 
+{\bf GTV\_\-WRONG\_\-TYPE} =  2, 
+\par
+{\bf GTV\_\-VERTEX\_\-PRESENT} =  3, 
+{\bf GTV\_\-COINCIDENT\_\-VERTEX} =  4, 
+{\bf GTV\_\-VERTEX\_\-NOT\_\-IN\_\-CELL} =  5, 
+{\bf GTV\_\-REPEATED\_\-ARGUMENT} =  6, 
+\par
+{\bf GTV\_\-VERTEX\_\-ON\_\-HULL} =  7, 
+{\bf GTV\_\-VERTEX\_\-NOT\_\-IN\_\-VOLUME} =  8, 
+{\bf GTV\_\-UNKNOWN\_\-FORMAT} =  9, 
+{\bf GTV\_\-ARGUMENT\_\-OUT\_\-OF\_\-RANGE} =  10
+ \}
+\item 
+enum {\bf GtvIntersect} \{ , \par
+{\bf GTV\_\-ON} =  0, 
+{\bf GTV\_\-IN} =  1, 
+{\bf GTV\_\-ON\_\-FACET} =  2, 
+{\bf GTV\_\-ON\_\-EDGE} =  3, 
+\par
+{\bf GTV\_\-ON\_\-VERTEX} =  4
+ \}
+\end{CompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{status@{status}!GtvIntersect@{GtvIntersect}}
+\index{GtvIntersect@{GtvIntersect}!status@{status}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GtvIntersect}}\label{group__status_gb1a7c0fd996feb29fd2412deb08ff573}
+
+
+Status codes returned by GTV functions which check if a vertex inside, outside or on the surface of a simplex, e.g. a tetrahedron. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GTV_ON@{GTV\_\-ON}!status@{status}}\index{status@{status}!GTV_ON@{GTV\_\-ON}}\item[{\em 
+GTV\_\-ON\label{group__status_ggb1a7c0fd996feb29fd2412deb08ff5736a8fd3e68363fb62392bc22ca76a0f8c}
+}]vertex lies outside tetrahedron \index{GTV_IN@{GTV\_\-IN}!status@{status}}\index{status@{status}!GTV_IN@{GTV\_\-IN}}\item[{\em 
+GTV\_\-IN\label{group__status_ggb1a7c0fd996feb29fd2412deb08ff573ba23b5b7151d8eee3ce6b251a0d90cd1}
+}]vertex lies on tetrahedron surface \index{GTV_ON_FACET@{GTV\_\-ON\_\-FACET}!status@{status}}\index{status@{status}!GTV_ON_FACET@{GTV\_\-ON\_\-FACET}}\item[{\em 
+GTV\_\-ON\_\-FACET\label{group__status_ggb1a7c0fd996feb29fd2412deb08ff5737dcd577dd01f7de220eccfc92704ce22}
+}]vertex lies strictly inside tetrahedron \index{GTV_ON_EDGE@{GTV\_\-ON\_\-EDGE}!status@{status}}\index{status@{status}!GTV_ON_EDGE@{GTV\_\-ON\_\-EDGE}}\item[{\em 
+GTV\_\-ON\_\-EDGE\label{group__status_ggb1a7c0fd996feb29fd2412deb08ff573f4bb77bc3b387349720f91b338c8cc41}
+}]vertex lies on a facet of tetrahedron \index{GTV_ON_VERTEX@{GTV\_\-ON\_\-VERTEX}!status@{status}}\index{status@{status}!GTV_ON_VERTEX@{GTV\_\-ON\_\-VERTEX}}\item[{\em 
+GTV\_\-ON\_\-VERTEX\label{group__status_ggb1a7c0fd996feb29fd2412deb08ff5731a1783e49d5482d45376295e4701efbd}
+}]vertex lies on an edge of tetrahedron \end{description}
+\end{Desc}
+
+\index{status@{status}!GtvStatus@{GtvStatus}}
+\index{GtvStatus@{GtvStatus}!status@{status}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GtvStatus}}\label{group__status_gfb23c4ddc35e1ea652487a43f9a0f8a9}
+
+
+Status codes returned by GTV functions. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GTV_FAILURE@{GTV\_\-FAILURE}!status@{status}}\index{status@{status}!GTV_FAILURE@{GTV\_\-FAILURE}}\item[{\em 
+GTV\_\-FAILURE\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d1a828d7dbe396eb058be34e2e614e3f}
+}]unspecified failure \index{GTV_SUCCESS@{GTV\_\-SUCCESS}!status@{status}}\index{status@{status}!GTV_SUCCESS@{GTV\_\-SUCCESS}}\item[{\em 
+GTV\_\-SUCCESS\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732}
+}]function succeeded \index{GTV_NULL_ARGUMENT@{GTV\_\-NULL\_\-ARGUMENT}!status@{status}}\index{status@{status}!GTV_NULL_ARGUMENT@{GTV\_\-NULL\_\-ARGUMENT}}\item[{\em 
+GTV\_\-NULL\_\-ARGUMENT\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a967f69a81ccab47beb0e5c0d997ebef2f}
+}]an argument was NULL \index{GTV_WRONG_TYPE@{GTV\_\-WRONG\_\-TYPE}!status@{status}}\index{status@{status}!GTV_WRONG_TYPE@{GTV\_\-WRONG\_\-TYPE}}\item[{\em 
+GTV\_\-WRONG\_\-TYPE\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9a7da7ff50d93f21d4ca1cd53c1f8985d}
+}]an argument was of the wrong type \index{GTV_VERTEX_PRESENT@{GTV\_\-VERTEX\_\-PRESENT}!status@{status}}\index{status@{status}!GTV_VERTEX_PRESENT@{GTV\_\-VERTEX\_\-PRESENT}}\item[{\em 
+GTV\_\-VERTEX\_\-PRESENT\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9055f481a1d82388ea04a98f377824a25}
+}]vertex already present in tetrahedralization \index{GTV_COINCIDENT_VERTEX@{GTV\_\-COINCIDENT\_\-VERTEX}!status@{status}}\index{status@{status}!GTV_COINCIDENT_VERTEX@{GTV\_\-COINCIDENT\_\-VERTEX}}\item[{\em 
+GTV\_\-COINCIDENT\_\-VERTEX\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9093769f750d7332bd1a438cb969cfb2e}
+}]vertex in tetrahedralization has the same coordinates \index{GTV_VERTEX_NOT_IN_CELL@{GTV\_\-VERTEX\_\-NOT\_\-IN\_\-CELL}!status@{status}}\index{status@{status}!GTV_VERTEX_NOT_IN_CELL@{GTV\_\-VERTEX\_\-NOT\_\-IN\_\-CELL}}\item[{\em 
+GTV\_\-VERTEX\_\-NOT\_\-IN\_\-CELL\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9e1f42c74a05ca03bddb0bfd15fabb188}
+}]the vertex to be added is not inside the cell \index{GTV_REPEATED_ARGUMENT@{GTV\_\-REPEATED\_\-ARGUMENT}!status@{status}}\index{status@{status}!GTV_REPEATED_ARGUMENT@{GTV\_\-REPEATED\_\-ARGUMENT}}\item[{\em 
+GTV\_\-REPEATED\_\-ARGUMENT\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a97b9a5a62482ecd7dbcd11dc55e529ac5}
+}]two or more input arguments are identical \index{GTV_VERTEX_ON_HULL@{GTV\_\-VERTEX\_\-ON\_\-HULL}!status@{status}}\index{status@{status}!GTV_VERTEX_ON_HULL@{GTV\_\-VERTEX\_\-ON\_\-HULL}}\item[{\em 
+GTV\_\-VERTEX\_\-ON\_\-HULL\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9da984c5f7fbaec5f872fccff8d2e79c9}
+}]vertex lies on the convex hull of a tetrahedralization \index{GTV_VERTEX_NOT_IN_VOLUME@{GTV\_\-VERTEX\_\-NOT\_\-IN\_\-VOLUME}!status@{status}}\index{status@{status}!GTV_VERTEX_NOT_IN_VOLUME@{GTV\_\-VERTEX\_\-NOT\_\-IN\_\-VOLUME}}\item[{\em 
+GTV\_\-VERTEX\_\-NOT\_\-IN\_\-VOLUME\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9792fd97f17705dea5f25f5b0a464c178}
+}]vertex is not contained in volume \index{GTV_UNKNOWN_FORMAT@{GTV\_\-UNKNOWN\_\-FORMAT}!status@{status}}\index{status@{status}!GTV_UNKNOWN_FORMAT@{GTV\_\-UNKNOWN\_\-FORMAT}}\item[{\em 
+GTV\_\-UNKNOWN\_\-FORMAT\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a91700209863555fdde7857fb373aabebe}
+}]unrecognized file format \index{GTV_ARGUMENT_OUT_OF_RANGE@{GTV\_\-ARGUMENT\_\-OUT\_\-OF\_\-RANGE}!status@{status}}\index{status@{status}!GTV_ARGUMENT_OUT_OF_RANGE@{GTV\_\-ARGUMENT\_\-OUT\_\-OF\_\-RANGE}}\item[{\em 
+GTV\_\-ARGUMENT\_\-OUT\_\-OF\_\-RANGE\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9c82cb106747883a1a29a2971bbc78899}
+}]argument outside valid range \end{description}
+\end{Desc}
+

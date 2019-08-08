@@ -1,0 +1,56 @@
+\section{Octtree decompositions of volumes.}
+\label{group__octtree}\index{Octtree decompositions of volumes.@{Octtree decompositions of volumes.}}
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct {\bf GtvOctTreeBoxClass}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\bf GtvOctTreeBoxClass} $\ast$ {\bf gtv\_\-oct\_\-tree\_\-box\_\-class} (void)
+\item 
+{\bf GtvOctTreeBox} $\ast$ {\bf gtv\_\-oct\_\-tree\_\-box\_\-new} ({\bf GtvOctTreeBoxClass} $\ast$klass)
+\item 
+GNode $\ast$ {\bf gtv\_\-oct\_\-tree\_\-new} ({\bf GtvOctTreeBoxClass} $\ast$klass, {\bf GtvVolume} $\ast$v, gint tetmax)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{octtree@{octtree}!gtv_oct_tree_box_class@{gtv\_\-oct\_\-tree\_\-box\_\-class}}
+\index{gtv_oct_tree_box_class@{gtv\_\-oct\_\-tree\_\-box\_\-class}!octtree@{octtree}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvOctTreeBoxClass}$\ast$ gtv\_\-oct\_\-tree\_\-box\_\-class (void)}\label{group__octtree_gef4a471e932f624717312568d17fc465}
+
+
+Generate the class definition for the \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox} type.
+
+\begin{Desc}
+\item[Returns:]\doxyref{GtvOctTreeBoxClass}{p.}{structGtvOctTreeBoxClass}. \end{Desc}
+\index{octtree@{octtree}!gtv_oct_tree_box_new@{gtv\_\-oct\_\-tree\_\-box\_\-new}}
+\index{gtv_oct_tree_box_new@{gtv\_\-oct\_\-tree\_\-box\_\-new}!octtree@{octtree}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvOctTreeBox}$\ast$ gtv\_\-oct\_\-tree\_\-box\_\-new ({\bf GtvOctTreeBoxClass} $\ast$ {\em klass})}\label{group__octtree_gaa75453312bd65fd5f4ccbb6e44fce69}
+
+
+Generate a new \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em klass}]a \doxyref{GtvOctTreeBoxClass}{p.}{structGtvOctTreeBoxClass}\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a new \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox}. \end{Desc}
+\index{octtree@{octtree}!gtv_oct_tree_new@{gtv\_\-oct\_\-tree\_\-new}}
+\index{gtv_oct_tree_new@{gtv\_\-oct\_\-tree\_\-new}!octtree@{octtree}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GNode$\ast$ gtv\_\-oct\_\-tree\_\-new ({\bf GtvOctTreeBoxClass} $\ast$ {\em klass}, {\bf GtvVolume} $\ast$ {\em v}, gint {\em tetmax})}\label{group__octtree_g9905123c09fc9b457e0e50fe52871035}
+
+
+Generate a new octtree for a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em klass}]a \doxyref{GtvOctTreeBoxClass}{p.}{structGtvOctTreeBoxClass}; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume} to decompose; \item[{\em tetmax}]maximum number of tetrahedra in a box of the tree.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a new GNode which is the root of the octtree decomposing the volume {\em v\/}. \end{Desc}

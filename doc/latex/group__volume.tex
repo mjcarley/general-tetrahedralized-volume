@@ -1,0 +1,350 @@
+\section{Volume}
+\label{group__volume}\index{Volume@{Volume}}
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct {\bf GtvVolume}
+\item 
+struct {\bf GtvVolumeClass}
+\item 
+struct {\bf GtvVolumeStats}
+\item 
+struct {\bf GtvVolumeQualityStats}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\bf GtvVolumeClass} $\ast$ {\bf gtv\_\-volume\_\-class} (void)
+\item 
+{\bf GtvVolume} $\ast$ {\bf gtv\_\-volume\_\-new} ({\bf GtvVolumeClass} $\ast$klass, {\bf GtvCellClass} $\ast$cell\_\-class, {\bf GtvFacetClass} $\ast$facet\_\-class, GtsEdgeClass $\ast$edge\_\-class, GtsVertexClass $\ast$vertex\_\-class)
+\item 
+gint {\bf gtv\_\-volume\_\-add\_\-cell} ({\bf GtvVolume} $\ast$v, {\bf GtvCell} $\ast$c)
+\item 
+gint {\bf gtv\_\-volume\_\-remove\_\-cell} ({\bf GtvVolume} $\ast$v, {\bf GtvCell} $\ast$c)
+\item 
+gint {\bf gtv\_\-volume\_\-write} ({\bf GtvVolume} $\ast$v, FILE $\ast$f)
+\item 
+guint {\bf gtv\_\-volume\_\-read} ({\bf GtvVolume} $\ast$v, GtsFile $\ast$f)
+\item 
+gint {\bf gtv\_\-volume\_\-foreach\_\-cell} ({\bf GtvVolume} $\ast$v, GtsFunc func, gpointer data)
+\item 
+gint {\bf gtv\_\-volume\_\-foreach\_\-facet} ({\bf GtvVolume} $\ast$v, GtsFunc func, gpointer data)
+\item 
+gint {\bf gtv\_\-volume\_\-foreach\_\-edge} ({\bf GtvVolume} $\ast$v, GtsFunc func, gpointer data)
+\item 
+gint {\bf gtv\_\-volume\_\-foreach\_\-vertex} ({\bf GtvVolume} $\ast$v, GtsFunc func, gpointer data)
+\item 
+gint {\bf gtv\_\-volume\_\-stats} ({\bf GtvVolume} $\ast$v, {\bf GtvVolumeStats} $\ast$s)
+\item 
+gint {\bf gtv\_\-volume\_\-quality\_\-stats} ({\bf GtvVolume} $\ast$v, {\bf GtvVolumeQualityStats} $\ast$s)
+\item 
+gint {\bf gtv\_\-volume\_\-print\_\-stats} ({\bf GtvVolume} $\ast$v, FILE $\ast$f)
+\item 
+gint {\bf gtv\_\-volume\_\-boundary} ({\bf GtvVolume} $\ast$v, GtsSurface $\ast$s)
+\item 
+gdouble {\bf gtv\_\-volume\_\-volume} ({\bf GtvVolume} $\ast$v)
+\item 
+GtsVertex $\ast$ {\bf gtv\_\-volume\_\-nearest\_\-vertex} ({\bf GtvVolume} $\ast$v, GtsPoint $\ast$p)
+\item 
+gint {\bf gtv\_\-volume\_\-write\_\-tetgen} ({\bf GtvVolume} $\ast$v, gchar $\ast$stub)
+\item 
+guint {\bf gtv\_\-volume\_\-read\_\-gmsh} (FILE $\ast$f, {\bf GtvVolume} $\ast$v)
+\item 
+gint {\bf gtv\_\-volume\_\-write\_\-gmsh1} ({\bf GtvVolume} $\ast$v, FILE $\ast$f)
+\item 
+gint {\bf gtv\_\-volume\_\-write\_\-gmsh} ({\bf GtvVolume} $\ast$v, FILE $\ast$f)
+\item 
+GtsBBox $\ast$ {\bf gtv\_\-bbox\_\-volume} (GtsBBoxClass $\ast$klass, {\bf GtvVolume} $\ast$v)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{volume@{volume}!gtv_bbox_volume@{gtv\_\-bbox\_\-volume}}
+\index{gtv_bbox_volume@{gtv\_\-bbox\_\-volume}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GtsBBox$\ast$ gtv\_\-bbox\_\-volume (GtsBBoxClass $\ast$ {\em klass}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__volume_g4c0540335c532303d6c2304c83467528}
+
+
+Generate a bounding box containing a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em klass}]a GtsBBoxClass; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a GtsBBox which contains {\em v\/}. \end{Desc}
+\index{volume@{volume}!gtv_volume_add_cell@{gtv\_\-volume\_\-add\_\-cell}}
+\index{gtv_volume_add_cell@{gtv\_\-volume\_\-add\_\-cell}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-add\_\-cell ({\bf GtvVolume} $\ast$ {\em v}, {\bf GtvCell} $\ast$ {\em c})}\label{group__volume_gb27b0291eb7562e7168fda44da54d6c9}
+
+
+Add a \doxyref{GtvCell}{p.}{structGtvCell} to a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume} \item[{\em c}]\doxyref{GtvCell}{p.}{structGtvCell}\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_boundary@{gtv\_\-volume\_\-boundary}}
+\index{gtv_volume_boundary@{gtv\_\-volume\_\-boundary}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-boundary ({\bf GtvVolume} $\ast$ {\em v}, GtsSurface $\ast$ {\em s})}\label{group__volume_g107dcb7d11672c4c50a8f70f5aac2bda}
+
+
+Add the boundary facets of a \doxyref{GtvVolume}{p.}{structGtvVolume} to a GtsSurface.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume} \item[{\em s}]GtsSurface to take boundary facets\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success \end{Desc}
+\index{volume@{volume}!gtv_volume_class@{gtv\_\-volume\_\-class}}
+\index{gtv_volume_class@{gtv\_\-volume\_\-class}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvVolumeClass}$\ast$ gtv\_\-volume\_\-class (void)}\label{group__volume_gad7e8b56e2acc868e912d0f13ab32ab4}
+
+
+Generate the class definition for the \doxyref{GtvVolume}{p.}{structGtvVolume} type.
+
+\begin{Desc}
+\item[Returns:]\doxyref{GtvVolumeClass}{p.}{structGtvVolumeClass}. \end{Desc}
+\index{volume@{volume}!gtv_volume_foreach_cell@{gtv\_\-volume\_\-foreach\_\-cell}}
+\index{gtv_volume_foreach_cell@{gtv\_\-volume\_\-foreach\_\-cell}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-foreach\_\-cell ({\bf GtvVolume} $\ast$ {\em v}, GtsFunc {\em func}, gpointer {\em data})}\label{group__volume_ga4b548b9d35331e2aa5939da5db47013}
+
+
+Execute a function for each cell of a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em func}]a GtsFunc to be evaluated for each cell; \item[{\em data}]data to be passed to function.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_foreach_edge@{gtv\_\-volume\_\-foreach\_\-edge}}
+\index{gtv_volume_foreach_edge@{gtv\_\-volume\_\-foreach\_\-edge}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-foreach\_\-edge ({\bf GtvVolume} $\ast$ {\em v}, GtsFunc {\em func}, gpointer {\em data})}\label{group__volume_g3b42044f75ee2733d31c96abd262509e}
+
+
+Execute a function for each edge of a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em func}]a GtsFunc to be evaluated for each edge; \item[{\em data}]data to be passed to function.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_foreach_facet@{gtv\_\-volume\_\-foreach\_\-facet}}
+\index{gtv_volume_foreach_facet@{gtv\_\-volume\_\-foreach\_\-facet}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-foreach\_\-facet ({\bf GtvVolume} $\ast$ {\em v}, GtsFunc {\em func}, gpointer {\em data})}\label{group__volume_gcf626f4befc34ca9115729b7fe8ddfc2}
+
+
+Execute a function for each facet of a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em func}]a GtsFunc to be evaluated for each facet; \item[{\em data}]data to be passed to function.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_foreach_vertex@{gtv\_\-volume\_\-foreach\_\-vertex}}
+\index{gtv_volume_foreach_vertex@{gtv\_\-volume\_\-foreach\_\-vertex}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-foreach\_\-vertex ({\bf GtvVolume} $\ast$ {\em v}, GtsFunc {\em func}, gpointer {\em data})}\label{group__volume_geecf0453947cd929b88e1fb7bb537ebb}
+
+
+Execute a function for each vertex of a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em func}]a GtsFunc to be evaluated for each vertex; \item[{\em data}]data to be passed to function.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_nearest_vertex@{gtv\_\-volume\_\-nearest\_\-vertex}}
+\index{gtv_volume_nearest_vertex@{gtv\_\-volume\_\-nearest\_\-vertex}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GtsVertex$\ast$ gtv\_\-volume\_\-nearest\_\-vertex ({\bf GtvVolume} $\ast$ {\em v}, GtsPoint $\ast$ {\em p})}\label{group__volume_g99b4119c0dac816bbf28a683952fea4d}
+
+
+Find the vertex of a tetrahedralization which is nearest a GtsPoint.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em p}]a GtsPoint.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the vertex of {\em v\/} which is closest to {\em p\/}, NULL in case of an error. \end{Desc}
+\index{volume@{volume}!gtv_volume_new@{gtv\_\-volume\_\-new}}
+\index{gtv_volume_new@{gtv\_\-volume\_\-new}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvVolume}$\ast$ gtv\_\-volume\_\-new ({\bf GtvVolumeClass} $\ast$ {\em klass}, {\bf GtvCellClass} $\ast$ {\em cell\_\-class}, {\bf GtvFacetClass} $\ast$ {\em facet\_\-class}, GtsEdgeClass $\ast$ {\em edge\_\-class}, GtsVertexClass $\ast$ {\em vertex\_\-class})}\label{group__volume_g9e55959663d93371b8f3a4ef212cb068}
+
+
+Generate a new \doxyref{GtvVolume}{p.}{structGtvVolume}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em klass}]\doxyref{GtvVolumeClass}{p.}{structGtvVolumeClass} for new volume \item[{\em cell\_\-class}]\doxyref{GtvCellClass}{p.}{structGtvCellClass} \item[{\em facet\_\-class}]\doxyref{GtvFacetClass}{p.}{structGtvFacetClass} \item[{\em edge\_\-class}]GtsEdgeClass \item[{\em vertex\_\-class}]GtsVertexClass\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the new \doxyref{GtvVolume}{p.}{structGtvVolume} \end{Desc}
+\index{volume@{volume}!gtv_volume_print_stats@{gtv\_\-volume\_\-print\_\-stats}}
+\index{gtv_volume_print_stats@{gtv\_\-volume\_\-print\_\-stats}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-print\_\-stats ({\bf GtvVolume} $\ast$ {\em v}, FILE $\ast$ {\em f})}\label{group__volume_g76ebdd133840a80eb1832550cce1b07e}
+
+
+Print out basic statistics about a \doxyref{GtvVolume}{p.}{structGtvVolume}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume} \item[{\em f}]file pointer\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success \end{Desc}
+\index{volume@{volume}!gtv_volume_quality_stats@{gtv\_\-volume\_\-quality\_\-stats}}
+\index{gtv_volume_quality_stats@{gtv\_\-volume\_\-quality\_\-stats}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-quality\_\-stats ({\bf GtvVolume} $\ast$ {\em v}, {\bf GtvVolumeQualityStats} $\ast$ {\em s})}\label{group__volume_gcee5b61c00359a47d99aa5bed01d4276}
+
+
+Fill a \doxyref{GtvVolumeQualityStats}{p.}{structGtvVolumeQualityStats} with the geometrical quality information for a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em s}]a \doxyref{GtvVolumeQualityStats}{p.}{structGtvVolumeQualityStats} to be filled with data.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_read@{gtv\_\-volume\_\-read}}
+\index{gtv_volume_read@{gtv\_\-volume\_\-read}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint gtv\_\-volume\_\-read ({\bf GtvVolume} $\ast$ {\em v}, GtsFile $\ast$ {\em f})}\label{group__volume_g05befcbb73d6c2125a8cfd108fcd18ac}
+
+
+Read a volume from file, adding its cells to the \doxyref{GtvVolume}{p.}{structGtvVolume} {\em v\/}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume} to add cells to; \item[{\em f}]GtsFile to read from.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success, otherwise the line number where the error occurred. \end{Desc}
+\index{volume@{volume}!gtv_volume_read_gmsh@{gtv\_\-volume\_\-read\_\-gmsh}}
+\index{gtv_volume_read_gmsh@{gtv\_\-volume\_\-read\_\-gmsh}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint gtv\_\-volume\_\-read\_\-gmsh (FILE $\ast$ {\em f}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__volume_gec1bd30d8610ea863d3161c65edf4cb4}
+
+
+Read a GMSH mesh file (.msh extension) from a file, adding its elements to a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]input file; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_remove_cell@{gtv\_\-volume\_\-remove\_\-cell}}
+\index{gtv_volume_remove_cell@{gtv\_\-volume\_\-remove\_\-cell}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-remove\_\-cell ({\bf GtvVolume} $\ast$ {\em v}, {\bf GtvCell} $\ast$ {\em c})}\label{group__volume_g785e893b12baca31d1917cf0a054fda7}
+
+
+Remove a \doxyref{GtvCell}{p.}{structGtvCell} from a \doxyref{GtvVolume}{p.}{structGtvVolume}. If gtv\_\-allow\_\-floating\_\-cells is FALSE, the cell will be destroyed if it is not used by any other \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em c}]\doxyref{GtvCell}{p.}{structGtvCell} to remove.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_stats@{gtv\_\-volume\_\-stats}}
+\index{gtv_volume_stats@{gtv\_\-volume\_\-stats}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-stats ({\bf GtvVolume} $\ast$ {\em v}, {\bf GtvVolumeStats} $\ast$ {\em s})}\label{group__volume_ge76ba4d57f5b73c8b9719276c7116c4b}
+
+
+Find basic statistics for a volume
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume} \item[{\em s}]\doxyref{GtvVolumeStats}{p.}{structGtvVolumeStats} to fill with data\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success \end{Desc}
+\index{volume@{volume}!gtv_volume_volume@{gtv\_\-volume\_\-volume}}
+\index{gtv_volume_volume@{gtv\_\-volume\_\-volume}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\_\-volume\_\-volume ({\bf GtvVolume} $\ast$ {\em v})}\label{group__volume_gb3a94249435fea9a5cadb0be6ea13ff9}
+
+
+Volume of a \doxyref{GtvVolume}{p.}{structGtvVolume}, found as the sum of the cell volumes.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume}\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]volume of {\em v\/} \end{Desc}
+\index{volume@{volume}!gtv_volume_write@{gtv\_\-volume\_\-write}}
+\index{gtv_volume_write@{gtv\_\-volume\_\-write}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-write ({\bf GtvVolume} $\ast$ {\em v}, FILE $\ast$ {\em f})}\label{group__volume_gb53fdad7690626452f987cbbee00ff7e}
+
+
+Write a \doxyref{GtvVolume}{p.}{structGtvVolume} to file. The file's first line is the number of vertices, edges, facets and cells respectively, followed by the class of each in the volume. There then follow the vertex coordinates, one vertex per line, and then the edges, facets and cells.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]\doxyref{GtvVolume}{p.}{structGtvVolume} to write; \item[{\em f}]file pointer.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_write_gmsh@{gtv\_\-volume\_\-write\_\-gmsh}}
+\index{gtv_volume_write_gmsh@{gtv\_\-volume\_\-write\_\-gmsh}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-write\_\-gmsh ({\bf GtvVolume} $\ast$ {\em v}, FILE $\ast$ {\em f})}\label{group__volume_ga97a7b4c2cbe5daf84cc639e826378ee}
+
+
+Write a \doxyref{GtvVolume}{p.}{structGtvVolume} to file as a GMSH .msh (format 2.0, favoured) file.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em f}]file to which {\em v\/} is to be written.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_write_gmsh1@{gtv\_\-volume\_\-write\_\-gmsh1}}
+\index{gtv_volume_write_gmsh1@{gtv\_\-volume\_\-write\_\-gmsh1}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-write\_\-gmsh1 ({\bf GtvVolume} $\ast$ {\em v}, FILE $\ast$ {\em f})}\label{group__volume_gae01a4add5ff88dd2a05482ea1f223f2}
+
+
+Write a \doxyref{GtvVolume}{p.}{structGtvVolume} to file as a GMSH .msh (format 1.0, deprecated) file.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em f}]file to which {\em v\/} is to be written.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
+\index{volume@{volume}!gtv_volume_write_tetgen@{gtv\_\-volume\_\-write\_\-tetgen}}
+\index{gtv_volume_write_tetgen@{gtv\_\-volume\_\-write\_\-tetgen}!volume@{volume}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-volume\_\-write\_\-tetgen ({\bf GtvVolume} $\ast$ {\em v}, gchar $\ast$ {\em stub})}\label{group__volume_g5f35b352f08ca3519d805278193a3a9b}
+
+
+Write a \doxyref{GtvVolume}{p.}{structGtvVolume} to .node and .ele files which can be read by tetgen, to allow checking and comparisons.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em stub}]the stub file name. Files will be written to stub.node and stub.ele.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}

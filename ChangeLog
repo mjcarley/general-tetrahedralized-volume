@@ -1,0 +1,95 @@
+2008-10-09    <ensmjc@enpc-adm34.bath.ac.uk>
+
+	* src/mpole.c moved fundamental multipole functions (inverse
+	distances, moment computations, etc.) into a separate file to make
+	re-use in other libraries easier.
+
+	Copyright (C) 2006, 2007, 2008 by Michael Carley
+
+	2008-10-06    <ensmjc@enpc-adm34.bath.ac.uk>
+
+	* src/curl.c (calc_curl): Added direct integration for in-box
+	calculations on curl fields. This still needs user-selectable
+	parameters for quadrature selection (or, better, a good
+	tolerance-based method).
+	
+2008-10-03    <ensmjc@enpc-adm34.bath.ac.uk>
+
+	* src/multipole.c (gtv_multipole_field_amm): Added support for
+	curl fields.
+
+2008-08-20    <ensmjc@enpc-adm34.bath.ac.uk>
+
+	* src/tetrahedron.c (gtv_tetrahedron_radius_ratio): added to
+	calculate radius ratio quality measure for a tetrahedron.
+
+	* tools/gtv-check.c (main): now calls gtv_volume_print_stats for
+	full geometric statistics information.
+
+	* src/volume.c (gtv_volume_quality_stats): Added function to fill
+	GtvVolumeQualityStats struct.
+
+	* src/gtv.h ("C"): Added GtvVolumeQualityStats struct.
+
+	* src/tetrahedron.c (gtv_tetrahedron_radius_ratio): Added quality
+	measure for tetrahedra.
+
+2008-07-29    <ensmjc@enpc-adm34.bath.ac.uk>
+
+	* src/multipole.c: Added functions to generate multipole moments
+	for volumes
+
+	* src/octtree.c: Added functions to generate octtrees for volumes.
+	
+2008-04-23    <ensmjc@enpc-adm34.bath.ac.uk>
+
+	* src/volume.c: Added functions to write GMSH format 2.0 files and
+	to read gmsh legacy formats.
+
+2008-03-18    <ensmjc@enpc-adm34.bath.ac.uk>
+
+	* src/facet.c: Added gtv_vertex_is_boundary()
+
+2008-03-10    <ensmjc@enpc-adm34.bath.ac.uk>
+
+	* src/volume.c: added functions to read GMSH format 2.0 msh files.
+
+2007-02-25    <michael@rpc-ensmjc.bath.ac.uk>
+
+	* src/volume.c: Added gtv_volume_remove_cell
+
+2007-02-18    <michael@rpc-ensmjc.bath.ac.uk>
+
+	* src/volume.c: Added gtv_volume_volume
+
+	* src/tetrahedron.c: Added gtv_tetrahedron_volume, using robust
+	point orientation.
+
+	* src/facet.c: Added gtv_facet_is_duplicate
+
+	* src/tetrahedron.c: Added gtv_tetrahedron_is_duplicate
+
+	* src/cell.c: Added gtv_cell_neighbours.
+
+2007-02-18    <michael@rpc-ensmjc.icam.fr>
+
+	* src/tetrahedron.c: Rewrote tetrahedron_destroy
+
+	* src/volume.c: Added gtv_volume_write.
+	Added gtv_volume_read
+
+	* src/parents.c (gtv_edge_facet_number): Function to find number
+	of GtvFacets using an edge.
+	(gtv_facet_cell_number): Function to find number of GtvCells using
+	a facet. 
+
+	* src/facet.c (gtv_facet_new): Corrected to set triangle lists of
+	edges properly.
+
+	* src/volume.c: Added gtv_volume_foreach_cell/facet/edge/vertex. 
+
+	* src/tetrahedron.c: Added gtv_tetrahedron_apex to find vertex of
+	a tetrahedron which does not lie on the first facet.
+	Added gtv_tetrahedron_vertices to find vertices of a tetrahedron.
+
+

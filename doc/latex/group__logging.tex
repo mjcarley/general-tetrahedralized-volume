@@ -1,0 +1,24 @@
+\section{Logging functions}
+\label{group__logging}\index{Logging functions@{Logging functions}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+gint {\bf gtv\_\-logging\_\-init} (FILE $\ast$f, gchar $\ast$p, GLogLevelFlags log\_\-level, gpointer exit\_\-func)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{logging@{logging}!gtv_logging_init@{gtv\_\-logging\_\-init}}
+\index{gtv_logging_init@{gtv\_\-logging\_\-init}!logging@{logging}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-logging\_\-init (FILE $\ast$ {\em f}, gchar $\ast$ {\em p}, GLogLevelFlags {\em log\_\-level}, gpointer {\em exit\_\-func})}\label{group__logging_ga9339a0967e72a04a82cff0fe5777a18}
+
+
+Initialize GTV logging
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]file stream for messages \item[{\em p}]string to prepend to messages \item[{\em log\_\-level}]maximum logging level to handle (see g\_\-log) \item[{\em exit\_\-func}]function to call if exiting on an error\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success \end{Desc}

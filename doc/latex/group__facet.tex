@@ -1,0 +1,159 @@
+\section{Facets}
+\label{group__facet}\index{Facets@{Facets}}
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct {\bf GtvFacet}
+\item 
+struct {\bf GtvFacetClass}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\bf GtvFacet} $\ast$ {\bf gtv\_\-facet\_\-new} ({\bf GtvFacetClass} $\ast$klass, GtsEdge $\ast$e1, GtsEdge $\ast$e2, GtsEdge $\ast$e3)
+\item 
+{\bf GtvCell} $\ast$ {\bf gtv\_\-facet\_\-is\_\-boundary} ({\bf GtvFacet} $\ast$f, {\bf GtvVolume} $\ast$v)
+\item 
+gint {\bf gtv\_\-facet\_\-tetrahedra\_\-vertices} ({\bf GtvFacet} $\ast$f, GtsVertex $\ast$$\ast$v1, GtsVertex $\ast$$\ast$v2, GtsVertex $\ast$$\ast$v3, GtsVertex $\ast$$\ast$v4, GtsVertex $\ast$$\ast$v5)
+\item 
+gint {\bf gtv\_\-facet\_\-tetrahedra} ({\bf GtvFacet} $\ast$f, {\bf GtvTetrahedron} $\ast$$\ast$t1, {\bf GtvTetrahedron} $\ast$$\ast$t2)
+\item 
+{\bf GtvFacet} $\ast$ {\bf gtv\_\-facet\_\-from\_\-vertices} (GtsVertex $\ast$v1, GtsVertex $\ast$v2, GtsVertex $\ast$v3)
+\item 
+gboolean {\bf gtv\_\-facet\_\-has\_\-vertex} ({\bf GtvFacet} $\ast$f, GtsVertex $\ast$v)
+\item 
+gboolean {\bf gtv\_\-facet\_\-has\_\-edge} ({\bf GtvFacet} $\ast$f, GtsEdge $\ast$e)
+\item 
+{\bf GtvCell} $\ast$ {\bf gtv\_\-edge\_\-is\_\-boundary} (GtsEdge $\ast$e, {\bf GtvVolume} $\ast$v)
+\item 
+{\bf GtvCell} $\ast$ {\bf gtv\_\-vertex\_\-is\_\-boundary} (GtsVertex $\ast$p, {\bf GtvVolume} $\ast$v)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{facet@{facet}!gtv_edge_is_boundary@{gtv\_\-edge\_\-is\_\-boundary}}
+\index{gtv_edge_is_boundary@{gtv\_\-edge\_\-is\_\-boundary}!facet@{facet}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-edge\_\-is\_\-boundary (GtsEdge $\ast$ {\em e}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__facet_g1774fe6343897de32152d32fdbeea972}
+
+
+Check if a GtsEdge lies on the boundary of a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em e}]a GtsEdge; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume} or NULL.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a \doxyref{GtvCell}{p.}{structGtvCell} which uses {\em e\/} and is on the boundary of {\em v\/}. \end{Desc}
+\index{facet@{facet}!gtv_facet_from_vertices@{gtv\_\-facet\_\-from\_\-vertices}}
+\index{gtv_facet_from_vertices@{gtv\_\-facet\_\-from\_\-vertices}!facet@{facet}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvFacet}$\ast$ gtv\_\-facet\_\-from\_\-vertices (GtsVertex $\ast$ {\em v1}, GtsVertex $\ast$ {\em v2}, GtsVertex $\ast$ {\em v3})}\label{group__facet_gff99c41df922f43e47f0ba5ede5dcaef}
+
+
+Find a \doxyref{GtvFacet}{p.}{structGtvFacet} which uses three given GtsVertex's.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v1}]a GtsVertex; \item[{\em v2}]a GtsVertex; \item[{\em v3}]a GtsVertex.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a \doxyref{GtvFacet}{p.}{structGtvFacet} which uses {\em v1\/}, {\em v2\/} and {\em v3\/}, if it exists, NULL otherwise. \end{Desc}
+\index{facet@{facet}!gtv_facet_has_edge@{gtv\_\-facet\_\-has\_\-edge}}
+\index{gtv_facet_has_edge@{gtv\_\-facet\_\-has\_\-edge}!facet@{facet}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\_\-facet\_\-has\_\-edge ({\bf GtvFacet} $\ast$ {\em f}, GtsEdge $\ast$ {\em e})}\label{group__facet_g4d753e2fbf5e8c6ddbd9bd79c5d0c40c}
+
+
+Check if a \doxyref{GtvFacet}{p.}{structGtvFacet} uses a GtsEdge.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em e}]a GtsEdge;\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]TRUE if {\em f\/} use {\em e\/}, FALSE otherwise. \end{Desc}
+\index{facet@{facet}!gtv_facet_has_vertex@{gtv\_\-facet\_\-has\_\-vertex}}
+\index{gtv_facet_has_vertex@{gtv\_\-facet\_\-has\_\-vertex}!facet@{facet}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\_\-facet\_\-has\_\-vertex ({\bf GtvFacet} $\ast$ {\em f}, GtsVertex $\ast$ {\em v})}\label{group__facet_g200d80d0a6565ee2b455e6896b8e4661}
+
+
+Check if a \doxyref{GtvFacet}{p.}{structGtvFacet} uses a GtsVertex.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em v}]a GtsVertex;\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]TRUE if {\em f\/} use {\em v\/}, FALSE otherwise. \end{Desc}
+\index{facet@{facet}!gtv_facet_is_boundary@{gtv\_\-facet\_\-is\_\-boundary}}
+\index{gtv_facet_is_boundary@{gtv\_\-facet\_\-is\_\-boundary}!facet@{facet}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-facet\_\-is\_\-boundary ({\bf GtvFacet} $\ast$ {\em f}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__facet_g3fdcda896f2f629853d4861b5c3a8c3a}
+
+
+Check if a \doxyref{GtvFacet}{p.}{structGtvFacet} lies on the boundary of a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume} or NULL.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a \doxyref{GtvCell}{p.}{structGtvCell} which uses {\em f\/} and is on the boundary of {\em v\/}. \end{Desc}
+\index{facet@{facet}!gtv_facet_new@{gtv\_\-facet\_\-new}}
+\index{gtv_facet_new@{gtv\_\-facet\_\-new}!facet@{facet}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvFacet}$\ast$ gtv\_\-facet\_\-new ({\bf GtvFacetClass} $\ast$ {\em klass}, GtsEdge $\ast$ {\em e1}, GtsEdge $\ast$ {\em e2}, GtsEdge $\ast$ {\em e3})}\label{group__facet_gbef362d1aa4387096b69019ebe400e40}
+
+
+Make a new \doxyref{GtvFacet}{p.}{structGtvFacet} from three edges which must define a proper triangle.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em klass}]a \doxyref{GtvFacetClass}{p.}{structGtvFacetClass}; \item[{\em e1}]a GtsEdge; \item[{\em e2}]a GtsEdge; \item[{\em e3}]a GtsEdge.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a new \doxyref{GtvFacet}{p.}{structGtvFacet} or NULL if the edges do not define a valid triangle. \end{Desc}
+\index{facet@{facet}!gtv_facet_tetrahedra@{gtv\_\-facet\_\-tetrahedra}}
+\index{gtv_facet_tetrahedra@{gtv\_\-facet\_\-tetrahedra}!facet@{facet}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-facet\_\-tetrahedra ({\bf GtvFacet} $\ast$ {\em f}, {\bf GtvTetrahedron} $\ast$$\ast$ {\em t1}, {\bf GtvTetrahedron} $\ast$$\ast$ {\em t2})}\label{group__facet_gd940dc7afda4d6c6014881ca0b0971e2}
+
+
+Find the tetrahedra which use a \doxyref{GtvFacet}{p.}{structGtvFacet}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]a \doxyref{GtvFacet}{p.}{structGtvFacet} \item[{\em t1}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} which uses {\em f\/} or NULL if {\em f\/} is isolated; \item[{\em t2}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} which uses {\em f\/} or NULL if {\em f\/} is a boundary facet.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{facet@{facet}!gtv_facet_tetrahedra_vertices@{gtv\_\-facet\_\-tetrahedra\_\-vertices}}
+\index{gtv_facet_tetrahedra_vertices@{gtv\_\-facet\_\-tetrahedra\_\-vertices}!facet@{facet}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-facet\_\-tetrahedra\_\-vertices ({\bf GtvFacet} $\ast$ {\em f}, GtsVertex $\ast$$\ast$ {\em v1}, GtsVertex $\ast$$\ast$ {\em v2}, GtsVertex $\ast$$\ast$ {\em v3}, GtsVertex $\ast$$\ast$ {\em v4}, GtsVertex $\ast$$\ast$ {\em v5})}\label{group__facet_g6649872d76d7d68575d345f5c3d7cd28}
+
+
+Find the vertices of the tetrahedra sharing a particular facet. If {\em f\/} is used by only one tetrahedron, v5 will be NULL. If {\em f\/} is an isolated facet, i.e. not used by any tetrahedra, all the vertices will be NULL.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]a \doxyref{GtvFacet}{p.}{structGtvFacet} \item[{\em v1}]a vertex of a tetrahedron using {\em f\/}; \item[{\em v2}]a vertex of a tetrahedron using {\em f\/}; \item[{\em v3}]a vertex of a tetrahedron using {\em f\/}; \item[{\em v4}]a vertex of a tetrahedron using {\em f\/}; \item[{\em v5}]a vertex of a tetrahedron using {\em f\/}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{facet@{facet}!gtv_vertex_is_boundary@{gtv\_\-vertex\_\-is\_\-boundary}}
+\index{gtv_vertex_is_boundary@{gtv\_\-vertex\_\-is\_\-boundary}!facet@{facet}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-vertex\_\-is\_\-boundary (GtsVertex $\ast$ {\em p}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__facet_gee51be4fec24cff401b250334b7ee333}
+
+
+Check if a GtsVertex lies on the boundary of a \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]a GtsVertex; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume} or NULL.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a \doxyref{GtvCell}{p.}{structGtvCell} which uses {\em p\/} and is on the boundary of {\em v\/}. \end{Desc}

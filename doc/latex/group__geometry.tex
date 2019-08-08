@@ -1,0 +1,40 @@
+\section{Geometric tests}
+\label{group__geometry}\index{Geometric tests@{Geometric tests}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+gdouble {\bf gtv\_\-point\_\-in\_\-sphere} (GtsPoint $\ast$p, GtsPoint $\ast$p1, GtsPoint $\ast$p2, GtsPoint $\ast$p3, GtsPoint $\ast$p4)
+\item 
+gboolean {\bf gtv\_\-points\_\-are\_\-collinear} (GtsPoint $\ast$p1, GtsPoint $\ast$p2, GtsPoint $\ast$p3)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{geometry@{geometry}!gtv_point_in_sphere@{gtv\_\-point\_\-in\_\-sphere}}
+\index{gtv_point_in_sphere@{gtv\_\-point\_\-in\_\-sphere}!geometry@{geometry}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\_\-point\_\-in\_\-sphere (GtsPoint $\ast$ {\em p}, GtsPoint $\ast$ {\em p1}, GtsPoint $\ast$ {\em p2}, GtsPoint $\ast$ {\em p3}, GtsPoint $\ast$ {\em p4})}\label{group__geometry_g62ec1adc74fe75ce5ea29f7d3be1bb1d}
+
+
+Check whether a point lies inside a sphere defined by four GtsPoint's.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]a GtsPoint; \item[{\em p1}]a GtsPoint; \item[{\em p2}]a GtsPoint; \item[{\em p3}]a GtsPoint; \item[{\em p4}]a GtsPoint;\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]positive value if {\em p\/} lies inside the sphere, zero if it lies on the sphere and a negative value if it lies outside. \end{Desc}
+\index{geometry@{geometry}!gtv_points_are_collinear@{gtv\_\-points\_\-are\_\-collinear}}
+\index{gtv_points_are_collinear@{gtv\_\-points\_\-are\_\-collinear}!geometry@{geometry}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\_\-points\_\-are\_\-collinear (GtsPoint $\ast$ {\em p1}, GtsPoint $\ast$ {\em p2}, GtsPoint $\ast$ {\em p3})}\label{group__geometry_g1d9b22104f8f85ab07bc5a71e0a77f3c}
+
+
+Check if three points are collinear by checking their orientation in three dimensions.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p1}]a GtsPoint; \item[{\em p2}]a GtsPoint; \item[{\em p3}]a GtsPoint.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]TRUE if {\em p1\/}, {\em p2\/} and {\em p3\/} are collinear, FALSE otherswise. \end{Desc}

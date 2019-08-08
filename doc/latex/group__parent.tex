@@ -1,0 +1,104 @@
+\section{Parent entities}
+\label{group__parent}\index{Parent entities@{Parent entities}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+GtsEdge $\ast$ {\bf gtv\_\-vertex\_\-has\_\-parent\_\-volume} (GtsVertex $\ast$p, {\bf GtvVolume} $\ast$v)
+\item 
+{\bf GtvFacet} $\ast$ {\bf gtv\_\-edge\_\-has\_\-parent\_\-volume} (GtsEdge $\ast$e, {\bf GtvVolume} $\ast$v)
+\item 
+{\bf GtvCell} $\ast$ {\bf gtv\_\-facet\_\-has\_\-parent\_\-volume} ({\bf GtvFacet} $\ast$f, {\bf GtvVolume} $\ast$v)
+\item 
+gboolean {\bf gtv\_\-cell\_\-has\_\-parent\_\-volume} ({\bf GtvCell} $\ast$c, {\bf GtvVolume} $\ast$v)
+\item 
+guint {\bf gtv\_\-edge\_\-facet\_\-number} (GtsEdge $\ast$e, {\bf GtvVolume} $\ast$v)
+\item 
+guint {\bf gtv\_\-facet\_\-cell\_\-number} ({\bf GtvFacet} $\ast$f, {\bf GtvVolume} $\ast$v)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{parent@{parent}!gtv_cell_has_parent_volume@{gtv\_\-cell\_\-has\_\-parent\_\-volume}}
+\index{gtv_cell_has_parent_volume@{gtv\_\-cell\_\-has\_\-parent\_\-volume}!parent@{parent}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\_\-cell\_\-has\_\-parent\_\-volume ({\bf GtvCell} $\ast$ {\em c}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__parent_g0ac4abf61d2c7d9cc6ef84f33f966bca}
+
+
+Check if a \doxyref{GtvCell}{p.}{structGtvCell} belongs to a given \doxyref{GtvVolume}{p.}{structGtvVolume}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]a \doxyref{GtvCell}{p.}{structGtvCell}; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]TRUE if {\em c\/} belongs to {\em v\/}, FALSE otherwise. \end{Desc}
+\index{parent@{parent}!gtv_edge_facet_number@{gtv\_\-edge\_\-facet\_\-number}}
+\index{gtv_edge_facet_number@{gtv\_\-edge\_\-facet\_\-number}!parent@{parent}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint gtv\_\-edge\_\-facet\_\-number (GtsEdge $\ast$ {\em e}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__parent_g8674ed088b8f376f0c0e5fad12715200}
+
+
+Count the number of facets using an edge.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em e}]a GtsEdge; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the number of facets of {\em v\/} which contain {\em e\/}. \end{Desc}
+\index{parent@{parent}!gtv_edge_has_parent_volume@{gtv\_\-edge\_\-has\_\-parent\_\-volume}}
+\index{gtv_edge_has_parent_volume@{gtv\_\-edge\_\-has\_\-parent\_\-volume}!parent@{parent}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvFacet}$\ast$ gtv\_\-edge\_\-has\_\-parent\_\-volume (GtsEdge $\ast$ {\em e}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__parent_gfc27eebd4b31d994dc17877e306b5fca}
+
+
+Check if a GtsEdge has a given parent volume.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em e}]a GtsEdge; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a \doxyref{GtvFacet}{p.}{structGtvFacet} of {\em v\/} containing {\em e\/}, NULL otherwise. \end{Desc}
+\index{parent@{parent}!gtv_facet_cell_number@{gtv\_\-facet\_\-cell\_\-number}}
+\index{gtv_facet_cell_number@{gtv\_\-facet\_\-cell\_\-number}!parent@{parent}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint gtv\_\-facet\_\-cell\_\-number ({\bf GtvFacet} $\ast$ {\em f}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__parent_gf3c750fdcd8a2352d5435409efe88b5f}
+
+
+Count the number of cells using a facet.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the number of cells of {\em v\/} which contain {\em f\/}. \end{Desc}
+\index{parent@{parent}!gtv_facet_has_parent_volume@{gtv\_\-facet\_\-has\_\-parent\_\-volume}}
+\index{gtv_facet_has_parent_volume@{gtv\_\-facet\_\-has\_\-parent\_\-volume}!parent@{parent}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-facet\_\-has\_\-parent\_\-volume ({\bf GtvFacet} $\ast$ {\em f}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__parent_g6fff8e0906af01b0691986578cfd5481}
+
+
+Check if a \doxyref{GtvFacet}{p.}{structGtvFacet} has a given parent volume.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a \doxyref{GtvCell}{p.}{structGtvCell} of {\em v\/} containing {\em f\/}, NULL otherwise. \end{Desc}
+\index{parent@{parent}!gtv_vertex_has_parent_volume@{gtv\_\-vertex\_\-has\_\-parent\_\-volume}}
+\index{gtv_vertex_has_parent_volume@{gtv\_\-vertex\_\-has\_\-parent\_\-volume}!parent@{parent}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GtsEdge$\ast$ gtv\_\-vertex\_\-has\_\-parent\_\-volume (GtsVertex $\ast$ {\em p}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__parent_gd2131aaea406ac228106951a1d32e0bc}
+
+
+Check if a GtsVertex has a given parent volume.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p}]a GtsVertex; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a GtsEdge of {\em v\/} containing {\em p\/}, NULL otherwise. \end{Desc}

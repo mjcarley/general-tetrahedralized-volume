@@ -1,0 +1,55 @@
+## Process this file with automake to produce Makefile.in
+
+INCLUDES = -I$(top_srcdir) -I$(includedir) -DG_LOG_DOMAIN=\"GTV\"
+
+bin_SCRIPTS=gtv-config
+
+BUILT_SOURCES= \
+	gtv-config \
+	predicates_init.h
+
+gtv-config: gtv-config.in
+
+lib_LTLIBRARIES = libgtv.la
+
+libgtv_la_LDFLAGS = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)\
+	-release $(LT_RELEASE) -export-dynamic
+
+libgtv_la_DEPENDENCIES = \
+	predicates_init.h
+
+libgtv_la_SOURCES = \
+	gtv.h \
+	gtv-private.h \
+	predicates.c \
+	predicates.h \
+	predicates_init.h \
+	rounding.h \
+	parents.c \
+	tetrahedron.c \
+	facet.c \
+	cell.c \
+	volume.c \
+	delaunay.c \
+	util.c \
+	gtv-logging.c \
+	locate.c \
+	geometry.c \
+	matrix.c 
+
+include_HEADERS = \
+	gtv.h
+
+predicates.o: predicates.c predicates_init.h predicates.h
+	$(COMPILE) -c $(srcdir)/predicates.c
+
+predicates_init: predicates_init.c rounding.h
+	$(COMPILE) $(srcdir)/predicates_init.c -o $(srcdir)/predicates_init
+
+predicates_init.h: predicates_init
+	./predicates_init >  $(srcdir)/predicates_init.h
+
+CLEANFILES = $(BUILT_SOURCES)
+
+EXTRA_DIST = \
+	predicates_init.c

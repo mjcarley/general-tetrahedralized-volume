@@ -1,0 +1,202 @@
+\section{Fast multipole calculations}
+\label{group__multipole}\index{Fast multipole calculations@{Fast multipole calculations}}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef gpointer($\ast$) {\bf GtvLookupFunc} (GtsVertex $\ast$v, gpointer data)
+\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum {\bf GtvFieldType} \{ {\bf GTV\_\-FIELD\_\-SCALAR}, 
+{\bf GTV\_\-FIELD\_\-CURL}
+ \}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+gint {\bf gtv\_\-multipole\_\-box\_\-moment\_\-coefficients} ({\bf GtvOctTreeBox} $\ast$box, gint order)
+\item 
+gint {\bf gtv\_\-multipole\_\-leaf\_\-moment\_\-coefficients} (GNode $\ast$tree, gint order)
+\item 
+gint {\bf gtv\_\-multipole\_\-box\_\-moments} ({\bf GtvOctTreeBox} $\ast$box, gint stride, {\bf GtvLookupFunc} func, gpointer data)
+\item 
+gint {\bf gtv\_\-multipole\_\-leaf\_\-moments} (GNode $\ast$tree, gint stride, {\bf GtvLookupFunc} func, gpointer data)
+\item 
+gint {\bf gtv\_\-multipole\_\-box\_\-shift\_\-moments} ({\bf GtvOctTreeBox} $\ast$dest, {\bf GtvOctTreeBox} $\ast$source)
+\item 
+gint {\bf gtv\_\-multipole\_\-tree\_\-moments} (GNode $\ast$tree)
+\item 
+gint {\bf gtv\_\-multipole\_\-moments} (GNode $\ast$tree, gint order, gint stride, {\bf GtvLookupFunc} func, gpointer data)
+\item 
+gint {\bf gtv\_\-multipole\_\-distances} (GtsVector r, gint a, gint H, GArray $\ast$dR)
+\item 
+gint {\bf gtv\_\-multipole\_\-field\_\-amm} (GNode $\ast$tree, gint a, {\bf GtvFieldType} field, {\bf GtvLookupFunc} func, gpointer data, gdouble tol, GtsPoint $\ast$x, gdouble $\ast$I, GtvEvaluationStats $\ast$s)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+These functions allow GTV to be used to perform accelerated volume integrations of potential-type integrands, using \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox} trees, based mainly on Marshall, J. S., Grant, J. R., Gossler, A. A. and Huyer, S. A. `Vorticity transport on a Lagrangian mesh', Journal of Computational Physics, 161:181--113 (2000), {\tt http://dx.doi.org/10.1006/jcph.2000.6490} 
+
+\subsection{Typedef Documentation}
+\index{multipole@{multipole}!GtvLookupFunc@{GtvLookupFunc}}
+\index{GtvLookupFunc@{GtvLookupFunc}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvLookupFunc}}\label{group__multipole_g285a7a75518ef947864239e7ff97b2c4}
+
+
+Lookup function for calculating multipole moments. If {\em func\/} is a \doxyref{GtvLookupFunc}{p.}{group__multipole_g285a7a75518ef947864239e7ff97b2c4} then {\em func\/}({\em v\/}, {\em data\/}) returns a gpointer to data associated with {\em v\/}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v}]a GtsVertex \item[{\em data}]user data passed by the calling GTV function\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a pointer of type gpointer to data which will be used in calculating a multipole expansion. \end{Desc}
+
+
+\subsection{Enumeration Type Documentation}
+\index{multipole@{multipole}!GtvFieldType@{GtvFieldType}}
+\index{GtvFieldType@{GtvFieldType}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GtvFieldType}}\label{group__multipole_g28a30164b4a43ededbb71ecd2fbb9acc}
+
+
+Field types for multipole integrations. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GTV_FIELD_SCALAR@{GTV\_\-FIELD\_\-SCALAR}!multipole@{multipole}}\index{multipole@{multipole}!GTV_FIELD_SCALAR@{GTV\_\-FIELD\_\-SCALAR}}\item[{\em 
+GTV\_\-FIELD\_\-SCALAR\label{group__multipole_gg28a30164b4a43ededbb71ecd2fbb9acc70cc63b22bf4d225df214a151ff16b96}
+}]scalar field, e.g. potential \index{GTV_FIELD_CURL@{GTV\_\-FIELD\_\-CURL}!multipole@{multipole}}\index{multipole@{multipole}!GTV_FIELD_CURL@{GTV\_\-FIELD\_\-CURL}}\item[{\em 
+GTV\_\-FIELD\_\-CURL\label{group__multipole_gg28a30164b4a43ededbb71ecd2fbb9accea7d2196a78d5a333426bc250bdab16f}
+}]curl field, e.g. Biot-Savart law \end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\index{multipole@{multipole}!gtv_multipole_box_moment_coefficients@{gtv\_\-multipole\_\-box\_\-moment\_\-coefficients}}
+\index{gtv_multipole_box_moment_coefficients@{gtv\_\-multipole\_\-box\_\-moment\_\-coefficients}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-multipole\_\-box\_\-moment\_\-coefficients ({\bf GtvOctTreeBox} $\ast$ {\em box}, gint {\em order})}\label{group__multipole_gf3de547a6ad9be8f3aab4a8664c1706d}
+
+
+Generate the vertex coefficients for the multipole moments of a set of tetrahedra contained in a \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em box}]a \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox} containing a list of \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}'s; \item[{\em order}]order of multipole moments, no greater than 16.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
+\index{multipole@{multipole}!gtv_multipole_box_moments@{gtv\_\-multipole\_\-box\_\-moments}}
+\index{gtv_multipole_box_moments@{gtv\_\-multipole\_\-box\_\-moments}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-multipole\_\-box\_\-moments ({\bf GtvOctTreeBox} $\ast$ {\em box}, gint {\em stride}, {\bf GtvLookupFunc} {\em func}, gpointer {\em data})}\label{group__multipole_g6b7cab3484d7b52eac5f5386d8e3cc0e}
+
+
+Calculate the multipole moments for a \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em box}]a \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox}; \item[{\em stride}]the number of components in the data to be expanded; \item[{\em func}]a \doxyref{GtvLookupFunc}{p.}{group__multipole_g285a7a75518ef947864239e7ff97b2c4} which returns the data associated with a given vertex, which must have at least {\em stride\/} components available; \item[{\em data}]data to be passed to {\em func\/}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
+\index{multipole@{multipole}!gtv_multipole_box_shift_moments@{gtv\_\-multipole\_\-box\_\-shift\_\-moments}}
+\index{gtv_multipole_box_shift_moments@{gtv\_\-multipole\_\-box\_\-shift\_\-moments}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-multipole\_\-box\_\-shift\_\-moments ({\bf GtvOctTreeBox} $\ast$ {\em dest}, {\bf GtvOctTreeBox} $\ast$ {\em source})}\label{group__multipole_ge5eb965af28a50f1dd4c938e65ac443e}
+
+
+Shift multipole moments generated for one \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox} to another. The coefficient array in {\em dest\/} is automatically resized to match {\em source\/} before inserting data.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dest}]destination \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox}; \item[{\em source}]source \doxyref{GtvOctTreeBox}{p.}{structGtvOctTreeBox}, with already-generated multipole coefficients.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
+\index{multipole@{multipole}!gtv_multipole_distances@{gtv\_\-multipole\_\-distances}}
+\index{gtv_multipole_distances@{gtv\_\-multipole\_\-distances}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-multipole\_\-distances (GtsVector {\em r}, gint {\em a}, gint {\em H}, GArray $\ast$ {\em dR})}\label{group__multipole_g8b73c9ea12056b1ea56b3f5f49ee3530}
+
+
+Calculate the spatial derivatives of $1/R^{q}$, $1\leq q\leq a$ up to order $H$, with $R=||\mathbf{r}||$. The derivatives are returned in a GArray of gdouble values, with the first row being the derivatives of $R$ and subsequent rows being derivatives of $R^{-1}$, $R^{-2}$, etc. To access a given derivative, note that the list of derivatives at each order takes up mpole\_\-block\_\-start(H+1) entries in {\em dR\/}, and use gtv\_\-multipole\_\-index\_\-mnk() to find $\partial^{m+n+k}R^{-a}/\partial x^{m}\partial y^{n}\partial z^{k}$. For example, if N=mpole\_\-block\_\-start(H+1), the derivatives of $\/R^{4}$ (if computed) start at \&(g\_\-array\_\-index(dR,gdouble,(4$\ast$N))).
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em r}]displacement vector from centre of multipole expansion box to field point; \item[{\em a}]maximum inverse power of distance to consider; \item[{\em H}]maximum order of derivatives; \item[{\em dR}]array of derivatives.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
+\index{multipole@{multipole}!gtv_multipole_field_amm@{gtv\_\-multipole\_\-field\_\-amm}}
+\index{gtv_multipole_field_amm@{gtv\_\-multipole\_\-field\_\-amm}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-multipole\_\-field\_\-amm (GNode $\ast$ {\em tree}, gint {\em a}, {\bf GtvFieldType} {\em field}, {\bf GtvLookupFunc} {\em func}, gpointer {\em data}, gdouble {\em tol}, GtsPoint $\ast$ {\em x}, gdouble $\ast$ {\em I}, GtvEvaluationStats $\ast$ {\em s})}\label{group__multipole_g06f688be0fec4469cf1f5d346f757e69}
+
+
+Accelerated multipole method evaluation of the field associated with a particular set of multipole coefficients and a source function, using a method based on that of Marshall, J. S., Grant, J. R., Gossler, A. A. and Huyer, S. A., `Vorticity transport on a Lagrangian tetrahedral mesh', Journal of Computational Physics, 161(1):85-113, 2000, {\tt http://dx.doi.org/10.1006/jcph.2000.6490.} The computation returns an estimate of $I(\mathbf{x})=\int_{V} f(\mathbf{x}_{1})/R^{a}\mathrm{d}V$ with $f(\mathbf{x}_{1})$ depending on the type of field selected.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tree}]a tree of multipole coefficients computed with, for example, \doxyref{gtv\_\-multipole\_\-moments}{p.}{group__multipole_ga2130f4f017a5ae2ea846de5b5bd6603}; \item[{\em a}]the power of distance in the field integral; \item[{\em field}]a field description of type \doxyref{GtvFieldType}{p.}{group__multipole_g28a30164b4a43ededbb71ecd2fbb9acc}. For \doxyref{GTV\_\-FIELD\_\-SCALAR}{p.}{group__multipole_gg28a30164b4a43ededbb71ecd2fbb9acc70cc63b22bf4d225df214a151ff16b96} $I(\mathbf{x})=\int_{V}f(\mathbf{x}_{1})/R^{a}\mathrm{d}V$. For \doxyref{GTV\_\-FIELD\_\-CURL}{p.}{group__multipole_gg28a30164b4a43ededbb71ecd2fbb9accea7d2196a78d5a333426bc250bdab16f} $I(\mathbf{x})=\int_{V}\mathbf{f}(\mathbf{x}_{1})\times\mathbf{r} /R^{a}\mathrm{d}V$, where $f$ and $\mathbf{f}$ are the data returned by {\em func\/}. \item[{\em func}]a \doxyref{GtvLookupFunc}{p.}{group__multipole_g285a7a75518ef947864239e7ff97b2c4} returning the source strength; \item[{\em data}]user data to pass to {\em func\/}; \item[{\em tol}]accuracy required in estimation (of dubious utility at the moment); \item[{\em x}]field evaluation point; \item[{\em I}]on exit, value of field integral; \item[{\em s}]a GtvEvaluationStats containing information about the evaluation.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
+\index{multipole@{multipole}!gtv_multipole_leaf_moment_coefficients@{gtv\_\-multipole\_\-leaf\_\-moment\_\-coefficients}}
+\index{gtv_multipole_leaf_moment_coefficients@{gtv\_\-multipole\_\-leaf\_\-moment\_\-coefficients}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-multipole\_\-leaf\_\-moment\_\-coefficients (GNode $\ast$ {\em tree}, gint {\em order})}\label{group__multipole_gadfa67eaf4da3f7c19a80c1a6331b17e}
+
+
+Calculate the vertex coefficients for each leaf of an octtree, by calling \doxyref{gtv\_\-multipole\_\-box\_\-moment\_\-coefficients}{p.}{group__multipole_gf3de547a6ad9be8f3aab4a8664c1706d} for each leaf.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tree}]a GNode at the root of the octtree; \item[{\em order}]order of multipole moments.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
+\index{multipole@{multipole}!gtv_multipole_leaf_moments@{gtv\_\-multipole\_\-leaf\_\-moments}}
+\index{gtv_multipole_leaf_moments@{gtv\_\-multipole\_\-leaf\_\-moments}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-multipole\_\-leaf\_\-moments (GNode $\ast$ {\em tree}, gint {\em stride}, {\bf GtvLookupFunc} {\em func}, gpointer {\em data})}\label{group__multipole_g53c82e02d621afefac875df226dbcb1b}
+
+
+Calculate the multipole moments for each leaf of an octtree, by calling \doxyref{gtv\_\-multipole\_\-box\_\-moments}{p.}{group__multipole_g6b7cab3484d7b52eac5f5386d8e3cc0e} for each leaf.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tree}]a GNode at the root of the octtree. \item[{\em stride}]the number of components in the data to be expanded; \item[{\em func}]a \doxyref{GtvLookupFunc}{p.}{group__multipole_g285a7a75518ef947864239e7ff97b2c4} which returns the data associated with a given vertex, which must have at least {\em stride\/} components available; \item[{\em data}]data to be passed to {\em func\/}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
+\index{multipole@{multipole}!gtv_multipole_moments@{gtv\_\-multipole\_\-moments}}
+\index{gtv_multipole_moments@{gtv\_\-multipole\_\-moments}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-multipole\_\-moments (GNode $\ast$ {\em tree}, gint {\em order}, gint {\em stride}, {\bf GtvLookupFunc} {\em func}, gpointer {\em data})}\label{group__multipole_ga2130f4f017a5ae2ea846de5b5bd6603}
+
+
+Generate a full tree of multipole moments.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tree}]a GNode for the root of a tree generated using \doxyref{gtv\_\-oct\_\-tree\_\-new}{p.}{group__octtree_g9905123c09fc9b457e0e50fe52871035}; \item[{\em order}]the maximum order of the moments; \item[{\em stride}]the number of components in the function to be expanded; \item[{\em func}]a \doxyref{GtvLookupFunc}{p.}{group__multipole_g285a7a75518ef947864239e7ff97b2c4} which returns a pointer to the vertex data for the moments; \item[{\em data}]user data to be passed to {\em func\/}.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
+\index{multipole@{multipole}!gtv_multipole_tree_moments@{gtv\_\-multipole\_\-tree\_\-moments}}
+\index{gtv_multipole_tree_moments@{gtv\_\-multipole\_\-tree\_\-moments}!multipole@{multipole}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-multipole\_\-tree\_\-moments (GNode $\ast$ {\em tree})}\label{group__multipole_g22a1579ed5951869f7e0408015ee2045}
+
+
+Generate a full tree of multipole moments, starting from already-generated leaf nodes (use \doxyref{gtv\_\-multipole\_\-leaf\_\-moments}{p.}{group__multipole_g53c82e02d621afefac875df226dbcb1b}).
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tree}]an octtree with initialized leaves.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
