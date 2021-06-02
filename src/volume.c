@@ -1795,7 +1795,7 @@ gint gtv_volume_write_gmsh(GtvVolume *v, FILE *f)
   data[1] = g_hash_table_new(NULL, NULL) ;
   data[2] = &n ;
 
-  fprintf(f, "$MeshFormat\n2.0 0 %u\n$EndMeshFormat\n",
+  fprintf(f, "$MeshFormat\n2.0 0 %lu\n$EndMeshFormat\n",
 	  sizeof(gdouble)) ;
 
   n = 0 ;

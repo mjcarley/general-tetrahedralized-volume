@@ -1,0 +1,123 @@
+make  all-recursive
+make[1]: Entering directory '/home/michael/Codes/C/general-tetrahedralized-volume'
+Making all in src
+make[2]: Entering directory '/home/michael/Codes/C/general-tetrahedralized-volume/src'
+cd .. && /bin/sh ./config.status src/gtv-config
+config.status: creating src/gtv-config
+./predicates_init >  ./predicates_init.h
+make  all-am
+make[3]: Entering directory '/home/michael/Codes/C/general-tetrahedralized-volume/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT predicates.lo -MD -MP -MF .deps/predicates.Tpo -c -o predicates.lo predicates.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT predicates.lo -MD -MP -MF .deps/predicates.Tpo -c predicates.c  -fPIC -DPIC -o .libs/predicates.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT predicates.lo -MD -MP -MF .deps/predicates.Tpo -c predicates.c -o predicates.o >/dev/null 2>&1
+mv -f .deps/predicates.Tpo .deps/predicates.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT parents.lo -MD -MP -MF .deps/parents.Tpo -c -o parents.lo parents.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT parents.lo -MD -MP -MF .deps/parents.Tpo -c parents.c  -fPIC -DPIC -o .libs/parents.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT parents.lo -MD -MP -MF .deps/parents.Tpo -c parents.c -o parents.o >/dev/null 2>&1
+mv -f .deps/parents.Tpo .deps/parents.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT tetrahedron.lo -MD -MP -MF .deps/tetrahedron.Tpo -c -o tetrahedron.lo tetrahedron.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT tetrahedron.lo -MD -MP -MF .deps/tetrahedron.Tpo -c tetrahedron.c  -fPIC -DPIC -o .libs/tetrahedron.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT tetrahedron.lo -MD -MP -MF .deps/tetrahedron.Tpo -c tetrahedron.c -o tetrahedron.o >/dev/null 2>&1
+mv -f .deps/tetrahedron.Tpo .deps/tetrahedron.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT facet.lo -MD -MP -MF .deps/facet.Tpo -c -o facet.lo facet.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT facet.lo -MD -MP -MF .deps/facet.Tpo -c facet.c  -fPIC -DPIC -o .libs/facet.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT facet.lo -MD -MP -MF .deps/facet.Tpo -c facet.c -o facet.o >/dev/null 2>&1
+mv -f .deps/facet.Tpo .deps/facet.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT cell.lo -MD -MP -MF .deps/cell.Tpo -c -o cell.lo cell.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT cell.lo -MD -MP -MF .deps/cell.Tpo -c cell.c  -fPIC -DPIC -o .libs/cell.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT cell.lo -MD -MP -MF .deps/cell.Tpo -c cell.c -o cell.o >/dev/null 2>&1
+mv -f .deps/cell.Tpo .deps/cell.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT volume.lo -MD -MP -MF .deps/volume.Tpo -c -o volume.lo volume.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT volume.lo -MD -MP -MF .deps/volume.Tpo -c volume.c  -fPIC -DPIC -o .libs/volume.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT volume.lo -MD -MP -MF .deps/volume.Tpo -c volume.c -o volume.o >/dev/null 2>&1
+mv -f .deps/volume.Tpo .deps/volume.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT delaunay.lo -MD -MP -MF .deps/delaunay.Tpo -c -o delaunay.lo delaunay.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT delaunay.lo -MD -MP -MF .deps/delaunay.Tpo -c delaunay.c  -fPIC -DPIC -o .libs/delaunay.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT delaunay.lo -MD -MP -MF .deps/delaunay.Tpo -c delaunay.c -o delaunay.o >/dev/null 2>&1
+mv -f .deps/delaunay.Tpo .deps/delaunay.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT util.lo -MD -MP -MF .deps/util.Tpo -c -o util.lo util.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT util.lo -MD -MP -MF .deps/util.Tpo -c util.c  -fPIC -DPIC -o .libs/util.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT util.lo -MD -MP -MF .deps/util.Tpo -c util.c -o util.o >/dev/null 2>&1
+mv -f .deps/util.Tpo .deps/util.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT gtv-logging.lo -MD -MP -MF .deps/gtv-logging.Tpo -c -o gtv-logging.lo gtv-logging.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT gtv-logging.lo -MD -MP -MF .deps/gtv-logging.Tpo -c gtv-logging.c  -fPIC -DPIC -o .libs/gtv-logging.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT gtv-logging.lo -MD -MP -MF .deps/gtv-logging.Tpo -c gtv-logging.c -o gtv-logging.o >/dev/null 2>&1
+mv -f .deps/gtv-logging.Tpo .deps/gtv-logging.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT locate.lo -MD -MP -MF .deps/locate.Tpo -c -o locate.lo locate.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT locate.lo -MD -MP -MF .deps/locate.Tpo -c locate.c  -fPIC -DPIC -o .libs/locate.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT locate.lo -MD -MP -MF .deps/locate.Tpo -c locate.c -o locate.o >/dev/null 2>&1
+mv -f .deps/locate.Tpo .deps/locate.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT geometry.lo -MD -MP -MF .deps/geometry.Tpo -c -o geometry.lo geometry.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT geometry.lo -MD -MP -MF .deps/geometry.Tpo -c geometry.c  -fPIC -DPIC -o .libs/geometry.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT geometry.lo -MD -MP -MF .deps/geometry.Tpo -c geometry.c -o geometry.o >/dev/null 2>&1
+mv -f .deps/geometry.Tpo .deps/geometry.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\"    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT matrix.lo -MD -MP -MF .deps/matrix.Tpo -c -o matrix.lo matrix.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT matrix.lo -MD -MP -MF .deps/matrix.Tpo -c matrix.c  -fPIC -DPIC -o .libs/matrix.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I/home/michael/Codes/include -DG_LOG_DOMAIN=\"GTV\" -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT matrix.lo -MD -MP -MF .deps/matrix.Tpo -c matrix.c -o matrix.o >/dev/null 2>&1
+mv -f .deps/matrix.Tpo .deps/matrix.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -version-info 0:0:0 -release 0.1 -export-dynamic -L/usr/lib -lgts -lglib-2.0 -lm -o libgtv.la -rpath /home/michael/Codes/lib predicates.lo parents.lo tetrahedron.lo facet.lo cell.lo volume.lo delaunay.lo util.lo gtv-logging.lo locate.lo geometry.lo matrix.lo  -L/usr/lib -lgts -lglib-2.0 -lm -lm 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/predicates.o .libs/parents.o .libs/tetrahedron.o .libs/facet.o .libs/cell.o .libs/volume.o .libs/delaunay.o .libs/util.o .libs/gtv-logging.o .libs/locate.o .libs/geometry.o .libs/matrix.o   -L/usr/lib /usr/lib64/libgts.so /usr/lib64/libglib-2.0.so -lpthread -lm  -g -O2   -Wl,-soname -Wl,libgtv-0.1.so.0 -o .libs/libgtv-0.1.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libgtv-0.1.so.0" && ln -s "libgtv-0.1.so.0.0.0" "libgtv-0.1.so.0")
+libtool: link: (cd ".libs" && rm -f "libgtv.so" && ln -s "libgtv-0.1.so.0.0.0" "libgtv.so")
+libtool: link: ar cru .libs/libgtv.a  predicates.o parents.o tetrahedron.o facet.o cell.o volume.o delaunay.o util.o gtv-logging.o locate.o geometry.o matrix.o
+libtool: link: ranlib .libs/libgtv.a
+libtool: link: ( cd ".libs" && rm -f "libgtv.la" && ln -s "../libgtv.la" "libgtv.la" )
+make[3]: Leaving directory '/home/michael/Codes/C/general-tetrahedralized-volume/src'
+make[2]: Leaving directory '/home/michael/Codes/C/general-tetrahedralized-volume/src'
+Making all in tools
+make[2]: Entering directory '/home/michael/Codes/C/general-tetrahedralized-volume/tools'
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../src -I/home/michael/Codes/include    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT gtv-delaunay.o -MD -MP -MF .deps/gtv-delaunay.Tpo -c -o gtv-delaunay.o gtv-delaunay.c
+gtv-delaunay.c: In function 'main':
+gtv-delaunay.c:85:12: warning: variable 'delete_last_vertex' set but not used [-Wunused-but-set-variable]
+   gboolean delete_last_vertex ;
+            ^
+mv -f .deps/gtv-delaunay.Tpo .deps/gtv-delaunay.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include  -L/usr/lib -lgts -lglib-2.0 -lm -o gtv-delaunay gtv-delaunay.o ../src/.libs/libgtv.a  -L/usr/lib -lgts -lglib-2.0 -lm -lm 
+libtool: link: gcc -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -o gtv-delaunay gtv-delaunay.o  -L/usr/lib ../src/.libs/libgtv.a /usr/lib64/libgts.so /usr/lib64/libglib-2.0.so -lpthread -lm
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../src -I/home/michael/Codes/include    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT gtv-cube.o -MD -MP -MF .deps/gtv-cube.Tpo -c -o gtv-cube.o gtv-cube.c
+gtv-cube.c: In function 'main':
+gtv-cube.c:45:49: warning: variable 'v8' set but not used [-Wunused-but-set-variable]
+   GtsVertex *v1, *v2, *v3, *v4, *v5, *v6, *v7, *v8, *v9 ;
+                                                 ^
+gtv-cube.c:45:44: warning: variable 'v7' set but not used [-Wunused-but-set-variable]
+   GtsVertex *v1, *v2, *v3, *v4, *v5, *v6, *v7, *v8, *v9 ;
+                                            ^
+gtv-cube.c:45:39: warning: variable 'v6' set but not used [-Wunused-but-set-variable]
+   GtsVertex *v1, *v2, *v3, *v4, *v5, *v6, *v7, *v8, *v9 ;
+                                       ^
+gtv-cube.c:45:34: warning: variable 'v5' set but not used [-Wunused-but-set-variable]
+   GtsVertex *v1, *v2, *v3, *v4, *v5, *v6, *v7, *v8, *v9 ;
+                                  ^
+mv -f .deps/gtv-cube.Tpo .deps/gtv-cube.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include  -L/usr/lib -lgts -lglib-2.0 -lm -o gtv-cube gtv-cube.o ../src/.libs/libgtv.a  -L/usr/lib -lgts -lglib-2.0 -lm -lm 
+libtool: link: gcc -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -o gtv-cube gtv-cube.o  -L/usr/lib ../src/.libs/libgtv.a /usr/lib64/libgts.so /usr/lib64/libglib-2.0.so -lpthread -lm
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../src -I/home/michael/Codes/include    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT gtv-check.o -MD -MP -MF .deps/gtv-check.Tpo -c -o gtv-check.o gtv-check.c
+gtv-check.c: In function 'main':
+gtv-check.c:46:17: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+   FILE *input, *output ;
+                 ^
+mv -f .deps/gtv-check.Tpo .deps/gtv-check.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include  -L/usr/lib -lgts -lglib-2.0 -lm -o gtv-check gtv-check.o ../src/.libs/libgtv.a  -L/usr/lib -lgts -lglib-2.0 -lm -lm 
+libtool: link: gcc -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -o gtv-check gtv-check.o  -L/usr/lib ../src/.libs/libgtv.a /usr/lib64/libgts.so /usr/lib64/libglib-2.0.so -lpthread -lm
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../src -I/home/michael/Codes/include    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT gtv2msh.o -MD -MP -MF .deps/gtv2msh.Tpo -c -o gtv2msh.o gtv2msh.c
+mv -f .deps/gtv2msh.Tpo .deps/gtv2msh.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include  -L/usr/lib -lgts -lglib-2.0 -lm -o gtv2msh gtv2msh.o ../src/.libs/libgtv.a  -L/usr/lib -lgts -lglib-2.0 -lm -lm 
+libtool: link: gcc -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -o gtv2msh gtv2msh.o  -L/usr/lib ../src/.libs/libgtv.a /usr/lib64/libgts.so /usr/lib64/libglib-2.0.so -lpthread -lm
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../src -I/home/michael/Codes/include    -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -MT msh2gtv.o -MD -MP -MF .deps/msh2gtv.Tpo -c -o msh2gtv.o msh2gtv.c
+mv -f .deps/msh2gtv.Tpo .deps/msh2gtv.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include  -L/usr/lib -lgts -lglib-2.0 -lm -o msh2gtv msh2gtv.o ../src/.libs/libgtv.a  -L/usr/lib -lgts -lglib-2.0 -lm -lm 
+libtool: link: gcc -g -O2 -Wall -Werror-implicit-function-declaration -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include -o msh2gtv msh2gtv.o  -L/usr/lib ../src/.libs/libgtv.a /usr/lib64/libgts.so /usr/lib64/libglib-2.0.so -lpthread -lm
+make[2]: Leaving directory '/home/michael/Codes/C/general-tetrahedralized-volume/tools'
+Making all in doc
+make[2]: Entering directory '/home/michael/Codes/C/general-tetrahedralized-volume/doc'
+Making all in html
+make[3]: Entering directory '/home/michael/Codes/C/general-tetrahedralized-volume/doc/html'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/michael/Codes/C/general-tetrahedralized-volume/doc/html'
+make[3]: Entering directory '/home/michael/Codes/C/general-tetrahedralized-volume/doc'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/michael/Codes/C/general-tetrahedralized-volume/doc'
+make[2]: Leaving directory '/home/michael/Codes/C/general-tetrahedralized-volume/doc'
+make[2]: Entering directory '/home/michael/Codes/C/general-tetrahedralized-volume'
+make[2]: Leaving directory '/home/michael/Codes/C/general-tetrahedralized-volume'
+make[1]: Leaving directory '/home/michael/Codes/C/general-tetrahedralized-volume'

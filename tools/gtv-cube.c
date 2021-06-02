@@ -42,7 +42,7 @@
 gint main(gint argc, gchar **argv)
 
 {
-  GtsVertex *v1, *v2, *v3, *v4, *v5, *v6, *v7, *v8, *v9 ;
+  GtsVertex *v1, *v2, *v3, *v4, *v9 ; /* *v5, *v6, *v7, *v8, *v9 ; */
   GtsEdge *e1, *e2, *e3, *e4, *e5, *e6, *e7, *e8, *e9 ;
   GtvFacet *f1, *f2, *f3, *f4 ;
   GtvCell *c ;
@@ -85,10 +85,10 @@ gint main(gint argc, gchar **argv)
   v2 = gts_vertex_new(gts_vertex_class(), len, -len, -len) ;
   v3 = gts_vertex_new(gts_vertex_class(), len, len, -len) ;
   v4 = gts_vertex_new(gts_vertex_class(), -len, len, -len) ;
-  v5 = gts_vertex_new(gts_vertex_class(), -len, -len, len) ;
-  v6 = gts_vertex_new(gts_vertex_class(), len, -len, len) ;
-  v7 = gts_vertex_new(gts_vertex_class(), len, len, len) ;
-  v8 = gts_vertex_new(gts_vertex_class(), -len, len, len) ;
+  /* v5 = gts_vertex_new(gts_vertex_class(), -len, -len, len) ; */
+  /* v6 = gts_vertex_new(gts_vertex_class(), len, -len, len) ; */
+  /* v7 = gts_vertex_new(gts_vertex_class(), len, len, len) ; */
+  /* v8 = gts_vertex_new(gts_vertex_class(), -len, len, len) ; */
   v9 = gts_vertex_new(gts_vertex_class(), 0, 0, 0) ;
 
   e1 = gts_edge_new(gts_edge_class(), v1, v2) ;

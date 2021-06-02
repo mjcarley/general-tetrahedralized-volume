@@ -22,7 +22,7 @@
 gts_libs="-L/usr/lib -lgts -lglib-2.0 -lm"
 gts_cflags="-I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include"
 
-prefix=/home/ensmjc/Codes
+prefix=/home/michael/Codes
 exec_prefix=${prefix}
 includedir=${prefix}/include
 

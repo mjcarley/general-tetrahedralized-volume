@@ -82,7 +82,7 @@ gint main(gint argc, gchar **argv)
   GtsFile *fid ;
   gboolean remove_hull, check_delaunay, read_volume, 
     write_volume, write_times ;
-  gboolean delete_last_vertex ;
+  /* gboolean delete_last_vertex ; */
   gchar *tetgen_stub = NULL ;
   gchar ch ;
   GLogLevelFlags log_level ;
@@ -92,7 +92,7 @@ gint main(gint argc, gchar **argv)
   len = 4.0 ; log_level = G_LOG_LEVEL_MESSAGE ;
   remove_hull = FALSE ; check_delaunay = FALSE ;
   write_volume = TRUE ; read_volume = FALSE ; write_times = FALSE ;
-  delete_last_vertex = FALSE ;
+  /* delete_last_vertex = FALSE ; */
   while ( (ch = getopt(argc, argv, "cdDhl:L:rt:Tw")) != EOF ) {
     switch (ch) {
     default: 
@@ -126,7 +126,7 @@ gint main(gint argc, gchar **argv)
     case 'T': write_times = TRUE ; break ;
     case 'w': write_volume = FALSE ; break ;
       /*undocumented options used for testing*/
-    case 'D': delete_last_vertex = TRUE ; break ;
+    /* case 'D': delete_last_vertex = TRUE ; break ; */
     }
   }
 

@@ -43,7 +43,8 @@ gint main(gint argc, gchar **argv)
 
 {
   GtvVolume *v ;
-  FILE *input, *output ;
+  FILE *input ;
+  /* , *output ; */
   GtsFile *fid ;
   gchar ch ;
   GLogLevelFlags log_level ;
@@ -82,7 +83,8 @@ gint main(gint argc, gchar **argv)
 		     gts_edge_class(),
 		     gts_vertex_class()) ;
 
-  input = stdin ; output = stdout ;
+  input = stdin ;
+  /* output = stdout ; */
 
   fid = gts_file_new(input) ;
 

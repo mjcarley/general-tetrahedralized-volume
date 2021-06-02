@@ -99,7 +99,7 @@ GtvFacet *facet_new_from_vertices(GtvFacetClass *klass,
 /* 				    GtsVertex *v3) ; */
 gchar *intersection_status(GtvIntersect status) ;
 
-inline void invert3x3(gdouble *Ai, gdouble *A) ;
+/* inline void invert3x3(gdouble *Ai, gdouble *A) ; */
 /* inline void multiply3x1(gdouble y[], gdouble *A, gdouble x[]) ; */
 void invert4x4(gdouble *Ai, gdouble *A) ;
 
@@ -112,7 +112,7 @@ void invert4x4(gdouble *Ai, gdouble *A) ;
 				(box->y1-box->y2)*(box->y1-box->y2) + \
 				(box->z1-box->z2)*(box->z1-box->z2)))
 
-void amm_evaluate_scalar(GNode *tree, gpointer data[]) ;
-void amm_evaluate_curl(GNode *tree, gpointer data[]) ;
+/* void amm_evaluate_scalar(GNode *tree, gpointer data[]) ; */
+/* void amm_evaluate_curl(GNode *tree, gpointer data[]) ; */
 
 #endif /* GTV_PRIVATE_INCLUDED*/
