@@ -7,6 +7,11 @@ no more than:
   make
   make install
 
+You will need to have the GNU Triangulated Surface (GTS) library
+installed. You can get it from
+
+http://gts.sourceforge.net/
+
 Type ./configure --help for more information on options and on where
 things are installed.
 

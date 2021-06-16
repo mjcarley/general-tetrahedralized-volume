@@ -1,40 +1,73 @@
 \section{Point location in a volume}
 \label{group__locate}\index{Point location in a volume@{Point location in a volume}}
 \subsection*{Functions}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-{\bf GtvCell} $\ast$ {\bf gtv\_\-point\_\-locate\_\-slow} (GtsPoint $\ast$p, {\bf GtvVolume} $\ast$volume, {\bf GtvCell} $\ast$guess)
+{\bf Gtv\+Cell} $\ast$ {\bf gtv\+\_\+point\+\_\+locate\+\_\+slow} (Gts\+Point $\ast$p, {\bf Gtv\+Volume} $\ast$volume, {\bf Gtv\+Cell} $\ast$guess)
 \item 
-{\bf GtvCell} $\ast$ {\bf gtv\_\-point\_\-locate} (GtsPoint $\ast$p, {\bf GtvVolume} $\ast$volume, {\bf GtvCell} $\ast$guess)
-\end{CompactItemize}
+{\bf Gtv\+Cell} $\ast$ {\bf gtv\+\_\+point\+\_\+locate} (Gts\+Point $\ast$p, {\bf Gtv\+Volume} $\ast$volume, {\bf Gtv\+Cell} $\ast$guess)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
 
 
 \subsection{Function Documentation}
-\index{locate@{locate}!gtv_point_locate@{gtv\_\-point\_\-locate}}
-\index{gtv_point_locate@{gtv\_\-point\_\-locate}!locate@{locate}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-point\_\-locate (GtsPoint $\ast$ {\em p}, {\bf GtvVolume} $\ast$ {\em volume}, {\bf GtvCell} $\ast$ {\em guess})}\label{group__locate_gdf51c0d369beced1cd73c1196f0ad08a}
+\index{Point location in a volume@{Point location in a volume}!gtv\+\_\+point\+\_\+locate@{gtv\+\_\+point\+\_\+locate}}
+\index{gtv\+\_\+point\+\_\+locate@{gtv\+\_\+point\+\_\+locate}!Point location in a volume@{Point location in a volume}}
+\subsubsection[{gtv\+\_\+point\+\_\+locate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Cell}$\ast$ gtv\+\_\+point\+\_\+locate (
+\begin{DoxyParamCaption}
+\item[{Gts\+Point $\ast$}]{p, }
+\item[{{\bf Gtv\+Volume} $\ast$}]{volume, }
+\item[{{\bf Gtv\+Cell} $\ast$}]{guess}
+\end{DoxyParamCaption}
+)}\label{group__locate_gadf51c0d369beced1cd73c1196f0ad08a}
+Locate a point in a triangulation using a remembering stochastic walk (Olivier Devillers, Sylvain Pion and Monique Teillaud, 2002, {\tt `\+Walking in a triangulation\textquotesingle{}}, International Journal of Foundations in Computer Science, 13\+:181--199). Note that at present this will not work for volumes with holes in their interior.
 
 
-Locate a point in a triangulation using a remembering stochastic walk (Olivier Devillers, Sylvain Pion and Monique Teillaud, 2002, {\tt `Walking in a triangulation'}, International Journal of Foundations in Computer Science, 13:181--199). Note that at present this will not work for volumes with holes in their interior.
+\begin{DoxyParams}{Parameters}
+{\em p} & a Gts\+Point to locate; \\
+\hline
+{\em volume} & a \doxyref{Gtv\+Volume}{p.}{structGtvVolume}; \\
+\hline
+{\em guess} & a \doxyref{Gtv\+Cell}{p.}{structGtvCell} which is an initial guess for a cell containing {\itshape p} or N\+U\+L\+L.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \doxyref{Gtv\+Cell}{p.}{structGtvCell} containing {\itshape p} or N\+U\+L\+L if {\itshape p} is not in {\itshape volume}. 
+\end{DoxyReturn}
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em p}]a GtsPoint to locate; \item[{\em volume}]a \doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em guess}]a \doxyref{GtvCell}{p.}{structGtvCell} which is an initial guess for a cell containing {\em p\/} or NULL.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a \doxyref{GtvCell}{p.}{structGtvCell} containing {\em p\/} or NULL if {\em p\/} is not in {\em volume\/}. \end{Desc}
-\index{locate@{locate}!gtv_point_locate_slow@{gtv\_\-point\_\-locate\_\-slow}}
-\index{gtv_point_locate_slow@{gtv\_\-point\_\-locate\_\-slow}!locate@{locate}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-point\_\-locate\_\-slow (GtsPoint $\ast$ {\em p}, {\bf GtvVolume} $\ast$ {\em volume}, {\bf GtvCell} $\ast$ {\em guess})}\label{group__locate_g16a258eeb1c5bfb9c53ff0a162fa2684}
+
+References gtv\+\_\+point\+\_\+in\+\_\+tetrahedron(), and gtv\+\_\+tetrahedron\+\_\+opposite().
 
 
-Find a \doxyref{GtvCell}{p.}{structGtvCell} in a given volume which encloses a GtsPoint by sequentially testing the cells. This is not a very good way of locating a point but it does work and can be used in testing other point location methods.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em p}]a GtsPoint; \item[{\em volume}]a \doxyref{GtvVolume}{p.}{structGtvVolume} to search for the location of {\em p\/}; \item[{\em guess}]ignored, included for compatibility with other location functions.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a \doxyref{GtvCell}{p.}{structGtvCell} containing {\em p\/} or NULL if {\em p\/} is not in {\em v\/}. \end{Desc}
+Referenced by gtv\+\_\+delaunay\+\_\+add\+\_\+vertex().
+
+\index{Point location in a volume@{Point location in a volume}!gtv\+\_\+point\+\_\+locate\+\_\+slow@{gtv\+\_\+point\+\_\+locate\+\_\+slow}}
+\index{gtv\+\_\+point\+\_\+locate\+\_\+slow@{gtv\+\_\+point\+\_\+locate\+\_\+slow}!Point location in a volume@{Point location in a volume}}
+\subsubsection[{gtv\+\_\+point\+\_\+locate\+\_\+slow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Cell}$\ast$ gtv\+\_\+point\+\_\+locate\+\_\+slow (
+\begin{DoxyParamCaption}
+\item[{Gts\+Point $\ast$}]{p, }
+\item[{{\bf Gtv\+Volume} $\ast$}]{volume, }
+\item[{{\bf Gtv\+Cell} $\ast$}]{guess}
+\end{DoxyParamCaption}
+)}\label{group__locate_ga16a258eeb1c5bfb9c53ff0a162fa2684}
+Find a \doxyref{Gtv\+Cell}{p.}{structGtvCell} in a given volume which encloses a \+::\+Gts\+Point by sequentially testing the cells. This is not a very good way of locating a point but it does work and can be used in testing other point location methods.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & a \+::\+Gts\+Point; \\
+\hline
+{\em volume} & a \doxyref{Gtv\+Volume}{p.}{structGtvVolume} to search for the location of {\itshape p}; \\
+\hline
+{\em guess} & ignored, included for compatibility with other location functions.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \doxyref{Gtv\+Cell}{p.}{structGtvCell} containing {\itshape p} or N\+U\+L\+L if {\itshape p} is not in {\itshape v}. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+point\+\_\+in\+\_\+tetrahedron(), and gtv\+\_\+volume\+\_\+foreach\+\_\+cell().
+

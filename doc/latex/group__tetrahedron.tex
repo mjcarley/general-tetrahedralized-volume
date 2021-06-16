@@ -1,589 +1,1051 @@
 \section{Tetrahedra}
 \label{group__tetrahedron}\index{Tetrahedra@{Tetrahedra}}
 \subsection*{Data Structures}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-struct {\bf GtvTetrahedron}
+struct {\bf Gtv\+Tetrahedron}
 \item 
-struct {\bf GtvTetrahedronClass}
-\end{CompactItemize}
+struct {\bf Gtv\+Tetrahedron\+Class}
+\end{DoxyCompactItemize}
 \subsection*{Functions}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-{\bf GtvTetrahedronClass} $\ast$ {\bf gtv\_\-tetrahedron\_\-class} (void)
+{\bf Gtv\+Tetrahedron\+Class} $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+class} (void)
 \item 
-gint {\bf gtv\_\-tetrahedron\_\-set} ({\bf GtvTetrahedron} $\ast$tetrahedron, {\bf GtvFacet} $\ast$f1, {\bf GtvFacet} $\ast$f2, {\bf GtvFacet} $\ast$f3, {\bf GtvFacet} $\ast$f4)
+gint {\bf gtv\+\_\+tetrahedron\+\_\+set} ({\bf Gtv\+Tetrahedron} $\ast$tetrahedron, {\bf Gtv\+Facet} $\ast$f1, {\bf Gtv\+Facet} $\ast$f2, {\bf Gtv\+Facet} $\ast$f3, {\bf Gtv\+Facet} $\ast$f4)
 \item 
-{\bf GtvTetrahedron} $\ast$ {\bf gtv\_\-tetrahedron\_\-new} ({\bf GtvTetrahedronClass} $\ast$klass, {\bf GtvFacet} $\ast$f1, {\bf GtvFacet} $\ast$f2, {\bf GtvFacet} $\ast$f3, {\bf GtvFacet} $\ast$f4)
+{\bf Gtv\+Tetrahedron} $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+new} ({\bf Gtv\+Tetrahedron\+Class} $\ast$klass, {\bf Gtv\+Facet} $\ast$f1, {\bf Gtv\+Facet} $\ast$f2, {\bf Gtv\+Facet} $\ast$f3, {\bf Gtv\+Facet} $\ast$f4)
 \item 
-gint {\bf gtv\_\-tetrahedron\_\-vertices} ({\bf GtvTetrahedron} $\ast$t, GtsVertex $\ast$$\ast$v1, GtsVertex $\ast$$\ast$v2, GtsVertex $\ast$$\ast$v3, GtsVertex $\ast$$\ast$v4)
+gint {\bf gtv\+\_\+tetrahedron\+\_\+vertices} ({\bf Gtv\+Tetrahedron} $\ast$t, Gts\+Vertex $\ast$$\ast$v1, Gts\+Vertex $\ast$$\ast$v2, Gts\+Vertex $\ast$$\ast$v3, Gts\+Vertex $\ast$$\ast$v4)
 \item 
-gdouble {\bf gtv\_\-tetrahedron\_\-volume} ({\bf GtvTetrahedron} $\ast$t)
+gdouble {\bf gtv\+\_\+tetrahedron\+\_\+volume} ({\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-gboolean {\bf gtv\_\-tetrahedron\_\-has\_\-facet} ({\bf GtvTetrahedron} $\ast$t, {\bf GtvFacet} $\ast$f)
+gboolean {\bf gtv\+\_\+tetrahedron\+\_\+has\+\_\+facet} ({\bf Gtv\+Tetrahedron} $\ast$t, {\bf Gtv\+Facet} $\ast$f)
 \item 
-{\bf GtvTetrahedron} $\ast$ {\bf gtv\_\-tetrahedron\_\-from\_\-facets} ({\bf GtvFacet} $\ast$f1, {\bf GtvFacet} $\ast$f2, {\bf GtvFacet} $\ast$f3, {\bf GtvFacet} $\ast$f4)
+{\bf Gtv\+Tetrahedron} $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets} ({\bf Gtv\+Facet} $\ast$f1, {\bf Gtv\+Facet} $\ast$f2, {\bf Gtv\+Facet} $\ast$f3, {\bf Gtv\+Facet} $\ast$f4)
 \item 
-{\bf GtvTetrahedron} $\ast$ {\bf gtv\_\-tetrahedron\_\-is\_\-duplicate} ({\bf GtvTetrahedron} $\ast$t)
+{\bf Gtv\+Tetrahedron} $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+is\+\_\+duplicate} ({\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-gdouble {\bf gtv\_\-point\_\-in\_\-tetrahedron\_\-sphere} (GtsPoint $\ast$p, {\bf GtvTetrahedron} $\ast$t)
+gdouble {\bf gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere} (Gts\+Point $\ast$p, {\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-{\bf GtvIntersect} {\bf gtv\_\-point\_\-in\_\-tetrahedron} (GtsPoint $\ast$p, {\bf GtvTetrahedron} $\ast$t, gpointer $\ast$s)
+{\bf Gtv\+Intersect} {\bf gtv\+\_\+point\+\_\+in\+\_\+tetrahedron} (Gts\+Point $\ast$p, {\bf Gtv\+Tetrahedron} $\ast$t, gpointer $\ast$s)
 \item 
-{\bf GtvTetrahedron} $\ast$ {\bf gtv\_\-tetrahedron\_\-large} ({\bf GtvTetrahedronClass} $\ast$klass, {\bf GtvFacetClass} $\ast$facet\_\-class, GtsEdgeClass $\ast$edge\_\-class, GtsVertexClass $\ast$vertex\_\-class, gdouble len)
+{\bf Gtv\+Tetrahedron} $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+large} ({\bf Gtv\+Tetrahedron\+Class} $\ast$klass, {\bf Gtv\+Facet\+Class} $\ast$facet\+\_\+class, Gts\+Edge\+Class $\ast$edge\+\_\+class, Gts\+Vertex\+Class $\ast$vertex\+\_\+class, gdouble len)
 \item 
-{\bf GtvTetrahedron} $\ast$ {\bf gtv\_\-tetrahedron\_\-equilateral} ({\bf GtvTetrahedronClass} $\ast$klass, {\bf GtvFacetClass} $\ast$facet\_\-class, GtsEdgeClass $\ast$edge\_\-class, GtsVertexClass $\ast$vertex\_\-class, gdouble len)
+{\bf Gtv\+Tetrahedron} $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+equilateral} ({\bf Gtv\+Tetrahedron\+Class} $\ast$klass, {\bf Gtv\+Facet\+Class} $\ast$facet\+\_\+class, Gts\+Edge\+Class $\ast$edge\+\_\+class, Gts\+Vertex\+Class $\ast$vertex\+\_\+class, gdouble len)
 \item 
-{\bf GtvFacet} $\ast$ {\bf gtv\_\-tetrahedra\_\-common\_\-facet} ({\bf GtvTetrahedron} $\ast$t1, {\bf GtvTetrahedron} $\ast$t2)
+{\bf Gtv\+Facet} $\ast$ {\bf gtv\+\_\+tetrahedra\+\_\+common\+\_\+facet} ({\bf Gtv\+Tetrahedron} $\ast$t1, {\bf Gtv\+Tetrahedron} $\ast$t2)
 \item 
-{\bf GtvTetrahedron} $\ast$ {\bf gtv\_\-tetrahedron\_\-opposite} ({\bf GtvTetrahedron} $\ast$t, {\bf GtvFacet} $\ast$f)
+{\bf Gtv\+Tetrahedron} $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+opposite} ({\bf Gtv\+Tetrahedron} $\ast$t, {\bf Gtv\+Facet} $\ast$f)
 \item 
-gdouble {\bf gtv\_\-tetrahedron\_\-orientation} ({\bf GtvTetrahedron} $\ast$t)
+gdouble {\bf gtv\+\_\+tetrahedron\+\_\+orientation} ({\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-gint {\bf gtv\_\-tetrahedron\_\-facets} ({\bf GtvTetrahedron} $\ast$t, {\bf GtvFacet} $\ast$$\ast$f1, {\bf GtvFacet} $\ast$$\ast$f2, {\bf GtvFacet} $\ast$$\ast$f3, {\bf GtvFacet} $\ast$$\ast$f4)
+gint {\bf gtv\+\_\+tetrahedron\+\_\+facets} ({\bf Gtv\+Tetrahedron} $\ast$t, {\bf Gtv\+Facet} $\ast$$\ast$f1, {\bf Gtv\+Facet} $\ast$$\ast$f2, {\bf Gtv\+Facet} $\ast$$\ast$f3, {\bf Gtv\+Facet} $\ast$$\ast$f4)
 \item 
-gint {\bf gtv\_\-tetrahedron\_\-invert} ({\bf GtvTetrahedron} $\ast$t)
+gint {\bf gtv\+\_\+tetrahedron\+\_\+invert} ({\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-GtsVertex $\ast$ {\bf gtv\_\-tetrahedron\_\-vertex\_\-opposite} ({\bf GtvTetrahedron} $\ast$t, {\bf GtvFacet} $\ast$f)
+Gts\+Vertex $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite} ({\bf Gtv\+Tetrahedron} $\ast$t, {\bf Gtv\+Facet} $\ast$f)
 \item 
-{\bf GtvFacet} $\ast$ {\bf gtv\_\-tetrahedron\_\-facet\_\-opposite} ({\bf GtvTetrahedron} $\ast$t, GtsVertex $\ast$v)
+{\bf Gtv\+Facet} $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+facet\+\_\+opposite} ({\bf Gtv\+Tetrahedron} $\ast$t, Gts\+Vertex $\ast$v)
 \item 
-gboolean {\bf gtv\_\-tetrahedron\_\-is\_\-okay} ({\bf GtvTetrahedron} $\ast$t)
+gboolean {\bf gtv\+\_\+tetrahedron\+\_\+is\+\_\+okay} ({\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-{\bf GtvTetrahedron} $\ast$ {\bf gtv\_\-tetrahedron\_\-new\_\-from\_\-vertices} ({\bf GtvTetrahedronClass} $\ast$klass, {\bf GtvFacetClass} $\ast$facet\_\-class, GtsEdgeClass $\ast$edge\_\-class, GtsVertex $\ast$v1, GtsVertex $\ast$v2, GtsVertex $\ast$v3, GtsVertex $\ast$v4)
+{\bf Gtv\+Tetrahedron} $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+new\+\_\+from\+\_\+vertices} ({\bf Gtv\+Tetrahedron\+Class} $\ast$klass, {\bf Gtv\+Facet\+Class} $\ast$facet\+\_\+class, Gts\+Edge\+Class $\ast$edge\+\_\+class, Gts\+Vertex $\ast$v1, Gts\+Vertex $\ast$v2, Gts\+Vertex $\ast$v3, Gts\+Vertex $\ast$v4)
 \item 
-{\bf GtvTetrahedron} $\ast$ {\bf gtv\_\-tetrahedron\_\-from\_\-vertices} (GtsVertex $\ast$v1, GtsVertex $\ast$v2, GtsVertex $\ast$v3, GtsVertex $\ast$v4)
+{\bf Gtv\+Tetrahedron} $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+from\+\_\+vertices} (Gts\+Vertex $\ast$v1, Gts\+Vertex $\ast$v2, Gts\+Vertex $\ast$v3, Gts\+Vertex $\ast$v4)
 \item 
-gboolean {\bf gtv\_\-tetrahedron\_\-has\_\-edge} ({\bf GtvTetrahedron} $\ast$t, GtsEdge $\ast$e)
+gboolean {\bf gtv\+\_\+tetrahedron\+\_\+has\+\_\+edge} ({\bf Gtv\+Tetrahedron} $\ast$t, Gts\+Edge $\ast$e)
 \item 
-gboolean {\bf gtv\_\-tetrahedron\_\-has\_\-vertex} ({\bf GtvTetrahedron} $\ast$t, GtsVertex $\ast$v)
+gboolean {\bf gtv\+\_\+tetrahedron\+\_\+has\+\_\+vertex} ({\bf Gtv\+Tetrahedron} $\ast$t, Gts\+Vertex $\ast$v)
 \item 
-{\bf GtvTetrahedron} $\ast$ {\bf gtv\_\-tetrahedra\_\-wedge\_\-neighbour} ({\bf GtvTetrahedron} $\ast$t1, {\bf GtvTetrahedron} $\ast$t2)
+{\bf Gtv\+Tetrahedron} $\ast$ {\bf gtv\+\_\+tetrahedra\+\_\+wedge\+\_\+neighbour} ({\bf Gtv\+Tetrahedron} $\ast$t1, {\bf Gtv\+Tetrahedron} $\ast$t2)
 \item 
-{\bf GtvFacet} $\ast$ {\bf gtv\_\-point\_\-in\_\-tetrahedron\_\-facet} ({\bf GtvTetrahedron} $\ast$t, GtsPoint $\ast$p)
+{\bf Gtv\+Facet} $\ast$ {\bf gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+facet} ({\bf Gtv\+Tetrahedron} $\ast$t, Gts\+Point $\ast$p)
 \item 
-gint {\bf gtv\_\-tetrahedron\_\-vertices\_\-off\_\-edge} ({\bf GtvTetrahedron} $\ast$t, GtsEdge $\ast$e, GtsVertex $\ast$$\ast$a, GtsVertex $\ast$$\ast$b)
+gint {\bf gtv\+\_\+tetrahedron\+\_\+vertices\+\_\+off\+\_\+edge} ({\bf Gtv\+Tetrahedron} $\ast$t, Gts\+Edge $\ast$e, Gts\+Vertex $\ast$$\ast$a, Gts\+Vertex $\ast$$\ast$b)
 \item 
-gint {\bf gtv\_\-tetrahedron\_\-opposite\_\-vertices} ({\bf GtvTetrahedron} $\ast$t, GtsVertex $\ast$v, GtsVertex $\ast$$\ast$v1, GtsVertex $\ast$$\ast$v2, GtsVertex $\ast$$\ast$v3)
+gint {\bf gtv\+\_\+tetrahedron\+\_\+opposite\+\_\+vertices} ({\bf Gtv\+Tetrahedron} $\ast$t, Gts\+Vertex $\ast$v, Gts\+Vertex $\ast$$\ast$v1, Gts\+Vertex $\ast$$\ast$v2, Gts\+Vertex $\ast$$\ast$v3)
 \item 
-gint {\bf gtv\_\-tetrahedron\_\-orient} ({\bf GtvTetrahedron} $\ast$t)
+gint {\bf gtv\+\_\+tetrahedron\+\_\+orient} ({\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-GtsVertex $\ast$ {\bf gtv\_\-tetrahedron\_\-is\_\-encroached} ({\bf GtvTetrahedron} $\ast$t)
+Gts\+Vertex $\ast$ {\bf gtv\+\_\+tetrahedron\+\_\+is\+\_\+encroached} ({\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-gdouble {\bf gtv\_\-tetrahedron\_\-inradius} ({\bf GtvTetrahedron} $\ast$t)
+gdouble {\bf gtv\+\_\+tetrahedron\+\_\+inradius} ({\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-gdouble {\bf gtv\_\-tetrahedron\_\-circumradius} ({\bf GtvTetrahedron} $\ast$t)
+gdouble {\bf gtv\+\_\+tetrahedron\+\_\+circumradius} ({\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-gdouble {\bf gtv\_\-tetrahedron\_\-quality\_\-radius\_\-ratio} ({\bf GtvTetrahedron} $\ast$t)
+gdouble {\bf gtv\+\_\+tetrahedron\+\_\+quality\+\_\+radius\+\_\+ratio} ({\bf Gtv\+Tetrahedron} $\ast$t)
 \item 
-GtsBBox $\ast$ {\bf gtv\_\-bbox\_\-tetrahedra} (GtsBBoxClass $\ast$klass, GSList $\ast$tetrahedra)
+Gts\+B\+Box $\ast$ {\bf gtv\+\_\+bbox\+\_\+tetrahedra} (Gts\+B\+Box\+Class $\ast$klass, G\+S\+List $\ast$tetrahedra)
 \item 
-gint {\bf gtv\_\-tetrahedron\_\-centroid} ({\bf GtvTetrahedron} $\ast$t, GtsPoint $\ast$c)
+gint {\bf gtv\+\_\+tetrahedron\+\_\+centroid} ({\bf Gtv\+Tetrahedron} $\ast$t, Gts\+Point $\ast$c)
 \item 
-gdouble {\bf gtv\_\-tetrahedron\_\-radius\_\-ratio} ({\bf GtvTetrahedron} $\ast$t)
-\end{CompactItemize}
+gdouble {\bf gtv\+\_\+tetrahedron\+\_\+radius\+\_\+ratio} ({\bf Gtv\+Tetrahedron} $\ast$t)
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-A convenience macro for the quality measure of a tetrahedron. This actually calls \doxyref{gtv\_\-tetrahedron\_\-radius\_\-ratio}{p.}{group__tetrahedron_g289dc91b8394c86b59614fb321c088cd}, although the behaviour may change in future. 
+A convenience macro for the quality measure of a tetrahedron. This actually calls \doxyref{gtv\+\_\+tetrahedron\+\_\+radius\+\_\+ratio}{p.}{group__tetrahedron_ga289dc91b8394c86b59614fb321c088cd}, although the behaviour may change in future. 
 
 \subsection{Function Documentation}
-\index{tetrahedron@{tetrahedron}!gtv_bbox_tetrahedra@{gtv\_\-bbox\_\-tetrahedra}}
-\index{gtv_bbox_tetrahedra@{gtv\_\-bbox\_\-tetrahedra}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GtsBBox$\ast$ gtv\_\-bbox\_\-tetrahedra (GtsBBoxClass $\ast$ {\em klass}, GSList $\ast$ {\em tetrahedra})}\label{group__tetrahedron_g831d00ed0f0962b4522a587ab147e0e6}
-
-
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+bbox\+\_\+tetrahedra@{gtv\+\_\+bbox\+\_\+tetrahedra}}
+\index{gtv\+\_\+bbox\+\_\+tetrahedra@{gtv\+\_\+bbox\+\_\+tetrahedra}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+bbox\+\_\+tetrahedra}]{\setlength{\rightskip}{0pt plus 5cm}Gts\+B\+Box$\ast$ gtv\+\_\+bbox\+\_\+tetrahedra (
+\begin{DoxyParamCaption}
+\item[{Gts\+B\+Box\+Class $\ast$}]{klass, }
+\item[{G\+S\+List $\ast$}]{tetrahedra}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga831d00ed0f0962b4522a587ab147e0e6}
 Generate a bounding box a list of tetrahedra
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em klass}]a GtsBBoxClass; \item[{\em tetrahedra}]a GSlist of GtvTetrahedrons.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a GtsBBox which contains the tetrahedra in {\em tetrahedra\/}. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_point_in_tetrahedron@{gtv\_\-point\_\-in\_\-tetrahedron}}
-\index{gtv_point_in_tetrahedron@{gtv\_\-point\_\-in\_\-tetrahedron}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvIntersect} gtv\_\-point\_\-in\_\-tetrahedron (GtsPoint $\ast$ {\em p}, {\bf GtvTetrahedron} $\ast$ {\em t}, gpointer $\ast$ {\em s})}\label{group__tetrahedron_gfe6f43601ea1337939cd0dfbd09c350c}
+
+\begin{DoxyParams}{Parameters}
+{\em klass} & a \+::\+Gts\+B\+Box\+Class; \\
+\hline
+{\em tetrahedra} & a \+::\+G\+Slist of \+::\+Gtv\+Tetrahedrons.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \+::\+Gts\+B\+Box which contains the tetrahedra in {\itshape tetrahedra}. 
+\end{DoxyReturn}
 
 
-Check if a GtsPoint lies in a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}, using the method given by {\tt Gary Herron}.
+References gtv\+\_\+tetrahedron\+\_\+vertices().
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em p}]a GtsPoint; \item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em s}]if NULL, ignored; if not NULL, set to the vertex, edge or facet of {\em t\/} which {\em p\/} intersects, or NULL if {\em p\/} lies strictly inside or strictly outside {\em t\/}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-OUT if {\em p\/} is strictly outside {\em t\/} and GTV\_\-IN if it lies strictly inside {\em t\/}. If {\em p\/} lies on the surface of {\em t\/}, returns GTV\_\-IN if {\em s\/} is NULL, otherwise GTV\_\-ON\_\-FACET, GTV\_\-ON\_\-EDGE or GTV\_\-ON\_\-VERTEX if it lies on a facet, edge or vertex of {\em t\/} respectively. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_point_in_tetrahedron_facet@{gtv\_\-point\_\-in\_\-tetrahedron\_\-facet}}
-\index{gtv_point_in_tetrahedron_facet@{gtv\_\-point\_\-in\_\-tetrahedron\_\-facet}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvFacet}$\ast$ gtv\_\-point\_\-in\_\-tetrahedron\_\-facet ({\bf GtvTetrahedron} $\ast$ {\em t}, GtsPoint $\ast$ {\em p})}\label{group__tetrahedron_g6050dc5a95ed75784b347a16cb1615b9}
-
-
-Find the facet of a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} on which lies a GtsPoint.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em p}]a GtsPoint.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the facet of {\em t\/} which contains {\em p\/}, i.e. {\em p\/} lies in the plane of the facet and inside or on its boundary. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_point_in_tetrahedron_sphere@{gtv\_\-point\_\-in\_\-tetrahedron\_\-sphere}}
-\index{gtv_point_in_tetrahedron_sphere@{gtv\_\-point\_\-in\_\-tetrahedron\_\-sphere}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\_\-point\_\-in\_\-tetrahedron\_\-sphere (GtsPoint $\ast$ {\em p}, {\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_gba1e9b68bb1c5813823de718a89e4f21}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+point\+\_\+in\+\_\+tetrahedron@{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron}}
+\index{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron@{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Intersect} gtv\+\_\+point\+\_\+in\+\_\+tetrahedron (
+\begin{DoxyParamCaption}
+\item[{Gts\+Point $\ast$}]{p, }
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{gpointer $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gafe6f43601ea1337939cd0dfbd09c350c}
+Check if a \+::\+Gts\+Point lies in a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}, using the method given by {\tt Gary Herron}.
 
 
+\begin{DoxyParams}{Parameters}
+{\em p} & a \+::\+Gts\+Point; \\
+\hline
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em s} & if N\+U\+L\+L, ignored; if not N\+U\+L\+L, set to the vertex, edge or facet of {\itshape t} which {\itshape p} intersects, or N\+U\+L\+L if {\itshape p} lies strictly inside or strictly outside {\itshape t}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+T\+V\+\_\+\+O\+U\+T if {\itshape p} is strictly outside {\itshape t} and G\+T\+V\+\_\+\+I\+N if it lies strictly inside {\itshape t}. If {\itshape p} lies on the surface of {\itshape t}, returns G\+T\+V\+\_\+\+I\+N if {\itshape s} is N\+U\+L\+L, otherwise G\+T\+V\+\_\+\+O\+N\+\_\+\+F\+A\+C\+E\+T, G\+T\+V\+\_\+\+O\+N\+\_\+\+E\+D\+G\+E or G\+T\+V\+\_\+\+O\+N\+\_\+\+V\+E\+R\+T\+E\+X if it lies on a facet, edge or vertex of {\itshape t} respectively. 
+\end{DoxyReturn}
+
+
+References G\+T\+V\+\_\+\+I\+N, G\+T\+V\+\_\+\+O\+N, G\+T\+V\+\_\+\+O\+N\+\_\+\+E\+D\+G\+E, G\+T\+V\+\_\+\+O\+N\+\_\+\+F\+A\+C\+E\+T, G\+T\+V\+\_\+\+O\+N\+\_\+\+V\+E\+R\+T\+E\+X, and gtv\+\_\+tetrahedron\+\_\+vertices().
+
+
+
+Referenced by gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell(), gtv\+\_\+point\+\_\+locate(), and gtv\+\_\+point\+\_\+locate\+\_\+slow().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+facet@{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+facet}}
+\index{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+facet@{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+facet}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+facet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Facet}$\ast$ gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+facet (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{Gts\+Point $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga6050dc5a95ed75784b347a16cb1615b9}
+Find the facet of a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} on which lies a \+::\+Gts\+Point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em p} & a \+::\+Gts\+Point.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the facet of {\itshape t} which contains {\itshape p}, i.\+e. {\itshape p} lies in the plane of the facet and inside or on its boundary. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+tetrahedron\+\_\+vertices().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere@{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere}}
+\index{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere@{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere}]{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere (
+\begin{DoxyParamCaption}
+\item[{Gts\+Point $\ast$}]{p, }
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gaba1e9b68bb1c5813823de718a89e4f21}
 Check whether a point lies inside or outside the circumsphere of a tetrahedron.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em p}]a GtsPoint; \item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]positive value if {\em p\/} lies inside {\em t\/}, zero if lies on {\em t\/} and a negative value if it lies outside {\em t\/}. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedra_common_facet@{gtv\_\-tetrahedra\_\-common\_\-facet}}
-\index{gtv_tetrahedra_common_facet@{gtv\_\-tetrahedra\_\-common\_\-facet}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvFacet}$\ast$ gtv\_\-tetrahedra\_\-common\_\-facet ({\bf GtvTetrahedron} $\ast$ {\em t1}, {\bf GtvTetrahedron} $\ast$ {\em t2})}\label{group__tetrahedron_gd7f735a13fe8a904ee1a218f35832244}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & a \+::\+Gts\+Point; \\
+\hline
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+positive value if {\itshape p} lies inside {\itshape t}, zero if lies on {\itshape t} and a negative value if it lies outside {\itshape t}. 
+\end{DoxyReturn}
 
 
+References gtv\+\_\+point\+\_\+in\+\_\+sphere(), and gtv\+\_\+tetrahedron\+\_\+vertices().
+
+
+
+Referenced by gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell(), and gtv\+\_\+facet\+\_\+is\+\_\+regular().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedra\+\_\+common\+\_\+facet@{gtv\+\_\+tetrahedra\+\_\+common\+\_\+facet}}
+\index{gtv\+\_\+tetrahedra\+\_\+common\+\_\+facet@{gtv\+\_\+tetrahedra\+\_\+common\+\_\+facet}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedra\+\_\+common\+\_\+facet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Facet}$\ast$ gtv\+\_\+tetrahedra\+\_\+common\+\_\+facet (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t1, }
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t2}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gad7f735a13fe8a904ee1a218f35832244}
 Find the facet shared by two tetrahedra.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t1}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em t2}]another \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the \doxyref{GtvFacet}{p.}{structGtvFacet} between {\em t1\/} and {\em t2\/}, if they neighbour each other, NULL otherwise. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedra_wedge_neighbour@{gtv\_\-tetrahedra\_\-wedge\_\-neighbour}}
-\index{gtv_tetrahedra_wedge_neighbour@{gtv\_\-tetrahedra\_\-wedge\_\-neighbour}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvTetrahedron}$\ast$ gtv\_\-tetrahedra\_\-wedge\_\-neighbour ({\bf GtvTetrahedron} $\ast$ {\em t1}, {\bf GtvTetrahedron} $\ast$ {\em t2})}\label{group__tetrahedron_g73e851840058b6b7098f76d8811d8851}
+
+\begin{DoxyParams}{Parameters}
+{\em t1} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em t2} & another \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \doxyref{Gtv\+Facet}{p.}{structGtvFacet} between {\itshape t1} and {\itshape t2}, if they neighbour each other, N\+U\+L\+L otherwise. 
+\end{DoxyReturn}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedra\+\_\+wedge\+\_\+neighbour@{gtv\+\_\+tetrahedra\+\_\+wedge\+\_\+neighbour}}
+\index{gtv\+\_\+tetrahedra\+\_\+wedge\+\_\+neighbour@{gtv\+\_\+tetrahedra\+\_\+wedge\+\_\+neighbour}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedra\+\_\+wedge\+\_\+neighbour}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Tetrahedron}$\ast$ gtv\+\_\+tetrahedra\+\_\+wedge\+\_\+neighbour (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t1, }
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t2}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga73e851840058b6b7098f76d8811d8851}
+Find a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} which lies in the `wedge\textquotesingle{} between two other tetrahedra.
 
 
-Find a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} which lies in the `wedge' between two other tetrahedra.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t1}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em t2}]another \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron};\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} which shares one facet with {\em t1\/} and another facet with {\em t2\/}, if it exists, NULL otherwise. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_centroid@{gtv\_\-tetrahedron\_\-centroid}}
-\index{gtv_tetrahedron_centroid@{gtv\_\-tetrahedron\_\-centroid}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-tetrahedron\_\-centroid ({\bf GtvTetrahedron} $\ast$ {\em t}, GtsPoint $\ast$ {\em c})}\label{group__tetrahedron_gcc342788d25e3071536c35bab3e81be4}
+\begin{DoxyParams}{Parameters}
+{\em t1} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em t2} & another \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron};\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} which shares one facet with {\itshape t1} and another facet with {\itshape t2}, if it exists, N\+U\+L\+L otherwise. 
+\end{DoxyReturn}
 
 
-Compute the centroid of a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} as the mean of the four vertex positions.
+References gtv\+\_\+tetrahedron\+\_\+opposite().
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em c}]a GtsPoint, whose components will be set to the centroid of {\em t\/} on successful exit.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_circumradius@{gtv\_\-tetrahedron\_\-circumradius}}
-\index{gtv_tetrahedron_circumradius@{gtv\_\-tetrahedron\_\-circumradius}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\_\-tetrahedron\_\-circumradius ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_g5787f651dc4b69c1b58e0cf354149c5b}
-
-
-Calculate the radius of the circumsphere of a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} using the method given by {\tt Eric Weisstein's Mathworld}.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the circumradius of {\em t\/}. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_class@{gtv\_\-tetrahedron\_\-class}}
-\index{gtv_tetrahedron_class@{gtv\_\-tetrahedron\_\-class}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvTetrahedronClass}$\ast$ gtv\_\-tetrahedron\_\-class (void)}\label{group__tetrahedron_g12dd1c3c58c1c41ead42d517489b420e}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+centroid@{gtv\+\_\+tetrahedron\+\_\+centroid}}
+\index{gtv\+\_\+tetrahedron\+\_\+centroid@{gtv\+\_\+tetrahedron\+\_\+centroid}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+centroid}]{\setlength{\rightskip}{0pt plus 5cm}gint gtv\+\_\+tetrahedron\+\_\+centroid (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{Gts\+Point $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gacc342788d25e3071536c35bab3e81be4}
+Compute the centroid of a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} as the mean of the four vertex positions.
 
 
-The basic class for tetrahedra in GTV.
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em c} & a \+::\+Gts\+Point, whose components will be set to the centroid of {\itshape t} on successful exit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S on success. 
+\end{DoxyReturn}
 
-\begin{Desc}
-\item[Returns:]the \doxyref{GtvTetrahedronClass}{p.}{structGtvTetrahedronClass} \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_equilateral@{gtv\_\-tetrahedron\_\-equilateral}}
-\index{gtv_tetrahedron_equilateral@{gtv\_\-tetrahedron\_\-equilateral}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvTetrahedron}$\ast$ gtv\_\-tetrahedron\_\-equilateral ({\bf GtvTetrahedronClass} $\ast$ {\em klass}, {\bf GtvFacetClass} $\ast$ {\em facet\_\-class}, GtsEdgeClass $\ast$ {\em edge\_\-class}, GtsVertexClass $\ast$ {\em vertex\_\-class}, gdouble {\em len})}\label{group__tetrahedron_g9f06d37e1203b17987b9d29ea4b434b0}
+
+References G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S, gtv\+\_\+tetrahedron\+\_\+vertices(), and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+circumradius@{gtv\+\_\+tetrahedron\+\_\+circumradius}}
+\index{gtv\+\_\+tetrahedron\+\_\+circumradius@{gtv\+\_\+tetrahedron\+\_\+circumradius}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+circumradius}]{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\+\_\+tetrahedron\+\_\+circumradius (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga5787f651dc4b69c1b58e0cf354149c5b}
+Calculate the radius of the circumsphere of a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} using the method given by {\tt Eric Weisstein\textquotesingle{}s Mathworld}.
 
 
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the circumradius of {\itshape t}. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+tetrahedron\+\_\+vertices(), and gtv\+\_\+tetrahedron\+\_\+volume().
+
+
+
+Referenced by gtv\+\_\+tetrahedron\+\_\+quality\+\_\+radius\+\_\+ratio().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+class@{gtv\+\_\+tetrahedron\+\_\+class}}
+\index{gtv\+\_\+tetrahedron\+\_\+class@{gtv\+\_\+tetrahedron\+\_\+class}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Tetrahedron\+Class}$\ast$ gtv\+\_\+tetrahedron\+\_\+class (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga12dd1c3c58c1c41ead42d517489b420e}
+The basic class for tetrahedra in G\+T\+V.
+
+\begin{DoxyReturn}{Returns}
+the \doxyref{Gtv\+Tetrahedron\+Class}{p.}{structGtvTetrahedronClass} 
+\end{DoxyReturn}
+
+
+Referenced by gtv\+\_\+cell\+\_\+class(), gtv\+\_\+tetrahedron\+\_\+equilateral(), gtv\+\_\+tetrahedron\+\_\+large(), and gtv\+\_\+tetrahedron\+\_\+new().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+equilateral@{gtv\+\_\+tetrahedron\+\_\+equilateral}}
+\index{gtv\+\_\+tetrahedron\+\_\+equilateral@{gtv\+\_\+tetrahedron\+\_\+equilateral}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+equilateral}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Tetrahedron}$\ast$ gtv\+\_\+tetrahedron\+\_\+equilateral (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron\+Class} $\ast$}]{klass, }
+\item[{{\bf Gtv\+Facet\+Class} $\ast$}]{facet\+\_\+class, }
+\item[{Gts\+Edge\+Class $\ast$}]{edge\+\_\+class, }
+\item[{Gts\+Vertex\+Class $\ast$}]{vertex\+\_\+class, }
+\item[{gdouble}]{len}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga9f06d37e1203b17987b9d29ea4b434b0}
 Generate an equilateral tetrahedron.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em klass}]a \doxyref{GtvTetrahedronClass}{p.}{structGtvTetrahedronClass}; \item[{\em facet\_\-class}]a \doxyref{GtvFacetClass}{p.}{structGtvFacetClass}; \item[{\em edge\_\-class}]a GtsEdgeClass; \item[{\em vertex\_\-class}]a GtsVertexClass; \item[{\em len}]the length of a side of the tetrahedron.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} with vertices at ({\em $\sqrt{3}/3${\em len\/},0\/},0), (-$\sqrt{3}/6${\em len\/},$\pm${\em len/2\/},0) and (0,0,$\sqrt{6}/3$ {\em len\/}). \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_facet_opposite@{gtv\_\-tetrahedron\_\-facet\_\-opposite}}
-\index{gtv_tetrahedron_facet_opposite@{gtv\_\-tetrahedron\_\-facet\_\-opposite}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvFacet}$\ast$ gtv\_\-tetrahedron\_\-facet\_\-opposite ({\bf GtvTetrahedron} $\ast$ {\em t}, GtsVertex $\ast$ {\em v})}\label{group__tetrahedron_g71797f249f849100b8d2d100506239d6}
+
+\begin{DoxyParams}{Parameters}
+{\em klass} & a \doxyref{Gtv\+Tetrahedron\+Class}{p.}{structGtvTetrahedronClass}; \\
+\hline
+{\em facet\+\_\+class} & a \doxyref{Gtv\+Facet\+Class}{p.}{structGtvFacetClass}; \\
+\hline
+{\em edge\+\_\+class} & a \+::\+Gts\+Edge\+Class; \\
+\hline
+{\em vertex\+\_\+class} & a \+::\+Gts\+Vertex\+Class; \\
+\hline
+{\em len} & the length of a side of the tetrahedron.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} with vertices at ({\itshape $\sqrt{3}/3${\itshape len},0},0), (-\/ $\sqrt{3}/6${\itshape len}, $\pm${\itshape len/2},0) and (0,0, $\sqrt{6}/3$ {\itshape len}). 
+\end{DoxyReturn}
 
 
+References gtv\+\_\+facet\+\_\+new(), gtv\+\_\+tetrahedron\+\_\+class(), and gtv\+\_\+tetrahedron\+\_\+new().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+facet\+\_\+opposite@{gtv\+\_\+tetrahedron\+\_\+facet\+\_\+opposite}}
+\index{gtv\+\_\+tetrahedron\+\_\+facet\+\_\+opposite@{gtv\+\_\+tetrahedron\+\_\+facet\+\_\+opposite}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+facet\+\_\+opposite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Facet}$\ast$ gtv\+\_\+tetrahedron\+\_\+facet\+\_\+opposite (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{Gts\+Vertex $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga71797f249f849100b8d2d100506239d6}
 Find the face of a tetrahedron which is opposite a specified vertex.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]\doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em v}]GtsVertex opposite to which a \doxyref{GtvFacet}{p.}{structGtvFacet} is to be found.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]\doxyref{GtvFacet}{p.}{structGtvFacet} of {\em t\/} which is opposite {\em v\/}, if {\em v\/} is on {\em t\/}, NULL otherwise. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_facets@{gtv\_\-tetrahedron\_\-facets}}
-\index{gtv_tetrahedron_facets@{gtv\_\-tetrahedron\_\-facets}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-tetrahedron\_\-facets ({\bf GtvTetrahedron} $\ast$ {\em t}, {\bf GtvFacet} $\ast$$\ast$ {\em f1}, {\bf GtvFacet} $\ast$$\ast$ {\em f2}, {\bf GtvFacet} $\ast$$\ast$ {\em f3}, {\bf GtvFacet} $\ast$$\ast$ {\em f4})}\label{group__tetrahedron_g8b08a2f1d302c453711fc01b417e297b}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em v} & \+::\+Gts\+Vertex opposite to which a \doxyref{Gtv\+Facet}{p.}{structGtvFacet} is to be found.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Gtv\+Facet}{p.}{structGtvFacet} of {\itshape t} which is opposite {\itshape v}, if {\itshape v} is on {\itshape t}, N\+U\+L\+L otherwise. 
+\end{DoxyReturn}
 
 
+References gtv\+\_\+tetrahedron\+\_\+vertices().
+
+
+
+Referenced by gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+facets@{gtv\+\_\+tetrahedron\+\_\+facets}}
+\index{gtv\+\_\+tetrahedron\+\_\+facets@{gtv\+\_\+tetrahedron\+\_\+facets}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+facets}]{\setlength{\rightskip}{0pt plus 5cm}gint gtv\+\_\+tetrahedron\+\_\+facets (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{{\bf Gtv\+Facet} $\ast$$\ast$}]{f1, }
+\item[{{\bf Gtv\+Facet} $\ast$$\ast$}]{f2, }
+\item[{{\bf Gtv\+Facet} $\ast$$\ast$}]{f3, }
+\item[{{\bf Gtv\+Facet} $\ast$$\ast$}]{f4}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga8b08a2f1d302c453711fc01b417e297b}
 Find the facets of a tetrahedron.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]\doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em f1}]\doxyref{GtvFacet}{p.}{structGtvFacet} of first face; \item[{\em f2}]\doxyref{GtvFacet}{p.}{structGtvFacet} of second face; \item[{\em f3}]\doxyref{GtvFacet}{p.}{structGtvFacet} of third face; \item[{\em f4}]\doxyref{GtvFacet}{p.}{structGtvFacet} of fourth face.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_from_facets@{gtv\_\-tetrahedron\_\-from\_\-facets}}
-\index{gtv_tetrahedron_from_facets@{gtv\_\-tetrahedron\_\-from\_\-facets}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvTetrahedron}$\ast$ gtv\_\-tetrahedron\_\-from\_\-facets ({\bf GtvFacet} $\ast$ {\em f1}, {\bf GtvFacet} $\ast$ {\em f2}, {\bf GtvFacet} $\ast$ {\em f3}, {\bf GtvFacet} $\ast$ {\em f4})}\label{group__tetrahedron_gb18536e9f209d2a593dce95d6f4fcfbd}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em f1} & \doxyref{Gtv\+Facet}{p.}{structGtvFacet} of first face; \\
+\hline
+{\em f2} & \doxyref{Gtv\+Facet}{p.}{structGtvFacet} of second face; \\
+\hline
+{\em f3} & \doxyref{Gtv\+Facet}{p.}{structGtvFacet} of third face; \\
+\hline
+{\em f4} & \doxyref{Gtv\+Facet}{p.}{structGtvFacet} of fourth face.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S on success. 
+\end{DoxyReturn}
 
 
+References G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S, and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets@{gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets}}
+\index{gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets@{gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Tetrahedron}$\ast$ gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Facet} $\ast$}]{f1, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f2, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f3, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f4}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gab18536e9f209d2a593dce95d6f4fcfbd}
 Find a tetrahedron which uses a set of facets.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em f1}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em f2}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em f3}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em f4}]a \doxyref{GtvFacet}{p.}{structGtvFacet}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} which uses {\em f1\/}, {\em f2\/}, {\em f3\/} and {\em f4\/}, if one exists, NULL otherwise. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_from_vertices@{gtv\_\-tetrahedron\_\-from\_\-vertices}}
-\index{gtv_tetrahedron_from_vertices@{gtv\_\-tetrahedron\_\-from\_\-vertices}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvTetrahedron}$\ast$ gtv\_\-tetrahedron\_\-from\_\-vertices (GtsVertex $\ast$ {\em v1}, GtsVertex $\ast$ {\em v2}, GtsVertex $\ast$ {\em v3}, GtsVertex $\ast$ {\em v4})}\label{group__tetrahedron_g3108c2cafae375399fad6555b33a5312}
+
+\begin{DoxyParams}{Parameters}
+{\em f1} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}; \\
+\hline
+{\em f2} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}; \\
+\hline
+{\em f3} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}; \\
+\hline
+{\em f4} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} which uses {\itshape f1}, {\itshape f2}, {\itshape f3} and {\itshape f4}, if one exists, N\+U\+L\+L otherwise. 
+\end{DoxyReturn}
 
 
-Make a new \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} from existing connections between four vertices.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em v1}]a GtsVertex; \item[{\em v2}]a GtsVertex; \item[{\em v3}]a GtsVertex; \item[{\em v4}]a GtsVertex.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} which uses facets connecting {\em v1\/}, {\em v2\/}, {\em v3\/} and {\em v4\/}, and NULL if any of these facets do not exist. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_has_edge@{gtv\_\-tetrahedron\_\-has\_\-edge}}
-\index{gtv_tetrahedron_has_edge@{gtv\_\-tetrahedron\_\-has\_\-edge}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\_\-tetrahedron\_\-has\_\-edge ({\bf GtvTetrahedron} $\ast$ {\em t}, GtsEdge $\ast$ {\em e})}\label{group__tetrahedron_gc10a8dcb1ad11bddb29b3ae041574537}
+References gtv\+\_\+tetrahedron\+\_\+has\+\_\+facet().
 
 
-Check if a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} has a given GtsEdge.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em e}]a GtsEdge.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]TRUE if a facet of {\em t\/} uses {\em e\/}, FALSE otherwise. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_has_facet@{gtv\_\-tetrahedron\_\-has\_\-facet}}
-\index{gtv_tetrahedron_has_facet@{gtv\_\-tetrahedron\_\-has\_\-facet}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\_\-tetrahedron\_\-has\_\-facet ({\bf GtvTetrahedron} $\ast$ {\em t}, {\bf GtvFacet} $\ast$ {\em f})}\label{group__tetrahedron_g8ce883663b15154035ce3bc499e0bcbd}
+Referenced by gtv\+\_\+cell\+\_\+new\+\_\+from\+\_\+vertices(), gtv\+\_\+tetrahedron\+\_\+from\+\_\+vertices(), and gtv\+\_\+tetrahedron\+\_\+new\+\_\+from\+\_\+vertices().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+from\+\_\+vertices@{gtv\+\_\+tetrahedron\+\_\+from\+\_\+vertices}}
+\index{gtv\+\_\+tetrahedron\+\_\+from\+\_\+vertices@{gtv\+\_\+tetrahedron\+\_\+from\+\_\+vertices}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+from\+\_\+vertices}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Tetrahedron}$\ast$ gtv\+\_\+tetrahedron\+\_\+from\+\_\+vertices (
+\begin{DoxyParamCaption}
+\item[{Gts\+Vertex $\ast$}]{v1, }
+\item[{Gts\+Vertex $\ast$}]{v2, }
+\item[{Gts\+Vertex $\ast$}]{v3, }
+\item[{Gts\+Vertex $\ast$}]{v4}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga3108c2cafae375399fad6555b33a5312}
+Make a new \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} from existing connections between four vertices.
 
 
+\begin{DoxyParams}{Parameters}
+{\em v1} & a Gts\+Vertex; \\
+\hline
+{\em v2} & a Gts\+Vertex; \\
+\hline
+{\em v3} & a Gts\+Vertex; \\
+\hline
+{\em v4} & a Gts\+Vertex.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} which uses facets connecting {\itshape v1}, {\itshape v2}, {\itshape v3} and {\itshape v4}, and N\+U\+L\+L if any of these facets do not exist. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+has\+\_\+edge@{gtv\+\_\+tetrahedron\+\_\+has\+\_\+edge}}
+\index{gtv\+\_\+tetrahedron\+\_\+has\+\_\+edge@{gtv\+\_\+tetrahedron\+\_\+has\+\_\+edge}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+has\+\_\+edge}]{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\+\_\+tetrahedron\+\_\+has\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{Gts\+Edge $\ast$}]{e}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gac10a8dcb1ad11bddb29b3ae041574537}
+Check if a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} has a given Gts\+Edge.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em e} & a Gts\+Edge.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E if a facet of {\itshape t} uses {\itshape e}, F\+A\+L\+S\+E otherwise. 
+\end{DoxyReturn}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+has\+\_\+facet@{gtv\+\_\+tetrahedron\+\_\+has\+\_\+facet}}
+\index{gtv\+\_\+tetrahedron\+\_\+has\+\_\+facet@{gtv\+\_\+tetrahedron\+\_\+has\+\_\+facet}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+has\+\_\+facet}]{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\+\_\+tetrahedron\+\_\+has\+\_\+facet (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga8ce883663b15154035ce3bc499e0bcbd}
 Check if a tetrahedron has a given facet.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em f}]a \doxyref{GtvFacet}{p.}{structGtvFacet}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]TRUE if {\em t\/} contains {\em f\/}, FALSE otherwise. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_has_vertex@{gtv\_\-tetrahedron\_\-has\_\-vertex}}
-\index{gtv_tetrahedron_has_vertex@{gtv\_\-tetrahedron\_\-has\_\-vertex}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\_\-tetrahedron\_\-has\_\-vertex ({\bf GtvTetrahedron} $\ast$ {\em t}, GtsVertex $\ast$ {\em v})}\label{group__tetrahedron_g55904557489a5811ad123e1fe5c1cac9}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em f} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E if {\itshape t} contains {\itshape f}, F\+A\+L\+S\+E otherwise. 
+\end{DoxyReturn}
 
 
-Check if a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} has a given GtsVertex.
+Referenced by gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets(), and gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite().
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em v}]a GtsVertex.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]TRUE {\em v\/} is a vertex of {\em t\/}, FALSE otherwise. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_inradius@{gtv\_\-tetrahedron\_\-inradius}}
-\index{gtv_tetrahedron_inradius@{gtv\_\-tetrahedron\_\-inradius}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\_\-tetrahedron\_\-inradius ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_gb0ea433ce5ee4ffc1948736c69116fcb}
-
-
-Compute the radius of the insphere of a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}, using the formula given in {\tt Proposal of Benchmarks for 3D Unstructured Tetrahedral Mesh Optimization}, Julien Dompierre, Paul Labbe, Francois Guibault, Ricardo Camarero, 1998.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the inradius of {\em t\/}. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_invert@{gtv\_\-tetrahedron\_\-invert}}
-\index{gtv_tetrahedron_invert@{gtv\_\-tetrahedron\_\-invert}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-tetrahedron\_\-invert ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_g18b59f4798ab709f0b5d5f683338d7d3}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+has\+\_\+vertex@{gtv\+\_\+tetrahedron\+\_\+has\+\_\+vertex}}
+\index{gtv\+\_\+tetrahedron\+\_\+has\+\_\+vertex@{gtv\+\_\+tetrahedron\+\_\+has\+\_\+vertex}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+has\+\_\+vertex}]{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\+\_\+tetrahedron\+\_\+has\+\_\+vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{Gts\+Vertex $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga55904557489a5811ad123e1fe5c1cac9}
+Check if a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} has a given Gts\+Vertex.
 
 
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em v} & a Gts\+Vertex.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E {\itshape v} is a vertex of {\itshape t}, F\+A\+L\+S\+E otherwise. 
+\end{DoxyReturn}
+
+
+References G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, gtv\+\_\+tetrahedron\+\_\+vertices(), and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+inradius@{gtv\+\_\+tetrahedron\+\_\+inradius}}
+\index{gtv\+\_\+tetrahedron\+\_\+inradius@{gtv\+\_\+tetrahedron\+\_\+inradius}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+inradius}]{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\+\_\+tetrahedron\+\_\+inradius (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gab0ea433ce5ee4ffc1948736c69116fcb}
+Compute the radius of the insphere of a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}, using the formula given in {\tt Proposal of Benchmarks for 3\+D Unstructured Tetrahedral Mesh Optimization}, Julien Dompierre, Paul Labbe, Francois Guibault, Ricardo Camarero, 1998.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the inradius of {\itshape t}. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+tetrahedron\+\_\+volume().
+
+
+
+Referenced by gtv\+\_\+tetrahedron\+\_\+quality\+\_\+radius\+\_\+ratio().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+invert@{gtv\+\_\+tetrahedron\+\_\+invert}}
+\index{gtv\+\_\+tetrahedron\+\_\+invert@{gtv\+\_\+tetrahedron\+\_\+invert}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+invert}]{\setlength{\rightskip}{0pt plus 5cm}gint gtv\+\_\+tetrahedron\+\_\+invert (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga18b59f4798ab709f0b5d5f683338d7d3}
 Invert a tetrahedron by changing the order of two faces. This will change the sign of the tetrahedron volume.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]\doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} to invert.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_is_duplicate@{gtv\_\-tetrahedron\_\-is\_\-duplicate}}
-\index{gtv_tetrahedron_is_duplicate@{gtv\_\-tetrahedron\_\-is\_\-duplicate}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvTetrahedron}$\ast$ gtv\_\-tetrahedron\_\-is\_\-duplicate ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_g94d3ada77747903050746dd5752e4f6a}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} to invert.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S on success. 
+\end{DoxyReturn}
 
 
+References G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S, and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+is\+\_\+duplicate@{gtv\+\_\+tetrahedron\+\_\+is\+\_\+duplicate}}
+\index{gtv\+\_\+tetrahedron\+\_\+is\+\_\+duplicate@{gtv\+\_\+tetrahedron\+\_\+is\+\_\+duplicate}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+is\+\_\+duplicate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Tetrahedron}$\ast$ gtv\+\_\+tetrahedron\+\_\+is\+\_\+duplicate (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga94d3ada77747903050746dd5752e4f6a}
 Check if a tetrahedron is duplicated.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron};\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]NULL if {\em t\/} is unique, otherwise the \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} which duplicates {\em t\/}. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_is_encroached@{gtv\_\-tetrahedron\_\-is\_\-encroached}}
-\index{gtv_tetrahedron_is_encroached@{gtv\_\-tetrahedron\_\-is\_\-encroached}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GtsVertex$\ast$ gtv\_\-tetrahedron\_\-is\_\-encroached ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_g8784058c061224974e85a2dfa6f382ec}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron};\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L if {\itshape t} is unique, otherwise the \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} which duplicates {\itshape t}. 
+\end{DoxyReturn}
 
 
-Check if any facet of a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} is encroached.
+Referenced by gtv\+\_\+tetrahedron\+\_\+is\+\_\+okay().
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a GtsVertex encroaching a facet of {\em t\/}, NULL if all facets of {\em t\/} are regular. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_is_okay@{gtv\_\-tetrahedron\_\-is\_\-okay}}
-\index{gtv_tetrahedron_is_okay@{gtv\_\-tetrahedron\_\-is\_\-okay}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\_\-tetrahedron\_\-is\_\-okay ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_g7e876c6631a35758a7d27cc6c00e6ae3}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+is\+\_\+encroached@{gtv\+\_\+tetrahedron\+\_\+is\+\_\+encroached}}
+\index{gtv\+\_\+tetrahedron\+\_\+is\+\_\+encroached@{gtv\+\_\+tetrahedron\+\_\+is\+\_\+encroached}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+is\+\_\+encroached}]{\setlength{\rightskip}{0pt plus 5cm}Gts\+Vertex$\ast$ gtv\+\_\+tetrahedron\+\_\+is\+\_\+encroached (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga8784058c061224974e85a2dfa6f382ec}
+Check if any facet of a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} is encroached.
 
 
-Check that a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} has positive volume and is not a duplicate.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]\doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} to check.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]TRUE if {\em t\/} is okay, FALSE otherwise. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_large@{gtv\_\-tetrahedron\_\-large}}
-\index{gtv_tetrahedron_large@{gtv\_\-tetrahedron\_\-large}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvTetrahedron}$\ast$ gtv\_\-tetrahedron\_\-large ({\bf GtvTetrahedronClass} $\ast$ {\em klass}, {\bf GtvFacetClass} $\ast$ {\em facet\_\-class}, GtsEdgeClass $\ast$ {\em edge\_\-class}, GtsVertexClass $\ast$ {\em vertex\_\-class}, gdouble {\em len})}\label{group__tetrahedron_ga38358f6f86f4dad5b2c8123bd3e800e}
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Gts\+Vertex encroaching a facet of {\itshape t}, N\+U\+L\+L if all facets of {\itshape t} are regular. 
+\end{DoxyReturn}
 
 
-Generate a `large' tetrahedron which can be used to enclose a Delaunay tetrahedralization under construction.
+References gtv\+\_\+facet\+\_\+is\+\_\+regular(), gtv\+\_\+tetrahedron\+\_\+opposite(), and gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite().
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em klass}]a \doxyref{GtvTetrahedronClass}{p.}{structGtvTetrahedronClass}; \item[{\em facet\_\-class}]a \doxyref{GtvFacetClass}{p.}{structGtvFacetClass}; \item[{\em edge\_\-class}]a GtsEdgeClass; \item[{\em vertex\_\-class}]a GtsVertexClass; \item[{\em len}]a length.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} with vertices at (0,0,{\em len\/}), (0,{\em len\/}, -{\em len\/}), ({\em len\/}, -{\em len\/}, -{\em len\/}) and (-{\em len\/}, -{\em len\/}, -{\em len\/}). \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_new@{gtv\_\-tetrahedron\_\-new}}
-\index{gtv_tetrahedron_new@{gtv\_\-tetrahedron\_\-new}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvTetrahedron}$\ast$ gtv\_\-tetrahedron\_\-new ({\bf GtvTetrahedronClass} $\ast$ {\em klass}, {\bf GtvFacet} $\ast$ {\em f1}, {\bf GtvFacet} $\ast$ {\em f2}, {\bf GtvFacet} $\ast$ {\em f3}, {\bf GtvFacet} $\ast$ {\em f4})}\label{group__tetrahedron_g1a09a8e5d60225cc921ad3c1b751d88e}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+is\+\_\+okay@{gtv\+\_\+tetrahedron\+\_\+is\+\_\+okay}}
+\index{gtv\+\_\+tetrahedron\+\_\+is\+\_\+okay@{gtv\+\_\+tetrahedron\+\_\+is\+\_\+okay}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+is\+\_\+okay}]{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\+\_\+tetrahedron\+\_\+is\+\_\+okay (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga7e876c6631a35758a7d27cc6c00e6ae3}
+Check that a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} has positive volume and is not a duplicate.
 
 
-Generate a new tetrahedron from four \doxyref{GtvFacet}{p.}{structGtvFacet}'s
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em klass}]a \doxyref{GtvTetrahedronClass}{p.}{structGtvTetrahedronClass} \item[{\em f1}]\doxyref{GtvFacet}{p.}{structGtvFacet} \item[{\em f2}]\doxyref{GtvFacet}{p.}{structGtvFacet} \item[{\em f3}]\doxyref{GtvFacet}{p.}{structGtvFacet} \item[{\em f4}]\doxyref{GtvFacet}{p.}{structGtvFacet}\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the new \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_new_from_vertices@{gtv\_\-tetrahedron\_\-new\_\-from\_\-vertices}}
-\index{gtv_tetrahedron_new_from_vertices@{gtv\_\-tetrahedron\_\-new\_\-from\_\-vertices}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvTetrahedron}$\ast$ gtv\_\-tetrahedron\_\-new\_\-from\_\-vertices ({\bf GtvTetrahedronClass} $\ast$ {\em klass}, {\bf GtvFacetClass} $\ast$ {\em facet\_\-class}, GtsEdgeClass $\ast$ {\em edge\_\-class}, GtsVertex $\ast$ {\em v1}, GtsVertex $\ast$ {\em v2}, GtsVertex $\ast$ {\em v3}, GtsVertex $\ast$ {\em v4})}\label{group__tetrahedron_gea2cec0747851ec0be818bf927283848}
+\begin{DoxyParams}{Parameters}
+{\em t} & \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E if {\itshape t} is okay, F\+A\+L\+S\+E otherwise. 
+\end{DoxyReturn}
 
 
-Generate a new tetrahedron from four GtsVertex's, making use of any existing \doxyref{GtvFacet}{p.}{structGtvFacet}'s which connect them.
+References gtv\+\_\+tetrahedron\+\_\+is\+\_\+duplicate(), and gtv\+\_\+tetrahedron\+\_\+volume().
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em klass}]a \doxyref{GtvTetrahedronClass}{p.}{structGtvTetrahedronClass} \item[{\em facet\_\-class}]a \doxyref{GtvFacetClass}{p.}{structGtvFacetClass} \item[{\em edge\_\-class}]a GtsEdgeClass \item[{\em v1}]a GtsVertex \item[{\em v2}]a GtsVertex \item[{\em v3}]a GtsVertex \item[{\em v4}]a GtsVertex\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the new \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_opposite@{gtv\_\-tetrahedron\_\-opposite}}
-\index{gtv_tetrahedron_opposite@{gtv\_\-tetrahedron\_\-opposite}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvTetrahedron}$\ast$ gtv\_\-tetrahedron\_\-opposite ({\bf GtvTetrahedron} $\ast$ {\em t}, {\bf GtvFacet} $\ast$ {\em f})}\label{group__tetrahedron_gd7c8e7d942c4aff0f5f793faa689ea78}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+large@{gtv\+\_\+tetrahedron\+\_\+large}}
+\index{gtv\+\_\+tetrahedron\+\_\+large@{gtv\+\_\+tetrahedron\+\_\+large}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+large}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Tetrahedron}$\ast$ gtv\+\_\+tetrahedron\+\_\+large (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron\+Class} $\ast$}]{klass, }
+\item[{{\bf Gtv\+Facet\+Class} $\ast$}]{facet\+\_\+class, }
+\item[{Gts\+Edge\+Class $\ast$}]{edge\+\_\+class, }
+\item[{Gts\+Vertex\+Class $\ast$}]{vertex\+\_\+class, }
+\item[{gdouble}]{len}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gaa38358f6f86f4dad5b2c8123bd3e800e}
+Generate a `large\textquotesingle{} tetrahedron which can be used to enclose a Delaunay tetrahedralization under construction.
 
 
+\begin{DoxyParams}{Parameters}
+{\em klass} & a \doxyref{Gtv\+Tetrahedron\+Class}{p.}{structGtvTetrahedronClass}; \\
+\hline
+{\em facet\+\_\+class} & a \doxyref{Gtv\+Facet\+Class}{p.}{structGtvFacetClass}; \\
+\hline
+{\em edge\+\_\+class} & a \+::\+Gts\+Edge\+Class; \\
+\hline
+{\em vertex\+\_\+class} & a \+::\+Gts\+Vertex\+Class; \\
+\hline
+{\em len} & a length.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} with vertices at (0,0,{\itshape len}), (0,{\itshape len}, -\/{\itshape len}), ({\itshape len}, -\/{\itshape len}, -\/{\itshape len}) and (-\/{\itshape len}, -\/{\itshape len}, -\/{\itshape len}). 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+facet\+\_\+new(), gtv\+\_\+tetrahedron\+\_\+class(), and gtv\+\_\+tetrahedron\+\_\+new().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+new@{gtv\+\_\+tetrahedron\+\_\+new}}
+\index{gtv\+\_\+tetrahedron\+\_\+new@{gtv\+\_\+tetrahedron\+\_\+new}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Tetrahedron}$\ast$ gtv\+\_\+tetrahedron\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron\+Class} $\ast$}]{klass, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f1, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f2, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f3, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f4}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga1a09a8e5d60225cc921ad3c1b751d88e}
+Generate a new tetrahedron from four \doxyref{Gtv\+Facet}{p.}{structGtvFacet}\textquotesingle{}s
+
+
+\begin{DoxyParams}{Parameters}
+{\em klass} & a \doxyref{Gtv\+Tetrahedron\+Class}{p.}{structGtvTetrahedronClass} \\
+\hline
+{\em f1} & \doxyref{Gtv\+Facet}{p.}{structGtvFacet} \\
+\hline
+{\em f2} & \doxyref{Gtv\+Facet}{p.}{structGtvFacet} \\
+\hline
+{\em f3} & \doxyref{Gtv\+Facet}{p.}{structGtvFacet} \\
+\hline
+{\em f4} & \doxyref{Gtv\+Facet}{p.}{structGtvFacet}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+tetrahedron\+\_\+class(), and gtv\+\_\+tetrahedron\+\_\+set().
+
+
+
+Referenced by gtv\+\_\+tetrahedron\+\_\+equilateral(), gtv\+\_\+tetrahedron\+\_\+large(), and gtv\+\_\+tetrahedron\+\_\+new\+\_\+from\+\_\+vertices().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+new\+\_\+from\+\_\+vertices@{gtv\+\_\+tetrahedron\+\_\+new\+\_\+from\+\_\+vertices}}
+\index{gtv\+\_\+tetrahedron\+\_\+new\+\_\+from\+\_\+vertices@{gtv\+\_\+tetrahedron\+\_\+new\+\_\+from\+\_\+vertices}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+new\+\_\+from\+\_\+vertices}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Tetrahedron}$\ast$ gtv\+\_\+tetrahedron\+\_\+new\+\_\+from\+\_\+vertices (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron\+Class} $\ast$}]{klass, }
+\item[{{\bf Gtv\+Facet\+Class} $\ast$}]{facet\+\_\+class, }
+\item[{Gts\+Edge\+Class $\ast$}]{edge\+\_\+class, }
+\item[{Gts\+Vertex $\ast$}]{v1, }
+\item[{Gts\+Vertex $\ast$}]{v2, }
+\item[{Gts\+Vertex $\ast$}]{v3, }
+\item[{Gts\+Vertex $\ast$}]{v4}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gaea2cec0747851ec0be818bf927283848}
+Generate a new tetrahedron from four \+::\+Gts\+Vertex\textquotesingle{}s, making use of any existing \doxyref{Gtv\+Facet}{p.}{structGtvFacet}\textquotesingle{}s which connect them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em klass} & a \doxyref{Gtv\+Tetrahedron\+Class}{p.}{structGtvTetrahedronClass} \\
+\hline
+{\em facet\+\_\+class} & a \doxyref{Gtv\+Facet\+Class}{p.}{structGtvFacetClass} \\
+\hline
+{\em edge\+\_\+class} & a \+::\+Gts\+Edge\+Class \\
+\hline
+{\em v1} & a \+::\+Gts\+Vertex \\
+\hline
+{\em v2} & a \+::\+Gts\+Vertex \\
+\hline
+{\em v3} & a \+::\+Gts\+Vertex \\
+\hline
+{\em v4} & a \+::\+Gts\+Vertex\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets(), and gtv\+\_\+tetrahedron\+\_\+new().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+opposite@{gtv\+\_\+tetrahedron\+\_\+opposite}}
+\index{gtv\+\_\+tetrahedron\+\_\+opposite@{gtv\+\_\+tetrahedron\+\_\+opposite}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+opposite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Tetrahedron}$\ast$ gtv\+\_\+tetrahedron\+\_\+opposite (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gad7c8e7d942c4aff0f5f793faa689ea78}
 Find the tetrahedron neighbouring a specified tetrahedron on a given side.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} \item[{\em f}]a \doxyref{GtvFacet}{p.}{structGtvFacet} of {\em t\/} \end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} which neighbours {\em t\/} on the side {\em f\/}, if there is one, otherwise NULL. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_opposite_vertices@{gtv\_\-tetrahedron\_\-opposite\_\-vertices}}
-\index{gtv_tetrahedron_opposite_vertices@{gtv\_\-tetrahedron\_\-opposite\_\-vertices}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-tetrahedron\_\-opposite\_\-vertices ({\bf GtvTetrahedron} $\ast$ {\em t}, GtsVertex $\ast$ {\em v}, GtsVertex $\ast$$\ast$ {\em v1}, GtsVertex $\ast$$\ast$ {\em v2}, GtsVertex $\ast$$\ast$ {\em v3})}\label{group__tetrahedron_g05d7b9e9858edb98027f107c868e938f}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} \\
+\hline
+{\em f} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet} of {\itshape t} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} which neighbours {\itshape t} on the side {\itshape f}, if there is one, otherwise N\+U\+L\+L. 
+\end{DoxyReturn}
 
 
-Find the three vertices of a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} opposite a given GtsVertex of the tetrahedron, respecting the orientation of the tetrahedron. On exit, {\em v1\/}, {\em v2\/} and {\em v3\/} will be the vertices of the facet of {\em t\/} opposite {\em v\/}, such that the orientation of {\em v\/}, {\em v1\/}, {\em v2\/} and {\em v3\/} will be the same as that of the tetrahedron itself, including the sign.
+Referenced by gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell(), gtv\+\_\+point\+\_\+locate(), gtv\+\_\+tetrahedra\+\_\+wedge\+\_\+neighbour(), and gtv\+\_\+tetrahedron\+\_\+is\+\_\+encroached().
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em v}]a GtsVertex; \item[{\em v1}]a GtsVertex; \item[{\em v2}]a GtsVertex; \item[{\em v3}]a GtsVertex.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-SUCCESS or GTV\_\-FAILURE if {\em v\/} is not a vertex of {\em t\/}. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_orient@{gtv\_\-tetrahedron\_\-orient}}
-\index{gtv_tetrahedron_orient@{gtv\_\-tetrahedron\_\-orient}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-tetrahedron\_\-orient ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_g2f78eaaeb566550c8a3e0fbbbc9c1775}
-
-
-Orient the facets of a tetrahedron so that it has non-negative volume.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron};\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-SUCCESS on success, i.e. {\em t\/} has positive volume. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_orientation@{gtv\_\-tetrahedron\_\-orientation}}
-\index{gtv_tetrahedron_orientation@{gtv\_\-tetrahedron\_\-orientation}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\_\-tetrahedron\_\-orientation ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_g4dffd6626c85d98b62ab56e6c74823c6}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+opposite\+\_\+vertices@{gtv\+\_\+tetrahedron\+\_\+opposite\+\_\+vertices}}
+\index{gtv\+\_\+tetrahedron\+\_\+opposite\+\_\+vertices@{gtv\+\_\+tetrahedron\+\_\+opposite\+\_\+vertices}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+opposite\+\_\+vertices}]{\setlength{\rightskip}{0pt plus 5cm}gint gtv\+\_\+tetrahedron\+\_\+opposite\+\_\+vertices (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{Gts\+Vertex $\ast$}]{v, }
+\item[{Gts\+Vertex $\ast$$\ast$}]{v1, }
+\item[{Gts\+Vertex $\ast$$\ast$}]{v2, }
+\item[{Gts\+Vertex $\ast$$\ast$}]{v3}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga05d7b9e9858edb98027f107c868e938f}
+Find the three vertices of a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} opposite a given \+::\+Gts\+Vertex of the tetrahedron, respecting the orientation of the tetrahedron. On exit, {\itshape v1}, {\itshape v2} and {\itshape v3} will be the vertices of the facet of {\itshape t} opposite {\itshape v}, such that the orientation of {\itshape v}, {\itshape v1}, {\itshape v2} and {\itshape v3} will be the same as that of the tetrahedron itself, including the sign.
 
 
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em v} & a \+::\+Gts\+Vertex; \\
+\hline
+{\em v1} & a \+::\+Gts\+Vertex; \\
+\hline
+{\em v2} & a \+::\+Gts\+Vertex; \\
+\hline
+{\em v3} & a \+::\+Gts\+Vertex.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S or G\+T\+V\+\_\+\+F\+A\+I\+L\+U\+R\+E if {\itshape v} is not a vertex of {\itshape t}. 
+\end{DoxyReturn}
+
+
+References G\+T\+V\+\_\+\+F\+A\+I\+L\+U\+R\+E, G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S, gtv\+\_\+tetrahedron\+\_\+vertices(), and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+orient@{gtv\+\_\+tetrahedron\+\_\+orient}}
+\index{gtv\+\_\+tetrahedron\+\_\+orient@{gtv\+\_\+tetrahedron\+\_\+orient}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+orient}]{\setlength{\rightskip}{0pt plus 5cm}gint gtv\+\_\+tetrahedron\+\_\+orient (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga2f78eaaeb566550c8a3e0fbbbc9c1775}
+Orient the facets of a tetrahedron so that it has non-\/negative volume.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron};\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S on success, i.\+e. {\itshape t} has positive volume. 
+\end{DoxyReturn}
+
+
+References G\+T\+V\+\_\+\+F\+A\+I\+L\+U\+R\+E, G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S, gtv\+\_\+tetrahedron\+\_\+volume(), and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+orientation@{gtv\+\_\+tetrahedron\+\_\+orientation}}
+\index{gtv\+\_\+tetrahedron\+\_\+orientation@{gtv\+\_\+tetrahedron\+\_\+orientation}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+orientation}]{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\+\_\+tetrahedron\+\_\+orientation (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga4dffd6626c85d98b62ab56e6c74823c6}
 Find the orientation of the vertices of a tetrahedron. This is an approximation of six times the signed volume of the the tetrahedron.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a positive value if the tetrahedron apex lies above the plane of the other three points, taken in cyclic order; a negative value if it lies below that plane and zero if it lies in the plane. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_quality_radius_ratio@{gtv\_\-tetrahedron\_\-quality\_\-radius\_\-ratio}}
-\index{gtv_tetrahedron_quality_radius_ratio@{gtv\_\-tetrahedron\_\-quality\_\-radius\_\-ratio}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\_\-tetrahedron\_\-quality\_\-radius\_\-ratio ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_g9f0657a9ecf2245bd1b0ac25a03785df}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a positive value if the tetrahedron apex lies above the plane of the other three points, taken in cyclic order; a negative value if it lies below that plane and zero if it lies in the plane. 
+\end{DoxyReturn}
 
 
-Calculate the radius ratio quality measure for a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}, as in {\tt Proposal of Benchmarks for 3D Unstructured Tetrahedral Mesh Optimization}, Julien Dompierre, Paul Labbe, Francois Guibault, Ricardo Camarero, 1998. This is three times the ratio of the inradius and the circumradius of {\em t\/} and will be one for an equilateral tetrahedron.
+References gtv\+\_\+tetrahedron\+\_\+vertices().
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the radius ratio quality measure of {\em t\/}. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_radius_ratio@{gtv\_\-tetrahedron\_\-radius\_\-ratio}}
-\index{gtv_tetrahedron_radius_ratio@{gtv\_\-tetrahedron\_\-radius\_\-ratio}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\_\-tetrahedron\_\-radius\_\-ratio ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_g289dc91b8394c86b59614fb321c088cd}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+quality\+\_\+radius\+\_\+ratio@{gtv\+\_\+tetrahedron\+\_\+quality\+\_\+radius\+\_\+ratio}}
+\index{gtv\+\_\+tetrahedron\+\_\+quality\+\_\+radius\+\_\+ratio@{gtv\+\_\+tetrahedron\+\_\+quality\+\_\+radius\+\_\+ratio}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+quality\+\_\+radius\+\_\+ratio}]{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\+\_\+tetrahedron\+\_\+quality\+\_\+radius\+\_\+ratio (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga9f0657a9ecf2245bd1b0ac25a03785df}
+Calculate the radius ratio quality measure for a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}, as in {\tt Proposal of Benchmarks for 3\+D Unstructured Tetrahedral Mesh Optimization}, Julien Dompierre, Paul Labbe, Francois Guibault, Ricardo Camarero, 1998. This is three times the ratio of the inradius and the circumradius of {\itshape t} and will be one for an equilateral tetrahedron.
 
 
-Calculate the radius ratio quality measure for a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}, given in Dompierre, Julien, Labbe', Paul, Guibault, Francois and Camarero, Ricardo, {\tt `Proposal of benchmarks for 3D unstructured tetrahedral mesh optimization'}, 1998. The measure $\rho=3\rho_{in}/\rho_{out}$ is three times the ratio of the inradius and circumradius of the tetrahedron (although computed in a different way).
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the radius ratio quality measure or zero if {\em t\/} is degenerate. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_set@{gtv\_\-tetrahedron\_\-set}}
-\index{gtv_tetrahedron_set@{gtv\_\-tetrahedron\_\-set}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-tetrahedron\_\-set ({\bf GtvTetrahedron} $\ast$ {\em tetrahedron}, {\bf GtvFacet} $\ast$ {\em f1}, {\bf GtvFacet} $\ast$ {\em f2}, {\bf GtvFacet} $\ast$ {\em f3}, {\bf GtvFacet} $\ast$ {\em f4})}\label{group__tetrahedron_gf6e65ba5e31e6b2baf228800be55d968}
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the radius ratio quality measure of {\itshape t}. 
+\end{DoxyReturn}
 
 
-Set the facets of a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}. A check is performed to ensure that the facets define a valid tetrahedron.
+References gtv\+\_\+tetrahedron\+\_\+circumradius(), and gtv\+\_\+tetrahedron\+\_\+inradius().
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em tetrahedron,:}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em f1,:}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em f2,:}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em f3,:}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em f4,:}]a \doxyref{GtvFacet}{p.}{structGtvFacet}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_vertex_opposite@{gtv\_\-tetrahedron\_\-vertex\_\-opposite}}
-\index{gtv_tetrahedron_vertex_opposite@{gtv\_\-tetrahedron\_\-vertex\_\-opposite}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GtsVertex$\ast$ gtv\_\-tetrahedron\_\-vertex\_\-opposite ({\bf GtvTetrahedron} $\ast$ {\em t}, {\bf GtvFacet} $\ast$ {\em f})}\label{group__tetrahedron_g30ee14730ecd4e1af080b8d086b740d1}
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+radius\+\_\+ratio@{gtv\+\_\+tetrahedron\+\_\+radius\+\_\+ratio}}
+\index{gtv\+\_\+tetrahedron\+\_\+radius\+\_\+ratio@{gtv\+\_\+tetrahedron\+\_\+radius\+\_\+ratio}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+radius\+\_\+ratio}]{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\+\_\+tetrahedron\+\_\+radius\+\_\+ratio (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga289dc91b8394c86b59614fb321c088cd}
+Calculate the radius ratio quality measure for a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}, given in Dompierre, Julien, Labbe\textquotesingle{}, Paul, Guibault, Francois and Camarero, Ricardo, {\tt `\+Proposal of benchmarks for 3\+D unstructured tetrahedral mesh optimization\textquotesingle{}},
+\begin{DoxyEnumerate}
+\item The measure $\rho=3\rho_{in}/\rho_{out}$ is three times the ratio of the inradius and circumradius of the tetrahedron (although computed in a different way).
+\end{DoxyEnumerate}
 
 
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the radius ratio quality measure or zero if {\itshape t} is degenerate. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+tetrahedron\+\_\+volume().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+set@{gtv\+\_\+tetrahedron\+\_\+set}}
+\index{gtv\+\_\+tetrahedron\+\_\+set@{gtv\+\_\+tetrahedron\+\_\+set}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}gint gtv\+\_\+tetrahedron\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{tetrahedron, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f1, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f2, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f3, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f4}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_gaf6e65ba5e31e6b2baf228800be55d968}
+Set the facets of a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}. A check is performed to ensure that the facets define a valid tetrahedron.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tetrahedron} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em f1} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}; \\
+\hline
+{\em f2} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}; \\
+\hline
+{\em f3} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}; \\
+\hline
+{\em f4} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S on success. 
+\end{DoxyReturn}
+
+
+References G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, G\+T\+V\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S, and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
+
+
+
+Referenced by gtv\+\_\+cell\+\_\+new(), and gtv\+\_\+tetrahedron\+\_\+new().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite@{gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite}}
+\index{gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite@{gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite}]{\setlength{\rightskip}{0pt plus 5cm}Gts\+Vertex$\ast$ gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga30ee14730ecd4e1af080b8d086b740d1}
 Find the vertex of a tetrahedron which is opposite a specified face.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]\doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em f}]\doxyref{GtvFacet}{p.}{structGtvFacet} opposite to which a GtsVertex is to be found.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GtsVertex of {\em t\/} which is opposite {\em f\/}, if {\em f\/} is on {\em t\/}, NULL otherwise. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_vertices@{gtv\_\-tetrahedron\_\-vertices}}
-\index{gtv_tetrahedron_vertices@{gtv\_\-tetrahedron\_\-vertices}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-tetrahedron\_\-vertices ({\bf GtvTetrahedron} $\ast$ {\em t}, GtsVertex $\ast$$\ast$ {\em v1}, GtsVertex $\ast$$\ast$ {\em v2}, GtsVertex $\ast$$\ast$ {\em v3}, GtsVertex $\ast$$\ast$ {\em v4})}\label{group__tetrahedron_g853130eb2078ded6793874c064b3f97a}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em f} & \doxyref{Gtv\+Facet}{p.}{structGtvFacet} opposite to which a \+::\+Gts\+Vertex is to be found.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+::\+Gts\+Vertex of {\itshape t} which is opposite {\itshape f}, if {\itshape f} is on {\itshape t}, N\+U\+L\+L otherwise. 
+\end{DoxyReturn}
 
 
-Extract the vertices of a tetrahedron. These are ordered so that {\em v1\/} is opposite the first face of {\em t\/} (t-$>$f1) and so on.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em v1}]a GtsVertex; \item[{\em v2}]a GtsVertex; \item[{\em v3}]a GtsVertex; \item[{\em v4}]a GtsVertex.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_vertices_off_edge@{gtv\_\-tetrahedron\_\-vertices\_\-off\_\-edge}}
-\index{gtv_tetrahedron_vertices_off_edge@{gtv\_\-tetrahedron\_\-vertices\_\-off\_\-edge}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-tetrahedron\_\-vertices\_\-off\_\-edge ({\bf GtvTetrahedron} $\ast$ {\em t}, GtsEdge $\ast$ {\em e}, GtsVertex $\ast$$\ast$ {\em a}, GtsVertex $\ast$$\ast$ {\em b})}\label{group__tetrahedron_g70fb06bf2abdd595613366f4b6664400}
+References gtv\+\_\+tetrahedron\+\_\+has\+\_\+facet().
 
 
-Find the vertices of a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} which are not used by a GtsEdge. If {\em e\/} is not used by {\em t\/}, {\em a\/} and {\em b\/} will be NULL.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}; \item[{\em e}]a GtsEdge; \item[{\em a}]on exit, a GtsVertex of {\em t\/} which does not lie on {\em e\/} \item[{\em b}]on exit, the other GtsVertex of {\em t\/} which does not lie on {\em e\/}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
-\index{tetrahedron@{tetrahedron}!gtv_tetrahedron_volume@{gtv\_\-tetrahedron\_\-volume}}
-\index{gtv_tetrahedron_volume@{gtv\_\-tetrahedron\_\-volume}!tetrahedron@{tetrahedron}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\_\-tetrahedron\_\-volume ({\bf GtvTetrahedron} $\ast$ {\em t})}\label{group__tetrahedron_g8ac1b8b4e2c460219a594cbf4d5ad062}
+Referenced by gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell(), gtv\+\_\+facet\+\_\+is\+\_\+regular(), gtv\+\_\+facet\+\_\+tetrahedra\+\_\+vertices(), and gtv\+\_\+tetrahedron\+\_\+is\+\_\+encroached().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+vertices@{gtv\+\_\+tetrahedron\+\_\+vertices}}
+\index{gtv\+\_\+tetrahedron\+\_\+vertices@{gtv\+\_\+tetrahedron\+\_\+vertices}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+vertices}]{\setlength{\rightskip}{0pt plus 5cm}gint gtv\+\_\+tetrahedron\+\_\+vertices (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{Gts\+Vertex $\ast$$\ast$}]{v1, }
+\item[{Gts\+Vertex $\ast$$\ast$}]{v2, }
+\item[{Gts\+Vertex $\ast$$\ast$}]{v3, }
+\item[{Gts\+Vertex $\ast$$\ast$}]{v4}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga853130eb2078ded6793874c064b3f97a}
+Extract the vertices of a tetrahedron. These are ordered so that {\itshape v1} is opposite the first face of {\itshape t} (t-\/$>$f1) and so on.
 
 
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em v1} & a \+::\+Gts\+Vertex; \\
+\hline
+{\em v2} & a \+::\+Gts\+Vertex; \\
+\hline
+{\em v3} & a \+::\+Gts\+Vertex; \\
+\hline
+{\em v4} & a \+::\+Gts\+Vertex.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S on success. 
+\end{DoxyReturn}
+
+
+References G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S, and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
+
+
+
+Referenced by gtv\+\_\+bbox\+\_\+tetrahedra(), gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell(), gtv\+\_\+point\+\_\+in\+\_\+tetrahedron(), gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+facet(), gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere(), gtv\+\_\+tetrahedron\+\_\+centroid(), gtv\+\_\+tetrahedron\+\_\+circumradius(), gtv\+\_\+tetrahedron\+\_\+facet\+\_\+opposite(), gtv\+\_\+tetrahedron\+\_\+has\+\_\+vertex(), gtv\+\_\+tetrahedron\+\_\+opposite\+\_\+vertices(), gtv\+\_\+tetrahedron\+\_\+orientation(), gtv\+\_\+tetrahedron\+\_\+vertices\+\_\+off\+\_\+edge(), and gtv\+\_\+tetrahedron\+\_\+volume().
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+vertices\+\_\+off\+\_\+edge@{gtv\+\_\+tetrahedron\+\_\+vertices\+\_\+off\+\_\+edge}}
+\index{gtv\+\_\+tetrahedron\+\_\+vertices\+\_\+off\+\_\+edge@{gtv\+\_\+tetrahedron\+\_\+vertices\+\_\+off\+\_\+edge}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+vertices\+\_\+off\+\_\+edge}]{\setlength{\rightskip}{0pt plus 5cm}gint gtv\+\_\+tetrahedron\+\_\+vertices\+\_\+off\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t, }
+\item[{Gts\+Edge $\ast$}]{e, }
+\item[{Gts\+Vertex $\ast$$\ast$}]{a, }
+\item[{Gts\+Vertex $\ast$$\ast$}]{b}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga70fb06bf2abdd595613366f4b6664400}
+Find the vertices of a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron} which are not used by a Gts\+Edge. If {\itshape e} is not used by {\itshape t}, {\itshape a} and {\itshape b} will be N\+U\+L\+L.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}; \\
+\hline
+{\em e} & a Gts\+Edge; \\
+\hline
+{\em a} & on exit, a Gts\+Vertex of {\itshape t} which does not lie on {\itshape e} \\
+\hline
+{\em b} & on exit, the other Gts\+Vertex of {\itshape t} which does not lie on {\itshape e}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S on success. 
+\end{DoxyReturn}
+
+
+References G\+T\+V\+\_\+\+F\+A\+I\+L\+U\+R\+E, G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S, gtv\+\_\+tetrahedron\+\_\+vertices(), and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
+
+\index{Tetrahedra@{Tetrahedra}!gtv\+\_\+tetrahedron\+\_\+volume@{gtv\+\_\+tetrahedron\+\_\+volume}}
+\index{gtv\+\_\+tetrahedron\+\_\+volume@{gtv\+\_\+tetrahedron\+\_\+volume}!Tetrahedra@{Tetrahedra}}
+\subsubsection[{gtv\+\_\+tetrahedron\+\_\+volume}]{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\+\_\+tetrahedron\+\_\+volume (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Tetrahedron} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{group__tetrahedron_ga8ac1b8b4e2c460219a594cbf4d5ad062}
 Find the signed volume of a tetrahedron.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the signed volume of {\em t\/}; if this is negative, you might want to use \doxyref{gtv\_\-tetrahedron\_\-invert}{p.}{group__tetrahedron_g18b59f4798ab709f0b5d5f683338d7d3} or \doxyref{gtv\_\-tetrahedron\_\-orient}{p.}{group__tetrahedron_g2f78eaaeb566550c8a3e0fbbbc9c1775} to reorient the vertices. \end{Desc}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & a \doxyref{Gtv\+Tetrahedron}{p.}{structGtvTetrahedron}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the signed volume of {\itshape t}; if this is negative, you might want to use \doxyref{gtv\+\_\+tetrahedron\+\_\+invert}{p.}{group__tetrahedron_ga18b59f4798ab709f0b5d5f683338d7d3} or \doxyref{gtv\+\_\+tetrahedron\+\_\+orient}{p.}{group__tetrahedron_ga2f78eaaeb566550c8a3e0fbbbc9c1775} to reorient the vertices. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+tetrahedron\+\_\+vertices().
+
+
+
+Referenced by gtv\+\_\+tetrahedron\+\_\+circumradius(), gtv\+\_\+tetrahedron\+\_\+inradius(), gtv\+\_\+tetrahedron\+\_\+is\+\_\+okay(), gtv\+\_\+tetrahedron\+\_\+orient(), and gtv\+\_\+tetrahedron\+\_\+radius\+\_\+ratio().
+

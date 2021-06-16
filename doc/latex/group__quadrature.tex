@@ -1,196 +1,100 @@
 \section{Quadrature}
 \label{group__quadrature}\index{Quadrature@{Quadrature}}
 \subsection*{Data Structures}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-struct {\bf GtvQuadratureRule}
-\end{CompactItemize}
-\subsection*{Defines}
-\begin{CompactItemize}
+struct {\bf Gtv\+Quadrature\+Rule}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
 \item 
-\#define {\bf gtv\_\-quadrature\_\-rule\_\-length}(q)
+\#define {\bf gtv\+\_\+quadrature\+\_\+rule\+\_\+length}(q)
 \item 
-\#define {\bf gtv\_\-quadrature\_\-rule\_\-xi1}(q, i)
+\#define {\bf gtv\+\_\+quadrature\+\_\+rule\+\_\+xi1}(q,  i)
 \item 
-\#define {\bf gtv\_\-quadrature\_\-rule\_\-xi2}(q, i)
+\#define {\bf gtv\+\_\+quadrature\+\_\+rule\+\_\+xi2}(q,  i)
 \item 
-\#define {\bf gtv\_\-quadrature\_\-rule\_\-xi3}(q, i)
+\#define {\bf gtv\+\_\+quadrature\+\_\+rule\+\_\+xi3}(q,  i)
 \item 
-\#define {\bf gtv\_\-quadrature\_\-rule\_\-xi4}(q, i)
+\#define {\bf gtv\+\_\+quadrature\+\_\+rule\+\_\+xi4}(q,  i)
 \item 
-\#define {\bf gtv\_\-quadrature\_\-rule\_\-weight}(q, i)
-\end{CompactItemize}
+\#define {\bf gtv\+\_\+quadrature\+\_\+rule\+\_\+weight}(q,  i)
+\end{DoxyCompactItemize}
 \subsection*{Enumerations}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-enum {\bf GtvQuadrature} \{ {\bf GTV\_\-QUADRATURE\_\-KEAST\_\-1}, 
-{\bf GTV\_\-QUADRATURE\_\-ZIENKIEWICZ\_\-4}, 
-{\bf GTV\_\-QUADRATURE\_\-ZIENKIEWICZ\_\-5}
+enum {\bf Gtv\+Quadrature} \{ {\bf G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+K\+E\+A\+S\+T\+\_\+1}, 
+{\bf G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+4}, 
+{\bf G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+5}
  \}
-\end{CompactItemize}
-\subsection*{Functions}
-\begin{CompactItemize}
-\item 
-{\bf GtvQuadratureRule} $\ast$ {\bf gtv\_\-quadrature\_\-rule\_\-new} (void)
-\item 
-gint {\bf gtv\_\-quadrature\_\-rule\_\-free} ({\bf GtvQuadratureRule} $\ast$q)
-\item 
-gint {\bf gtv\_\-quadrature\_\-rule\_\-select} ({\bf GtvQuadratureRule} $\ast$q, {\bf GtvQuadrature} quadrature)
-\item 
-gint {\bf gtv\_\-quadrature\_\-rule\_\-compute} ({\bf GtvQuadratureRule} $\ast$q, {\bf GtvTetrahedron} $\ast$t, GtsPoint $\ast$p, gint nh, gint nr, gint nt)
-\item 
-gint {\bf gtv\_\-quadrature\_\-rule\_\-interp\_\-point} ({\bf GtvQuadratureRule} $\ast$q, GtsPoint $\ast$p1, GtsPoint $\ast$p2, GtsPoint $\ast$p3, GtsPoint $\ast$p4, gint i, GtsPoint $\ast$p)
-\item 
-gint {\bf gtv\_\-quadrature\_\-rule\_\-interp\_\-vector} ({\bf GtvQuadratureRule} $\ast$q, GtsVector v1, GtsVector v2, GtsVector v3, GtsVector v4, gint i, GtsVector v)
-\item 
-gint {\bf gtv\_\-quadrature\_\-rule\_\-interp\_\-scalar} ({\bf GtvQuadratureRule} $\ast$q, gdouble v1, gdouble v2, gdouble v3, gdouble v4, gint i, gdouble $\ast$v)
-\end{CompactItemize}
+\end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
-\index{quadrature@{quadrature}!gtv_quadrature_rule_length@{gtv\_\-quadrature\_\-rule\_\-length}}
-\index{gtv_quadrature_rule_length@{gtv\_\-quadrature\_\-rule\_\-length}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\_\-quadrature\_\-rule\_\-length(q)}\label{group__quadrature_g7f5b251c33e6cfc2f5f27719c8228f67}
+\subsection{Detailed Description}
 
 
-The number of points in a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule} q. \index{quadrature@{quadrature}!gtv_quadrature_rule_weight@{gtv\_\-quadrature\_\-rule\_\-weight}}
-\index{gtv_quadrature_rule_weight@{gtv\_\-quadrature\_\-rule\_\-weight}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\_\-quadrature\_\-rule\_\-weight(q, i)}\label{group__quadrature_gfe492d7b417bb708b8dbf341b1a85cd9}
-
-
-The weight of the {\em i\/} th point of a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule} {\em q\/}. \index{quadrature@{quadrature}!gtv_quadrature_rule_xi1@{gtv\_\-quadrature\_\-rule\_\-xi1}}
-\index{gtv_quadrature_rule_xi1@{gtv\_\-quadrature\_\-rule\_\-xi1}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\_\-quadrature\_\-rule\_\-xi1(q, i)}\label{group__quadrature_gd2eecb2dfcc449524f129ea66522f3f2}
-
-
-The first normalized coordinate of the {\em i\/} th point of a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule} {\em q\/}. \index{quadrature@{quadrature}!gtv_quadrature_rule_xi2@{gtv\_\-quadrature\_\-rule\_\-xi2}}
-\index{gtv_quadrature_rule_xi2@{gtv\_\-quadrature\_\-rule\_\-xi2}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\_\-quadrature\_\-rule\_\-xi2(q, i)}\label{group__quadrature_g8e98c7752ed180c59d22d89f982e3136}
-
-
-The second normalized coordinate of the {\em i\/} th point of a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule} {\em q\/}. \index{quadrature@{quadrature}!gtv_quadrature_rule_xi3@{gtv\_\-quadrature\_\-rule\_\-xi3}}
-\index{gtv_quadrature_rule_xi3@{gtv\_\-quadrature\_\-rule\_\-xi3}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\_\-quadrature\_\-rule\_\-xi3(q, i)}\label{group__quadrature_g7a06cb7e0381a5ccafdb915cb267e3b7}
-
-
-The third normalized coordinate of the {\em i\/} th point of a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule} {\em q\/}. \index{quadrature@{quadrature}!gtv_quadrature_rule_xi4@{gtv\_\-quadrature\_\-rule\_\-xi4}}
-\index{gtv_quadrature_rule_xi4@{gtv\_\-quadrature\_\-rule\_\-xi4}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\_\-quadrature\_\-rule\_\-xi4(q, i)}\label{group__quadrature_g08db2410911a3b5b7e51dcd69ff398f6}
-
-
-The fourth normalized coordinate of the {\em i\/} th point of a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule} {\em q\/}. 
+\subsection{Macro Definition Documentation}
+\index{Quadrature@{Quadrature}!gtv\+\_\+quadrature\+\_\+rule\+\_\+length@{gtv\+\_\+quadrature\+\_\+rule\+\_\+length}}
+\index{gtv\+\_\+quadrature\+\_\+rule\+\_\+length@{gtv\+\_\+quadrature\+\_\+rule\+\_\+length}!Quadrature@{Quadrature}}
+\subsubsection[{gtv\+\_\+quadrature\+\_\+rule\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\+\_\+quadrature\+\_\+rule\+\_\+length(
+\begin{DoxyParamCaption}
+\item[{}]{q}
+\end{DoxyParamCaption}
+)}\label{group__quadrature_ga7f5b251c33e6cfc2f5f27719c8228f67}
+The number of points in a \doxyref{Gtv\+Quadrature\+Rule}{p.}{structGtvQuadratureRule} q. \index{Quadrature@{Quadrature}!gtv\+\_\+quadrature\+\_\+rule\+\_\+weight@{gtv\+\_\+quadrature\+\_\+rule\+\_\+weight}}
+\index{gtv\+\_\+quadrature\+\_\+rule\+\_\+weight@{gtv\+\_\+quadrature\+\_\+rule\+\_\+weight}!Quadrature@{Quadrature}}
+\subsubsection[{gtv\+\_\+quadrature\+\_\+rule\+\_\+weight}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\+\_\+quadrature\+\_\+rule\+\_\+weight(
+\begin{DoxyParamCaption}
+\item[{}]{q, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}\label{group__quadrature_gafe492d7b417bb708b8dbf341b1a85cd9}
+The weight of the {\itshape i} th point of a \doxyref{Gtv\+Quadrature\+Rule}{p.}{structGtvQuadratureRule} {\itshape q}. \index{Quadrature@{Quadrature}!gtv\+\_\+quadrature\+\_\+rule\+\_\+xi1@{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi1}}
+\index{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi1@{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi1}!Quadrature@{Quadrature}}
+\subsubsection[{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi1}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\+\_\+quadrature\+\_\+rule\+\_\+xi1(
+\begin{DoxyParamCaption}
+\item[{}]{q, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}\label{group__quadrature_gad2eecb2dfcc449524f129ea66522f3f2}
+The first normalized coordinate of the {\itshape i} th point of a \doxyref{Gtv\+Quadrature\+Rule}{p.}{structGtvQuadratureRule} {\itshape q}. \index{Quadrature@{Quadrature}!gtv\+\_\+quadrature\+\_\+rule\+\_\+xi2@{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi2}}
+\index{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi2@{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi2}!Quadrature@{Quadrature}}
+\subsubsection[{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi2}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\+\_\+quadrature\+\_\+rule\+\_\+xi2(
+\begin{DoxyParamCaption}
+\item[{}]{q, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}\label{group__quadrature_ga8e98c7752ed180c59d22d89f982e3136}
+The second normalized coordinate of the {\itshape i} th point of a \doxyref{Gtv\+Quadrature\+Rule}{p.}{structGtvQuadratureRule} {\itshape q}. \index{Quadrature@{Quadrature}!gtv\+\_\+quadrature\+\_\+rule\+\_\+xi3@{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi3}}
+\index{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi3@{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi3}!Quadrature@{Quadrature}}
+\subsubsection[{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi3}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\+\_\+quadrature\+\_\+rule\+\_\+xi3(
+\begin{DoxyParamCaption}
+\item[{}]{q, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}\label{group__quadrature_ga7a06cb7e0381a5ccafdb915cb267e3b7}
+The third normalized coordinate of the {\itshape i} th point of a \doxyref{Gtv\+Quadrature\+Rule}{p.}{structGtvQuadratureRule} {\itshape q}. \index{Quadrature@{Quadrature}!gtv\+\_\+quadrature\+\_\+rule\+\_\+xi4@{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi4}}
+\index{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi4@{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi4}!Quadrature@{Quadrature}}
+\subsubsection[{gtv\+\_\+quadrature\+\_\+rule\+\_\+xi4}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtv\+\_\+quadrature\+\_\+rule\+\_\+xi4(
+\begin{DoxyParamCaption}
+\item[{}]{q, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}\label{group__quadrature_ga08db2410911a3b5b7e51dcd69ff398f6}
+The fourth normalized coordinate of the {\itshape i} th point of a \doxyref{Gtv\+Quadrature\+Rule}{p.}{structGtvQuadratureRule} {\itshape q}. 
 
 \subsection{Enumeration Type Documentation}
-\index{quadrature@{quadrature}!GtvQuadrature@{GtvQuadrature}}
-\index{GtvQuadrature@{GtvQuadrature}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GtvQuadrature}}\label{group__quadrature_g0e67a652d1a003e0ef69688621cd7e4d}
-
-
-Quadrature types built in to GTV. \begin{Desc}
-\item[Enumerator: ]\par
+\index{Quadrature@{Quadrature}!Gtv\+Quadrature@{Gtv\+Quadrature}}
+\index{Gtv\+Quadrature@{Gtv\+Quadrature}!Quadrature@{Quadrature}}
+\subsubsection[{Gtv\+Quadrature}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gtv\+Quadrature}}\label{group__quadrature_ga0e67a652d1a003e0ef69688621cd7e4d}
+Quadrature types built in to G\+T\+V. \begin{Desc}
+\item[Enumerator]\par
 \begin{description}
-\index{GTV_QUADRATURE_KEAST_1@{GTV\_\-QUADRATURE\_\-KEAST\_\-1}!quadrature@{quadrature}}\index{quadrature@{quadrature}!GTV_QUADRATURE_KEAST_1@{GTV\_\-QUADRATURE\_\-KEAST\_\-1}}\item[{\em 
-GTV\_\-QUADRATURE\_\-KEAST\_\-1\label{group__quadrature_gg0e67a652d1a003e0ef69688621cd7e4d9b77459194573dd6a6b9ebcc96fa9d7a}
-}]Keast four point rule \index{GTV_QUADRATURE_ZIENKIEWICZ_4@{GTV\_\-QUADRATURE\_\-ZIENKIEWICZ\_\-4}!quadrature@{quadrature}}\index{quadrature@{quadrature}!GTV_QUADRATURE_ZIENKIEWICZ_4@{GTV\_\-QUADRATURE\_\-ZIENKIEWICZ\_\-4}}\item[{\em 
-GTV\_\-QUADRATURE\_\-ZIENKIEWICZ\_\-4\label{group__quadrature_gg0e67a652d1a003e0ef69688621cd7e4d7f5433e039b6c418b6eb87c65668bc5f}
-}]Zienkiewicz four point rule \index{GTV_QUADRATURE_ZIENKIEWICZ_5@{GTV\_\-QUADRATURE\_\-ZIENKIEWICZ\_\-5}!quadrature@{quadrature}}\index{quadrature@{quadrature}!GTV_QUADRATURE_ZIENKIEWICZ_5@{GTV\_\-QUADRATURE\_\-ZIENKIEWICZ\_\-5}}\item[{\em 
-GTV\_\-QUADRATURE\_\-ZIENKIEWICZ\_\-5\label{group__quadrature_gg0e67a652d1a003e0ef69688621cd7e4d4f276a815d5862c63c1fd038f77572bd}
+\index{G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+K\+E\+A\+S\+T\+\_\+1@{G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+K\+E\+A\+S\+T\+\_\+1}!Quadrature@{Quadrature}}\index{Quadrature@{Quadrature}!G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+K\+E\+A\+S\+T\+\_\+1@{G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+K\+E\+A\+S\+T\+\_\+1}}\item[{\em 
+G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+K\+E\+A\+S\+T\+\_\+1\label{group__quadrature_gga0e67a652d1a003e0ef69688621cd7e4da9b77459194573dd6a6b9ebcc96fa9d7a}
+}]Keast four point rule \index{G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+4@{G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+4}!Quadrature@{Quadrature}}\index{Quadrature@{Quadrature}!G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+4@{G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+4}}\item[{\em 
+G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+4\label{group__quadrature_gga0e67a652d1a003e0ef69688621cd7e4da7f5433e039b6c418b6eb87c65668bc5f}
+}]Zienkiewicz four point rule \index{G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+5@{G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+5}!Quadrature@{Quadrature}}\index{Quadrature@{Quadrature}!G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+5@{G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+5}}\item[{\em 
+G\+T\+V\+\_\+\+Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+Z\+I\+E\+N\+K\+I\+E\+W\+I\+C\+Z\+\_\+5\label{group__quadrature_gga0e67a652d1a003e0ef69688621cd7e4da4f276a815d5862c63c1fd038f77572bd}
 }]Zienkiewicz five point rule \end{description}
 \end{Desc}
-
-
-
-\subsection{Function Documentation}
-\index{quadrature@{quadrature}!gtv_quadrature_rule_compute@{gtv\_\-quadrature\_\-rule\_\-compute}}
-\index{gtv_quadrature_rule_compute@{gtv\_\-quadrature\_\-rule\_\-compute}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-quadrature\_\-rule\_\-compute ({\bf GtvQuadratureRule} $\ast$ {\em q}, {\bf GtvTetrahedron} $\ast$ {\em t}, GtsPoint $\ast$ {\em p}, gint {\em nh}, gint {\em nr}, gint {\em nt})}\label{group__quadrature_gd4690866840365be0f8ed5abeda06730}
-
-
-Generate a quadrature rule for the integration of functions with a $1/R$ singularity on a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron}, using (something like) the algorithm of Khayat and Wilton, `Numerical evaluation of singular and near-singular potential integrals', IEEE Transactions on Antennas and Propagation, 53(10):3180-3190, 2005, {\tt http://dx.doi.org/10.1109/TAP.2005.856342}
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em q}]a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule}; \item[{\em t}]a \doxyref{GtvTetrahedron}{p.}{structGtvTetrahedron} to integrate over; \item[{\em p}]the field point for evaluation of the integral; \item[{\em nh}]number of vertical sampling points on {\em t\/}; \item[{\em nr}]number of radial sampling points on each slice of {\em t\/}; \item[{\em nt}]number of transverse sampling points on each slice of {\em t\/};\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
-\index{quadrature@{quadrature}!gtv_quadrature_rule_free@{gtv\_\-quadrature\_\-rule\_\-free}}
-\index{gtv_quadrature_rule_free@{gtv\_\-quadrature\_\-rule\_\-free}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-quadrature\_\-rule\_\-free ({\bf GtvQuadratureRule} $\ast$ {\em q})}\label{group__quadrature_g75ec8984083c3be2e57bc1a4e26a184c}
-
-
-Free a previously allocated \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule}, releasing all associated memory.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em q}]the \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule} to be freed.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-SUCCESS on success. \end{Desc}
-\index{quadrature@{quadrature}!gtv_quadrature_rule_interp_point@{gtv\_\-quadrature\_\-rule\_\-interp\_\-point}}
-\index{gtv_quadrature_rule_interp_point@{gtv\_\-quadrature\_\-rule\_\-interp\_\-point}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-quadrature\_\-rule\_\-interp\_\-point ({\bf GtvQuadratureRule} $\ast$ {\em q}, GtsPoint $\ast$ {\em p1}, GtsPoint $\ast$ {\em p2}, GtsPoint $\ast$ {\em p3}, GtsPoint $\ast$ {\em p4}, gint {\em i}, GtsPoint $\ast$ {\em p})}\label{group__quadrature_g38f1f679fc32867c142a9f4aee0dfa14}
-
-
-Interpolate a position between four points using a quadrature rule for tetrahedra.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em q}]a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule}; \item[{\em p1}]first vertex; \item[{\em p2}]second vertex; \item[{\em p3}]third vertex; \item[{\em p4}]fourth vertex; \item[{\em i}]index of node in {\em q\/}; \item[{\em p}]interpolated position.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
-\index{quadrature@{quadrature}!gtv_quadrature_rule_interp_scalar@{gtv\_\-quadrature\_\-rule\_\-interp\_\-scalar}}
-\index{gtv_quadrature_rule_interp_scalar@{gtv\_\-quadrature\_\-rule\_\-interp\_\-scalar}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-quadrature\_\-rule\_\-interp\_\-scalar ({\bf GtvQuadratureRule} $\ast$ {\em q}, gdouble {\em v1}, gdouble {\em v2}, gdouble {\em v3}, gdouble {\em v4}, gint {\em i}, gdouble $\ast$ {\em v})}\label{group__quadrature_gbeefdab6343b07b32bdd37a3735ad74b}
-
-
-Interpolate a scalar between four points using a quadrature rule for tetrahedra.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em q}]a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule}; \item[{\em v1}]scalar value at the first vertex; \item[{\em v2}]scalar value at the second vertex; \item[{\em v3}]scalar value at the third vertex; \item[{\em v4}]scalar value at the fourth vertex; \item[{\em i}]index of node in {\em q\/}; \item[{\em v}]interpolated value.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
-\index{quadrature@{quadrature}!gtv_quadrature_rule_interp_vector@{gtv\_\-quadrature\_\-rule\_\-interp\_\-vector}}
-\index{gtv_quadrature_rule_interp_vector@{gtv\_\-quadrature\_\-rule\_\-interp\_\-vector}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-quadrature\_\-rule\_\-interp\_\-vector ({\bf GtvQuadratureRule} $\ast$ {\em q}, GtsVector {\em v1}, GtsVector {\em v2}, GtsVector {\em v3}, GtsVector {\em v4}, gint {\em i}, GtsVector {\em v})}\label{group__quadrature_g4779ecf789756cba0da9250d893266a7}
-
-
-Interpolate a vector quantity between four points using a quadrature rule for tetrahedra.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em q}]a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule}; \item[{\em v1}]vector value at the first vertex; \item[{\em v2}]vector value at the second vertex; \item[{\em v3}]vector value at the third vertex; \item[{\em v4}]vector value at the fourth vertex; \item[{\em i}]index of node in {\em q\/}; \item[{\em v}]interpolated vector.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}
-\index{quadrature@{quadrature}!gtv_quadrature_rule_new@{gtv\_\-quadrature\_\-rule\_\-new}}
-\index{gtv_quadrature_rule_new@{gtv\_\-quadrature\_\-rule\_\-new}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvQuadratureRule}$\ast$ gtv\_\-quadrature\_\-rule\_\-new (void)}\label{group__quadrature_g0c8dbb3d35a3c73423603f5e3718f2c8}
-
-
-Allocate a new \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule}.
-
-\begin{Desc}
-\item[Returns:]the new rule. \end{Desc}
-\index{quadrature@{quadrature}!gtv_quadrature_rule_select@{gtv\_\-quadrature\_\-rule\_\-select}}
-\index{gtv_quadrature_rule_select@{gtv\_\-quadrature\_\-rule\_\-select}!quadrature@{quadrature}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-quadrature\_\-rule\_\-select ({\bf GtvQuadratureRule} $\ast$ {\em q}, {\bf GtvQuadrature} {\em quadrature})}\label{group__quadrature_g632b1a012dc187ffd3f2cfc886291e5c}
-
-
-Select a pre-computed quadrature rule for integration on a tetrahedron.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em q}]a \doxyref{GtvQuadratureRule}{p.}{structGtvQuadratureRule} \item[{\em quadrature}]the rule, of type \doxyref{GtvQuadrature}{p.}{group__quadrature_g0e67a652d1a003e0ef69688621cd7e4d}\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success. \end{Desc}

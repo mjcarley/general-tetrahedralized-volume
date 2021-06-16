@@ -1,40 +1,71 @@
 \section{Geometric tests}
 \label{group__geometry}\index{Geometric tests@{Geometric tests}}
 \subsection*{Functions}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-gdouble {\bf gtv\_\-point\_\-in\_\-sphere} (GtsPoint $\ast$p, GtsPoint $\ast$p1, GtsPoint $\ast$p2, GtsPoint $\ast$p3, GtsPoint $\ast$p4)
+gdouble {\bf gtv\+\_\+point\+\_\+in\+\_\+sphere} (Gts\+Point $\ast$p, Gts\+Point $\ast$p1, Gts\+Point $\ast$p2, Gts\+Point $\ast$p3, Gts\+Point $\ast$p4)
 \item 
-gboolean {\bf gtv\_\-points\_\-are\_\-collinear} (GtsPoint $\ast$p1, GtsPoint $\ast$p2, GtsPoint $\ast$p3)
-\end{CompactItemize}
+gboolean {\bf gtv\+\_\+points\+\_\+are\+\_\+collinear} (Gts\+Point $\ast$p1, Gts\+Point $\ast$p2, Gts\+Point $\ast$p3)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
 
 
 \subsection{Function Documentation}
-\index{geometry@{geometry}!gtv_point_in_sphere@{gtv\_\-point\_\-in\_\-sphere}}
-\index{gtv_point_in_sphere@{gtv\_\-point\_\-in\_\-sphere}!geometry@{geometry}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\_\-point\_\-in\_\-sphere (GtsPoint $\ast$ {\em p}, GtsPoint $\ast$ {\em p1}, GtsPoint $\ast$ {\em p2}, GtsPoint $\ast$ {\em p3}, GtsPoint $\ast$ {\em p4})}\label{group__geometry_g62ec1adc74fe75ce5ea29f7d3be1bb1d}
+\index{Geometric tests@{Geometric tests}!gtv\+\_\+point\+\_\+in\+\_\+sphere@{gtv\+\_\+point\+\_\+in\+\_\+sphere}}
+\index{gtv\+\_\+point\+\_\+in\+\_\+sphere@{gtv\+\_\+point\+\_\+in\+\_\+sphere}!Geometric tests@{Geometric tests}}
+\subsubsection[{gtv\+\_\+point\+\_\+in\+\_\+sphere}]{\setlength{\rightskip}{0pt plus 5cm}gdouble gtv\+\_\+point\+\_\+in\+\_\+sphere (
+\begin{DoxyParamCaption}
+\item[{Gts\+Point $\ast$}]{p, }
+\item[{Gts\+Point $\ast$}]{p1, }
+\item[{Gts\+Point $\ast$}]{p2, }
+\item[{Gts\+Point $\ast$}]{p3, }
+\item[{Gts\+Point $\ast$}]{p4}
+\end{DoxyParamCaption}
+)}\label{group__geometry_ga62ec1adc74fe75ce5ea29f7d3be1bb1d}
+Check whether a point lies inside a sphere defined by four Gts\+Point\textquotesingle{}s.
 
 
-Check whether a point lies inside a sphere defined by four GtsPoint's.
+\begin{DoxyParams}{Parameters}
+{\em p} & a \+::\+Gts\+Point; \\
+\hline
+{\em p1} & a \+::\+Gts\+Point; \\
+\hline
+{\em p2} & a \+::\+Gts\+Point; \\
+\hline
+{\em p3} & a \+::\+Gts\+Point; \\
+\hline
+{\em p4} & a \+::\+Gts\+Point;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+positive value if {\itshape p} lies inside the sphere, zero if it lies on the sphere and a negative value if it lies outside. 
+\end{DoxyReturn}
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em p}]a GtsPoint; \item[{\em p1}]a GtsPoint; \item[{\em p2}]a GtsPoint; \item[{\em p3}]a GtsPoint; \item[{\em p4}]a GtsPoint;\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]positive value if {\em p\/} lies inside the sphere, zero if it lies on the sphere and a negative value if it lies outside. \end{Desc}
-\index{geometry@{geometry}!gtv_points_are_collinear@{gtv\_\-points\_\-are\_\-collinear}}
-\index{gtv_points_are_collinear@{gtv\_\-points\_\-are\_\-collinear}!geometry@{geometry}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\_\-points\_\-are\_\-collinear (GtsPoint $\ast$ {\em p1}, GtsPoint $\ast$ {\em p2}, GtsPoint $\ast$ {\em p3})}\label{group__geometry_g1d9b22104f8f85ab07bc5a71e0a77f3c}
 
+Referenced by gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere().
 
+\index{Geometric tests@{Geometric tests}!gtv\+\_\+points\+\_\+are\+\_\+collinear@{gtv\+\_\+points\+\_\+are\+\_\+collinear}}
+\index{gtv\+\_\+points\+\_\+are\+\_\+collinear@{gtv\+\_\+points\+\_\+are\+\_\+collinear}!Geometric tests@{Geometric tests}}
+\subsubsection[{gtv\+\_\+points\+\_\+are\+\_\+collinear}]{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\+\_\+points\+\_\+are\+\_\+collinear (
+\begin{DoxyParamCaption}
+\item[{Gts\+Point $\ast$}]{p1, }
+\item[{Gts\+Point $\ast$}]{p2, }
+\item[{Gts\+Point $\ast$}]{p3}
+\end{DoxyParamCaption}
+)}\label{group__geometry_ga1d9b22104f8f85ab07bc5a71e0a77f3c}
 Check if three points are collinear by checking their orientation in three dimensions.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em p1}]a GtsPoint; \item[{\em p2}]a GtsPoint; \item[{\em p3}]a GtsPoint.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]TRUE if {\em p1\/}, {\em p2\/} and {\em p3\/} are collinear, FALSE otherswise. \end{Desc}
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & a \+::\+Gts\+Point; \\
+\hline
+{\em p2} & a \+::\+Gts\+Point; \\
+\hline
+{\em p3} & a \+::\+Gts\+Point.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E if {\itshape p1}, {\itshape p2} and {\itshape p3} are collinear, F\+A\+L\+S\+E otherswise. 
+\end{DoxyReturn}

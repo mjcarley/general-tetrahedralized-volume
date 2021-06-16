@@ -1,72 +1,123 @@
 \section{Delaunay tetrahedralization}
 \label{group__delaunay}\index{Delaunay tetrahedralization@{Delaunay tetrahedralization}}
 \subsection*{Functions}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-{\bf GtvCell} $\ast$ {\bf gtv\_\-delaunay\_\-check} ({\bf GtvVolume} $\ast$v)
+{\bf Gtv\+Cell} $\ast$ {\bf gtv\+\_\+delaunay\+\_\+check} ({\bf Gtv\+Volume} $\ast$v)
 \item 
-gint {\bf gtv\_\-delaunay\_\-add\_\-vertex\_\-to\_\-cell} ({\bf GtvVolume} $\ast$v, GtsVertex $\ast$p, {\bf GtvCell} $\ast$c)
+gint {\bf gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell} ({\bf Gtv\+Volume} $\ast$v, Gts\+Vertex $\ast$p, {\bf Gtv\+Cell} $\ast$c)
 \item 
-gint {\bf gtv\_\-delaunay\_\-add\_\-vertex} ({\bf GtvVolume} $\ast$v, GtsVertex $\ast$p, {\bf GtvCell} $\ast$c)
+gint {\bf gtv\+\_\+delaunay\+\_\+add\+\_\+vertex} ({\bf Gtv\+Volume} $\ast$v, Gts\+Vertex $\ast$p, {\bf Gtv\+Cell} $\ast$c)
 \item 
-gboolean {\bf gtv\_\-facet\_\-is\_\-regular} ({\bf GtvFacet} $\ast$f)
-\end{CompactItemize}
+gboolean {\bf gtv\+\_\+facet\+\_\+is\+\_\+regular} ({\bf Gtv\+Facet} $\ast$f)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
 
 
 \subsection{Function Documentation}
-\index{delaunay@{delaunay}!gtv_delaunay_add_vertex@{gtv\_\-delaunay\_\-add\_\-vertex}}
-\index{gtv_delaunay_add_vertex@{gtv\_\-delaunay\_\-add\_\-vertex}!delaunay@{delaunay}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-delaunay\_\-add\_\-vertex ({\bf GtvVolume} $\ast$ {\em v}, GtsVertex $\ast$ {\em p}, {\bf GtvCell} $\ast$ {\em c})}\label{group__delaunay_g5e8dd6cab382661dacd919ded1de1fd0}
+\index{Delaunay tetrahedralization@{Delaunay tetrahedralization}!gtv\+\_\+delaunay\+\_\+add\+\_\+vertex@{gtv\+\_\+delaunay\+\_\+add\+\_\+vertex}}
+\index{gtv\+\_\+delaunay\+\_\+add\+\_\+vertex@{gtv\+\_\+delaunay\+\_\+add\+\_\+vertex}!Delaunay tetrahedralization@{Delaunay tetrahedralization}}
+\subsubsection[{gtv\+\_\+delaunay\+\_\+add\+\_\+vertex}]{\setlength{\rightskip}{0pt plus 5cm}gint gtv\+\_\+delaunay\+\_\+add\+\_\+vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Volume} $\ast$}]{v, }
+\item[{Gts\+Vertex $\ast$}]{p, }
+\item[{{\bf Gtv\+Cell} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__delaunay_ga5e8dd6cab382661dacd919ded1de1fd0}
+Add a \+::\+Gts\+Vertex to a \doxyref{Gtv\+Volume}{p.}{structGtvVolume}, preserving the Delaunay property.
 
 
-Add a GtsVertex to a \doxyref{GtvVolume}{p.}{structGtvVolume}, preserving the Delaunay property.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em p}]a GtsVertex to be added to {\em v\/}; \item[{\em c}]a \doxyref{GtvCell}{p.}{structGtvCell} which is an initial guess for the location of {\em p\/}, or NULL.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]GTV\_\-SUCCESS on insertion of {\em p\/} in {\em v\/}, or an appropriate error code. \end{Desc}
-\index{delaunay@{delaunay}!gtv_delaunay_add_vertex_to_cell@{gtv\_\-delaunay\_\-add\_\-vertex\_\-to\_\-cell}}
-\index{gtv_delaunay_add_vertex_to_cell@{gtv\_\-delaunay\_\-add\_\-vertex\_\-to\_\-cell}!delaunay@{delaunay}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gint gtv\_\-delaunay\_\-add\_\-vertex\_\-to\_\-cell ({\bf GtvVolume} $\ast$ {\em v}, GtsVertex $\ast$ {\em p}, {\bf GtvCell} $\ast$ {\em c})}\label{group__delaunay_gaa068b042998ba17100d32e992e2494e}
-
-
-Add a GtsVertex to a \doxyref{GtvCell}{p.}{structGtvCell} of a \doxyref{GtvVolume}{p.}{structGtvVolume}, restoring the Delaunay property of the volume, using the method of Edelsbrunner, H. and Shah, N. R., Algorithmica 15:223--241, 1996 and Lawson, C., Computer Aided Geometric Design, 3:231--246, 1986, as described in Ledoux, H., {\tt `Computing the 3D Voronoi diagram robustly: An easy explanation'}, 4th International Symposium on Voronoi Diagrams in Science and Engineering, 2007.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}; \item[{\em p}]a GtsVertex to add to {\em p\/}; \item[{\em c}]a \doxyref{GtvCell}{p.}{structGtvCell} to add {\em p\/} to.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]\doxyref{GTV\_\-SUCCESS}{p.}{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732} on success, non-zero if {\em p\/} is already part of {\em c\/} or coincides with a vertex of {\em c\/}. \end{Desc}
-\index{delaunay@{delaunay}!gtv_delaunay_check@{gtv\_\-delaunay\_\-check}}
-\index{gtv_delaunay_check@{gtv\_\-delaunay\_\-check}!delaunay@{delaunay}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-delaunay\_\-check ({\bf GtvVolume} $\ast$ {\em v})}\label{group__delaunay_g461300e93ba4f8ff613e6b67b12987e2}
+\begin{DoxyParams}{Parameters}
+{\em v} & a \doxyref{Gtv\+Volume}{p.}{structGtvVolume}; \\
+\hline
+{\em p} & a \+::\+Gts\+Vertex to be added to {\itshape v}; \\
+\hline
+{\em c} & a \doxyref{Gtv\+Cell}{p.}{structGtvCell} which is an initial guess for the location of {\itshape p}, or N\+U\+L\+L.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S on insertion of {\itshape p} in {\itshape v}, or an appropriate error code. 
+\end{DoxyReturn}
 
 
-Check whether a \doxyref{GtvVolume}{p.}{structGtvVolume} satisfies the Delaunay property.
+References gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell(), G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, gtv\+\_\+point\+\_\+locate(), G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+V\+O\+L\+U\+M\+E, and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em v}]volume to check\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a non-Delaunay \doxyref{GtvCell}{p.}{structGtvCell} of {\em v\/} if {\em v\/} is non-Delaunay, NULL otherwise. \end{Desc}
-\index{delaunay@{delaunay}!gtv_facet_is_regular@{gtv\_\-facet\_\-is\_\-regular}}
-\index{gtv_facet_is_regular@{gtv\_\-facet\_\-is\_\-regular}!delaunay@{delaunay}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\_\-facet\_\-is\_\-regular ({\bf GtvFacet} $\ast$ {\em f})}\label{group__delaunay_ge4eca2bd2f2e47919fabbecef9af5893}
+\index{Delaunay tetrahedralization@{Delaunay tetrahedralization}!gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell@{gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell}}
+\index{gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell@{gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell}!Delaunay tetrahedralization@{Delaunay tetrahedralization}}
+\subsubsection[{gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell}]{\setlength{\rightskip}{0pt plus 5cm}gint gtv\+\_\+delaunay\+\_\+add\+\_\+vertex\+\_\+to\+\_\+cell (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Volume} $\ast$}]{v, }
+\item[{Gts\+Vertex $\ast$}]{p, }
+\item[{{\bf Gtv\+Cell} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__delaunay_gaaa068b042998ba17100d32e992e2494e}
+Add a \+::\+Gts\+Vertex to a \doxyref{Gtv\+Cell}{p.}{structGtvCell} of a \doxyref{Gtv\+Volume}{p.}{structGtvVolume}, restoring the Delaunay property of the volume, using the method of Edelsbrunner, H. and Shah, N. R., Algorithmica 15\+:223--241, 1996 and Lawson, C., Computer Aided Geometric Design, 3\+:231--246, 1986, as described in Ledoux, H., {\tt `\+Computing the 3\+D Voronoi diagram robustly\+: An easy explanation\textquotesingle{}}, 4th International Symposium on Voronoi Diagrams in Science and Engineering, 2007.
 
 
-Check if a \doxyref{GtvFacet}{p.}{structGtvFacet} is regular. A facet is regular if neither of the tetrahedra using it has the apex of the opposite tetrahedron inside its circumsphere. Boundary facets and isolated facets are also considered regular.
+\begin{DoxyParams}{Parameters}
+{\em v} & a \doxyref{Gtv\+Volume}{p.}{structGtvVolume}; \\
+\hline
+{\em p} & a \+::\+Gts\+Vertex to add to {\itshape p}; \\
+\hline
+{\em c} & a \doxyref{Gtv\+Cell}{p.}{structGtvCell} to add {\itshape p} to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S}{p.}{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9ad86eb3314eb116aa31f1ef794fbfd732} on success, non-\/zero if {\itshape p} is already part of {\itshape c} or coincides with a vertex of {\itshape c}. 
+\end{DoxyReturn}
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em f}]a \doxyref{GtvFacet}{p.}{structGtvFacet}.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]TRUE if {\em f\/} is regular, FALSE otherwise. \end{Desc}
+
+References G\+T\+V\+\_\+\+C\+O\+I\+N\+C\+I\+D\+E\+N\+T\+\_\+\+V\+E\+R\+T\+E\+X, gtv\+\_\+edge\+\_\+is\+\_\+boundary(), gtv\+\_\+facet\+\_\+is\+\_\+boundary(), G\+T\+V\+\_\+\+I\+N, G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T, G\+T\+V\+\_\+\+O\+N\+\_\+\+E\+D\+G\+E, G\+T\+V\+\_\+\+O\+N\+\_\+\+F\+A\+C\+E\+T, G\+T\+V\+\_\+\+O\+N\+\_\+\+V\+E\+R\+T\+E\+X, gtv\+\_\+point\+\_\+in\+\_\+tetrahedron(), gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere(), G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S, gtv\+\_\+tetrahedron\+\_\+facet\+\_\+opposite(), gtv\+\_\+tetrahedron\+\_\+opposite(), gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite(), gtv\+\_\+tetrahedron\+\_\+vertices(), G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+C\+E\+L\+L, G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+O\+N\+\_\+\+H\+U\+L\+L, G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+P\+R\+E\+S\+E\+N\+T, gtv\+\_\+volume\+\_\+add\+\_\+cell(), gtv\+\_\+volume\+\_\+remove\+\_\+cell(), and G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E.
+
+
+
+Referenced by gtv\+\_\+delaunay\+\_\+add\+\_\+vertex().
+
+\index{Delaunay tetrahedralization@{Delaunay tetrahedralization}!gtv\+\_\+delaunay\+\_\+check@{gtv\+\_\+delaunay\+\_\+check}}
+\index{gtv\+\_\+delaunay\+\_\+check@{gtv\+\_\+delaunay\+\_\+check}!Delaunay tetrahedralization@{Delaunay tetrahedralization}}
+\subsubsection[{gtv\+\_\+delaunay\+\_\+check}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Cell}$\ast$ gtv\+\_\+delaunay\+\_\+check (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Volume} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\label{group__delaunay_ga461300e93ba4f8ff613e6b67b12987e2}
+Check whether a \doxyref{Gtv\+Volume}{p.}{structGtvVolume} satisfies the Delaunay property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & volume to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a non-\/\+Delaunay \doxyref{Gtv\+Cell}{p.}{structGtvCell} of {\itshape v} if {\itshape v} is non-\/\+Delaunay, N\+U\+L\+L otherwise. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+volume\+\_\+foreach\+\_\+cell().
+
+\index{Delaunay tetrahedralization@{Delaunay tetrahedralization}!gtv\+\_\+facet\+\_\+is\+\_\+regular@{gtv\+\_\+facet\+\_\+is\+\_\+regular}}
+\index{gtv\+\_\+facet\+\_\+is\+\_\+regular@{gtv\+\_\+facet\+\_\+is\+\_\+regular}!Delaunay tetrahedralization@{Delaunay tetrahedralization}}
+\subsubsection[{gtv\+\_\+facet\+\_\+is\+\_\+regular}]{\setlength{\rightskip}{0pt plus 5cm}gboolean gtv\+\_\+facet\+\_\+is\+\_\+regular (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Facet} $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\label{group__delaunay_gae4eca2bd2f2e47919fabbecef9af5893}
+Check if a \doxyref{Gtv\+Facet}{p.}{structGtvFacet} is regular. A facet is regular if neither of the tetrahedra using it has the apex of the opposite tetrahedron inside its circumsphere. Boundary facets and isolated facets are also considered regular.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E if {\itshape f} is regular, F\+A\+L\+S\+E otherwise. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+point\+\_\+in\+\_\+tetrahedron\+\_\+sphere(), and gtv\+\_\+tetrahedron\+\_\+vertex\+\_\+opposite().
+
+
+
+Referenced by gtv\+\_\+tetrahedron\+\_\+is\+\_\+encroached().
+

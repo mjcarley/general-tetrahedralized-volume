@@ -1,106 +1,198 @@
 \section{Cells}
 \label{group__cell}\index{Cells@{Cells}}
 \subsection*{Data Structures}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-struct {\bf GtvCell}
+struct {\bf Gtv\+Cell}
 \item 
-struct {\bf GtvCellClass}
-\end{CompactItemize}
+struct {\bf Gtv\+Cell\+Class}
+\end{DoxyCompactItemize}
 \subsection*{Functions}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-{\bf GtvCellClass} $\ast$ {\bf gtv\_\-cell\_\-class} (void)
+{\bf Gtv\+Cell\+Class} $\ast$ {\bf gtv\+\_\+cell\+\_\+class} (void)
 \item 
-{\bf GtvCell} $\ast$ {\bf gtv\_\-cell\_\-new} ({\bf GtvCellClass} $\ast$klass, {\bf GtvFacet} $\ast$f1, {\bf GtvFacet} $\ast$f2, {\bf GtvFacet} $\ast$f3, {\bf GtvFacet} $\ast$f4)
+{\bf Gtv\+Cell} $\ast$ {\bf gtv\+\_\+cell\+\_\+new} ({\bf Gtv\+Cell\+Class} $\ast$klass, {\bf Gtv\+Facet} $\ast$f1, {\bf Gtv\+Facet} $\ast$f2, {\bf Gtv\+Facet} $\ast$f3, {\bf Gtv\+Facet} $\ast$f4)
 \item 
-GSList $\ast$ {\bf gtv\_\-cell\_\-neighbours} ({\bf GtvCell} $\ast$c, {\bf GtvVolume} $\ast$v)
+G\+S\+List $\ast$ {\bf gtv\+\_\+cell\+\_\+neighbours} ({\bf Gtv\+Cell} $\ast$c, {\bf Gtv\+Volume} $\ast$v)
 \item 
-{\bf GtvCell} $\ast$ {\bf gtv\_\-cell\_\-new\_\-from\_\-vertices} ({\bf GtvCellClass} $\ast$klass, {\bf GtvFacetClass} $\ast$facet\_\-class, GtsEdgeClass $\ast$edge\_\-class, GtsVertex $\ast$v1, GtsVertex $\ast$v2, GtsVertex $\ast$v3, GtsVertex $\ast$v4)
+{\bf Gtv\+Cell} $\ast$ {\bf gtv\+\_\+cell\+\_\+new\+\_\+from\+\_\+vertices} ({\bf Gtv\+Cell\+Class} $\ast$klass, {\bf Gtv\+Facet\+Class} $\ast$facet\+\_\+class, Gts\+Edge\+Class $\ast$edge\+\_\+class, Gts\+Vertex $\ast$v1, Gts\+Vertex $\ast$v2, Gts\+Vertex $\ast$v3, Gts\+Vertex $\ast$v4)
 \item 
-GSList $\ast$ {\bf gtv\_\-edge\_\-cells} (GtsEdge $\ast$e, {\bf GtvVolume} $\ast$v)
+G\+S\+List $\ast$ {\bf gtv\+\_\+edge\+\_\+cells} (Gts\+Edge $\ast$e, {\bf Gtv\+Volume} $\ast$v)
 \item 
-GSList $\ast$ {\bf gtv\_\-vertex\_\-cells} (GtsVertex $\ast$p, {\bf GtvVolume} $\ast$v)
-\end{CompactItemize}
+G\+S\+List $\ast$ {\bf gtv\+\_\+vertex\+\_\+cells} (Gts\+Vertex $\ast$p, {\bf Gtv\+Volume} $\ast$v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
 
 
 \subsection{Function Documentation}
-\index{cell@{cell}!gtv_cell_class@{gtv\_\-cell\_\-class}}
-\index{gtv_cell_class@{gtv\_\-cell\_\-class}!cell@{cell}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCellClass}$\ast$ gtv\_\-cell\_\-class (void)}\label{group__cell_g19eae7a982ed3a0aa29208ceb46aa0fc}
+\index{Cells@{Cells}!gtv\+\_\+cell\+\_\+class@{gtv\+\_\+cell\+\_\+class}}
+\index{gtv\+\_\+cell\+\_\+class@{gtv\+\_\+cell\+\_\+class}!Cells@{Cells}}
+\subsubsection[{gtv\+\_\+cell\+\_\+class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Cell\+Class}$\ast$ gtv\+\_\+cell\+\_\+class (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{group__cell_ga19eae7a982ed3a0aa29208ceb46aa0fc}
+The basic class for cells (volume elements) in G\+T\+V.
+
+\begin{DoxyReturn}{Returns}
+the \doxyref{Gtv\+Cell\+Class}{p.}{structGtvCellClass} 
+\end{DoxyReturn}
 
 
-The basic class for cells (volume elements) in GTV.
-
-\begin{Desc}
-\item[Returns:]the \doxyref{GtvCellClass}{p.}{structGtvCellClass} \end{Desc}
-\index{cell@{cell}!gtv_cell_neighbours@{gtv\_\-cell\_\-neighbours}}
-\index{gtv_cell_neighbours@{gtv\_\-cell\_\-neighbours}!cell@{cell}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GSList$\ast$ gtv\_\-cell\_\-neighbours ({\bf GtvCell} $\ast$ {\em c}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__cell_gfe05cb644ebd3b95bbf2d220b3fedbfe}
+References gtv\+\_\+tetrahedron\+\_\+class().
 
 
-Find the neighbours of a \doxyref{GtvCell}{p.}{structGtvCell}.
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em c}]a \doxyref{GtvCell}{p.}{structGtvCell}; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}, or NULL.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a GSList of the cells of {\em v\/}, or any cells if {\em v\/} is NULL, which share a facet with {\em c\/}. \end{Desc}
-\index{cell@{cell}!gtv_cell_new@{gtv\_\-cell\_\-new}}
-\index{gtv_cell_new@{gtv\_\-cell\_\-new}!cell@{cell}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-cell\_\-new ({\bf GtvCellClass} $\ast$ {\em klass}, {\bf GtvFacet} $\ast$ {\em f1}, {\bf GtvFacet} $\ast$ {\em f2}, {\bf GtvFacet} $\ast$ {\em f3}, {\bf GtvFacet} $\ast$ {\em f4})}\label{group__cell_g4f6e6c14b784c688b5fb694659faee72}
+Referenced by gtv\+\_\+cell\+\_\+new\+\_\+from\+\_\+vertices().
 
-
-Make a new \doxyref{GtvCell}{p.}{structGtvCell} from four facets which must define a proper tetrahedron.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em klass}]a \doxyref{GtvCellClass}{p.}{structGtvCellClass}; \item[{\em f1}]a \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em f2}]another \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em f3}]a further \doxyref{GtvFacet}{p.}{structGtvFacet}; \item[{\em f4}]one more \doxyref{GtvFacet}{p.}{structGtvFacet};\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the new \doxyref{GtvCell}{p.}{structGtvCell}. \end{Desc}
-\index{cell@{cell}!gtv_cell_new_from_vertices@{gtv\_\-cell\_\-new\_\-from\_\-vertices}}
-\index{gtv_cell_new_from_vertices@{gtv\_\-cell\_\-new\_\-from\_\-vertices}!cell@{cell}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvCell}$\ast$ gtv\_\-cell\_\-new\_\-from\_\-vertices ({\bf GtvCellClass} $\ast$ {\em klass}, {\bf GtvFacetClass} $\ast$ {\em facet\_\-class}, GtsEdgeClass $\ast$ {\em edge\_\-class}, GtsVertex $\ast$ {\em v1}, GtsVertex $\ast$ {\em v2}, GtsVertex $\ast$ {\em v3}, GtsVertex $\ast$ {\em v4})}\label{group__cell_g4ff9a13367d5bacd00a3b10e1a17d7d5}
+\index{Cells@{Cells}!gtv\+\_\+cell\+\_\+neighbours@{gtv\+\_\+cell\+\_\+neighbours}}
+\index{gtv\+\_\+cell\+\_\+neighbours@{gtv\+\_\+cell\+\_\+neighbours}!Cells@{Cells}}
+\subsubsection[{gtv\+\_\+cell\+\_\+neighbours}]{\setlength{\rightskip}{0pt plus 5cm}G\+S\+List$\ast$ gtv\+\_\+cell\+\_\+neighbours (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Cell} $\ast$}]{c, }
+\item[{{\bf Gtv\+Volume} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\label{group__cell_gafe05cb644ebd3b95bbf2d220b3fedbfe}
+Find the neighbours of a \doxyref{Gtv\+Cell}{p.}{structGtvCell}.
 
 
-Generate a new \doxyref{GtvCell}{p.}{structGtvCell} from four GtsVertex's, making use of any existing \doxyref{GtvFacet}{p.}{structGtvFacet}'s which connect them.
-
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em klass}]a \doxyref{GtvCellClass}{p.}{structGtvCellClass} \item[{\em facet\_\-class}]a \doxyref{GtvFacetClass}{p.}{structGtvFacetClass} \item[{\em edge\_\-class}]a GtsEdgeClass \item[{\em v1}]a GtsVertex \item[{\em v2}]a GtsVertex \item[{\em v3}]a GtsVertex \item[{\em v4}]a GtsVertex\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]the new \doxyref{GtvCell}{p.}{structGtvCell} \end{Desc}
-\index{cell@{cell}!gtv_edge_cells@{gtv\_\-edge\_\-cells}}
-\index{gtv_edge_cells@{gtv\_\-edge\_\-cells}!cell@{cell}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GSList$\ast$ gtv\_\-edge\_\-cells (GtsEdge $\ast$ {\em e}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__cell_g098af11726fd6e59160c760b3cb49085}
+\begin{DoxyParams}{Parameters}
+{\em c} & a \doxyref{Gtv\+Cell}{p.}{structGtvCell}; \\
+\hline
+{\em v} & a \doxyref{Gtv\+Volume}{p.}{structGtvVolume}, or N\+U\+L\+L.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \+::\+G\+S\+List of the cells of {\itshape v}, or any cells if {\itshape v} is N\+U\+L\+L, which share a facet with {\itshape c}. 
+\end{DoxyReturn}
 
 
-Find the \doxyref{GtvCell}{p.}{structGtvCell}'s which use a given GtsEdge.
+References gtv\+\_\+cell\+\_\+has\+\_\+parent\+\_\+volume().
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em e}]a GtsEdge \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume}\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a GSList of the \doxyref{GtvCell}{p.}{structGtvCell}'s of {\em v\/} which contain {\em e\/}, NULL if {\em e\/} is not used by any cells. \end{Desc}
-\index{cell@{cell}!gtv_vertex_cells@{gtv\_\-vertex\_\-cells}}
-\index{gtv_vertex_cells@{gtv\_\-vertex\_\-cells}!cell@{cell}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GSList$\ast$ gtv\_\-vertex\_\-cells (GtsVertex $\ast$ {\em p}, {\bf GtvVolume} $\ast$ {\em v})}\label{group__cell_g1434bf96b1010fb5f660a0003c1e1df9}
+\index{Cells@{Cells}!gtv\+\_\+cell\+\_\+new@{gtv\+\_\+cell\+\_\+new}}
+\index{gtv\+\_\+cell\+\_\+new@{gtv\+\_\+cell\+\_\+new}!Cells@{Cells}}
+\subsubsection[{gtv\+\_\+cell\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Cell}$\ast$ gtv\+\_\+cell\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Cell\+Class} $\ast$}]{klass, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f1, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f2, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f3, }
+\item[{{\bf Gtv\+Facet} $\ast$}]{f4}
+\end{DoxyParamCaption}
+)}\label{group__cell_ga4f6e6c14b784c688b5fb694659faee72}
+Make a new \doxyref{Gtv\+Cell}{p.}{structGtvCell} from four facets which must define a proper tetrahedron.
 
 
-Find the \doxyref{GtvCell}{p.}{structGtvCell}'s which use a given GtsVertex
+\begin{DoxyParams}{Parameters}
+{\em klass} & a \doxyref{Gtv\+Cell\+Class}{p.}{structGtvCellClass}; \\
+\hline
+{\em f1} & a \doxyref{Gtv\+Facet}{p.}{structGtvFacet}; \\
+\hline
+{\em f2} & another \doxyref{Gtv\+Facet}{p.}{structGtvFacet}; \\
+\hline
+{\em f3} & a further \doxyref{Gtv\+Facet}{p.}{structGtvFacet}; \\
+\hline
+{\em f4} & one more \doxyref{Gtv\+Facet}{p.}{structGtvFacet};\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new \doxyref{Gtv\+Cell}{p.}{structGtvCell}. 
+\end{DoxyReturn}
 
-\begin{Desc}
-\item[Parameters:]
-\begin{description}
-\item[{\em p}]a GtsVertex; \item[{\em v}]a \doxyref{GtvVolume}{p.}{structGtvVolume} or NULL.\end{description}
-\end{Desc}
-\begin{Desc}
-\item[Returns:]a GSList of the \doxyref{GtvCell}{p.}{structGtvCell}'s of {\em v\/} which contain {\em e\/}, NULL if {\em e\/} is not used by any cells. \end{Desc}
+
+References gtv\+\_\+tetrahedron\+\_\+set().
+
+
+
+Referenced by gtv\+\_\+cell\+\_\+new\+\_\+from\+\_\+vertices(), and gtv\+\_\+volume\+\_\+read().
+
+\index{Cells@{Cells}!gtv\+\_\+cell\+\_\+new\+\_\+from\+\_\+vertices@{gtv\+\_\+cell\+\_\+new\+\_\+from\+\_\+vertices}}
+\index{gtv\+\_\+cell\+\_\+new\+\_\+from\+\_\+vertices@{gtv\+\_\+cell\+\_\+new\+\_\+from\+\_\+vertices}!Cells@{Cells}}
+\subsubsection[{gtv\+\_\+cell\+\_\+new\+\_\+from\+\_\+vertices}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Cell}$\ast$ gtv\+\_\+cell\+\_\+new\+\_\+from\+\_\+vertices (
+\begin{DoxyParamCaption}
+\item[{{\bf Gtv\+Cell\+Class} $\ast$}]{klass, }
+\item[{{\bf Gtv\+Facet\+Class} $\ast$}]{facet\+\_\+class, }
+\item[{Gts\+Edge\+Class $\ast$}]{edge\+\_\+class, }
+\item[{Gts\+Vertex $\ast$}]{v1, }
+\item[{Gts\+Vertex $\ast$}]{v2, }
+\item[{Gts\+Vertex $\ast$}]{v3, }
+\item[{Gts\+Vertex $\ast$}]{v4}
+\end{DoxyParamCaption}
+)}\label{group__cell_ga4ff9a13367d5bacd00a3b10e1a17d7d5}
+Generate a new \doxyref{Gtv\+Cell}{p.}{structGtvCell} from four \+::\+Gts\+Vertex\textquotesingle{}s, making use of any existing \doxyref{Gtv\+Facet}{p.}{structGtvFacet}\textquotesingle{}s which connect them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em klass} & a \doxyref{Gtv\+Cell\+Class}{p.}{structGtvCellClass} \\
+\hline
+{\em facet\+\_\+class} & a \doxyref{Gtv\+Facet\+Class}{p.}{structGtvFacetClass} \\
+\hline
+{\em edge\+\_\+class} & a \+::\+Gts\+Edge\+Class \\
+\hline
+{\em v1} & a \+::\+Gts\+Vertex \\
+\hline
+{\em v2} & a \+::\+Gts\+Vertex \\
+\hline
+{\em v3} & a \+::\+Gts\+Vertex \\
+\hline
+{\em v4} & a \+::\+Gts\+Vertex\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new \doxyref{Gtv\+Cell}{p.}{structGtvCell} 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+cell\+\_\+class(), gtv\+\_\+cell\+\_\+new(), and gtv\+\_\+tetrahedron\+\_\+from\+\_\+facets().
+
+\index{Cells@{Cells}!gtv\+\_\+edge\+\_\+cells@{gtv\+\_\+edge\+\_\+cells}}
+\index{gtv\+\_\+edge\+\_\+cells@{gtv\+\_\+edge\+\_\+cells}!Cells@{Cells}}
+\subsubsection[{gtv\+\_\+edge\+\_\+cells}]{\setlength{\rightskip}{0pt plus 5cm}G\+S\+List$\ast$ gtv\+\_\+edge\+\_\+cells (
+\begin{DoxyParamCaption}
+\item[{Gts\+Edge $\ast$}]{e, }
+\item[{{\bf Gtv\+Volume} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\label{group__cell_ga098af11726fd6e59160c760b3cb49085}
+Find the \doxyref{Gtv\+Cell}{p.}{structGtvCell}\textquotesingle{}s which use a given \+::\+Gts\+Edge.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & a \+::\+Gts\+Edge \\
+\hline
+{\em v} & a \doxyref{Gtv\+Volume}{p.}{structGtvVolume}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \+::\+G\+S\+List of the \doxyref{Gtv\+Cell}{p.}{structGtvCell}\textquotesingle{}s of {\itshape v} which contain {\itshape e}, N\+U\+L\+L if {\itshape e} is not used by any cells. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+cell\+\_\+has\+\_\+parent\+\_\+volume().
+
+\index{Cells@{Cells}!gtv\+\_\+vertex\+\_\+cells@{gtv\+\_\+vertex\+\_\+cells}}
+\index{gtv\+\_\+vertex\+\_\+cells@{gtv\+\_\+vertex\+\_\+cells}!Cells@{Cells}}
+\subsubsection[{gtv\+\_\+vertex\+\_\+cells}]{\setlength{\rightskip}{0pt plus 5cm}G\+S\+List$\ast$ gtv\+\_\+vertex\+\_\+cells (
+\begin{DoxyParamCaption}
+\item[{Gts\+Vertex $\ast$}]{p, }
+\item[{{\bf Gtv\+Volume} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\label{group__cell_ga1434bf96b1010fb5f660a0003c1e1df9}
+Find the \doxyref{Gtv\+Cell}{p.}{structGtvCell}\textquotesingle{}s which use a given \+::\+Gts\+Vertex
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & a \+::\+Gts\+Vertex; \\
+\hline
+{\em v} & a \doxyref{Gtv\+Volume}{p.}{structGtvVolume} or N\+U\+L\+L.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \+::\+G\+S\+List of the \doxyref{Gtv\+Cell}{p.}{structGtvCell}\textquotesingle{}s of {\itshape v} which contain {\itshape e}, N\+U\+L\+L if {\itshape e} is not used by any cells. 
+\end{DoxyReturn}
+
+
+References gtv\+\_\+cell\+\_\+has\+\_\+parent\+\_\+volume().
+

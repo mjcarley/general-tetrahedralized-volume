@@ -1,98 +1,119 @@
-\section{GtvVolumeStats Struct Reference}
-\label{structGtvVolumeStats}\index{GtvVolumeStats@{GtvVolumeStats}}
+\section{Gtv\+Volume\+Stats Struct Reference}
+\label{structGtvVolumeStats}\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
 \subsection*{Data Fields}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-guint {\bf n\_\-cells}
+guint {\bf n\+\_\+cells}
 \item 
-guint {\bf n\_\-incompatible\_\-cells}
+guint {\bf n\+\_\+incompatible\+\_\+cells}
 \item 
-guint {\bf n\_\-duplicate\_\-cells}
+guint {\bf n\+\_\+duplicate\+\_\+cells}
 \item 
-guint {\bf n\_\-facets}
+guint {\bf n\+\_\+facets}
 \item 
-guint {\bf n\_\-incompatible\_\-facets}
+guint {\bf n\+\_\+incompatible\+\_\+facets}
 \item 
-guint {\bf n\_\-duplicate\_\-facets}
+guint {\bf n\+\_\+duplicate\+\_\+facets}
 \item 
-guint {\bf n\_\-boundary\_\-facets}
+guint {\bf n\+\_\+boundary\+\_\+facets}
 \item 
-guint {\bf n\_\-duplicate\_\-edges}
+guint {\bf n\+\_\+duplicate\+\_\+edges}
 \item 
-GtsRange {\bf edges\_\-per\_\-vertex}
+Gts\+Range {\bf edges\+\_\+per\+\_\+vertex}
 \item 
-GtsRange {\bf facets\_\-per\_\-edge}
+Gts\+Range {\bf facets\+\_\+per\+\_\+edge}
 \item 
-GtsRange {\bf cells\_\-per\_\-facet}
+Gts\+Range {\bf cells\+\_\+per\+\_\+facet}
 \item 
-{\bf GtvVolume} $\ast$ {\bf parent}
-\end{CompactItemize}
+{\bf Gtv\+Volume} $\ast$ {\bf parent}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Data structure containing statistics for a \doxyref{GtvVolume}{p.}{structGtvVolume} 
-
-
+Data structure containing statistics for a \doxyref{Gtv\+Volume}{p.}{structGtvVolume} 
 
 \subsection{Field Documentation}
-\index{GtvVolumeStats@{GtvVolumeStats}!n_cells@{n\_\-cells}}
-\index{n_cells@{n\_\-cells}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint {\bf GtvVolumeStats::n\_\-cells}}\label{structGtvVolumeStats_db15a65a1a934256ad808705d0512e02}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!cells\+\_\+per\+\_\+facet@{cells\+\_\+per\+\_\+facet}}
+\index{cells\+\_\+per\+\_\+facet@{cells\+\_\+per\+\_\+facet}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{cells\+\_\+per\+\_\+facet}]{\setlength{\rightskip}{0pt plus 5cm}Gts\+Range Gtv\+Volume\+Stats\+::cells\+\_\+per\+\_\+facet}\label{structGtvVolumeStats_aa3863493adc58796515865138ae9e012}
+statistics for cells per facet 
 
+Referenced by gtv\+\_\+volume\+\_\+print\+\_\+stats(), gtv\+\_\+volume\+\_\+stats(), and gtv\+\_\+volume\+\_\+write().
 
-number of cells in volume \index{GtvVolumeStats@{GtvVolumeStats}!n_incompatible_cells@{n\_\-incompatible\_\-cells}}
-\index{n_incompatible_cells@{n\_\-incompatible\_\-cells}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint {\bf GtvVolumeStats::n\_\-incompatible\_\-cells}}\label{structGtvVolumeStats_798b602c3156b11b457a934c8c402cfd}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!edges\+\_\+per\+\_\+vertex@{edges\+\_\+per\+\_\+vertex}}
+\index{edges\+\_\+per\+\_\+vertex@{edges\+\_\+per\+\_\+vertex}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{edges\+\_\+per\+\_\+vertex}]{\setlength{\rightskip}{0pt plus 5cm}Gts\+Range Gtv\+Volume\+Stats\+::edges\+\_\+per\+\_\+vertex}\label{structGtvVolumeStats_aa66f480592fe3ed4d57f3cf3713a5a8e}
+statistics for edges per vertex 
 
+Referenced by gtv\+\_\+volume\+\_\+print\+\_\+stats(), gtv\+\_\+volume\+\_\+stats(), gtv\+\_\+volume\+\_\+write(), gtv\+\_\+volume\+\_\+write\+\_\+gmsh(), and gtv\+\_\+volume\+\_\+write\+\_\+gmsh1().
 
-number of incompatible cells \index{GtvVolumeStats@{GtvVolumeStats}!n_duplicate_cells@{n\_\-duplicate\_\-cells}}
-\index{n_duplicate_cells@{n\_\-duplicate\_\-cells}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint {\bf GtvVolumeStats::n\_\-duplicate\_\-cells}}\label{structGtvVolumeStats_f414d36164d6a98bebf3da02d4784234}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!facets\+\_\+per\+\_\+edge@{facets\+\_\+per\+\_\+edge}}
+\index{facets\+\_\+per\+\_\+edge@{facets\+\_\+per\+\_\+edge}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{facets\+\_\+per\+\_\+edge}]{\setlength{\rightskip}{0pt plus 5cm}Gts\+Range Gtv\+Volume\+Stats\+::facets\+\_\+per\+\_\+edge}\label{structGtvVolumeStats_a5fae3df6c1aa5662adb167a2c28818d9}
+statistics for facets per edge 
 
+Referenced by gtv\+\_\+volume\+\_\+print\+\_\+stats(), gtv\+\_\+volume\+\_\+stats(), and gtv\+\_\+volume\+\_\+write().
 
-number of duplicate cells \index{GtvVolumeStats@{GtvVolumeStats}!n_facets@{n\_\-facets}}
-\index{n_facets@{n\_\-facets}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint {\bf GtvVolumeStats::n\_\-facets}}\label{structGtvVolumeStats_cbd4d1867476cf7f7626f64fa227eb23}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!n\+\_\+boundary\+\_\+facets@{n\+\_\+boundary\+\_\+facets}}
+\index{n\+\_\+boundary\+\_\+facets@{n\+\_\+boundary\+\_\+facets}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{n\+\_\+boundary\+\_\+facets}]{\setlength{\rightskip}{0pt plus 5cm}guint Gtv\+Volume\+Stats\+::n\+\_\+boundary\+\_\+facets}\label{structGtvVolumeStats_a02f7ae6f8bbb36b62fadf11bc472baf9}
+number of facets on boundary of volume 
 
+Referenced by gtv\+\_\+volume\+\_\+print\+\_\+stats(), and gtv\+\_\+volume\+\_\+stats().
 
-number of facets \index{GtvVolumeStats@{GtvVolumeStats}!n_incompatible_facets@{n\_\-incompatible\_\-facets}}
-\index{n_incompatible_facets@{n\_\-incompatible\_\-facets}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint {\bf GtvVolumeStats::n\_\-incompatible\_\-facets}}\label{structGtvVolumeStats_7f90c933fce2c9a9866048fce0c313d1}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!n\+\_\+cells@{n\+\_\+cells}}
+\index{n\+\_\+cells@{n\+\_\+cells}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{n\+\_\+cells}]{\setlength{\rightskip}{0pt plus 5cm}guint Gtv\+Volume\+Stats\+::n\+\_\+cells}\label{structGtvVolumeStats_adb15a65a1a934256ad808705d0512e02}
+number of cells in volume 
 
+Referenced by gtv\+\_\+volume\+\_\+print\+\_\+stats(), gtv\+\_\+volume\+\_\+stats(), gtv\+\_\+volume\+\_\+write(), gtv\+\_\+volume\+\_\+write\+\_\+gmsh(), gtv\+\_\+volume\+\_\+write\+\_\+gmsh1(), and gtv\+\_\+volume\+\_\+write\+\_\+tetgen().
 
-number of incompatible facets \index{GtvVolumeStats@{GtvVolumeStats}!n_duplicate_facets@{n\_\-duplicate\_\-facets}}
-\index{n_duplicate_facets@{n\_\-duplicate\_\-facets}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint {\bf GtvVolumeStats::n\_\-duplicate\_\-facets}}\label{structGtvVolumeStats_d3d67f8e1ccff85ddb27fb03bb3920ec}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!n\+\_\+duplicate\+\_\+cells@{n\+\_\+duplicate\+\_\+cells}}
+\index{n\+\_\+duplicate\+\_\+cells@{n\+\_\+duplicate\+\_\+cells}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{n\+\_\+duplicate\+\_\+cells}]{\setlength{\rightskip}{0pt plus 5cm}guint Gtv\+Volume\+Stats\+::n\+\_\+duplicate\+\_\+cells}\label{structGtvVolumeStats_af414d36164d6a98bebf3da02d4784234}
+number of duplicate cells 
 
+Referenced by gtv\+\_\+volume\+\_\+print\+\_\+stats(), and gtv\+\_\+volume\+\_\+stats().
 
-number of duplicate facets \index{GtvVolumeStats@{GtvVolumeStats}!n_boundary_facets@{n\_\-boundary\_\-facets}}
-\index{n_boundary_facets@{n\_\-boundary\_\-facets}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint {\bf GtvVolumeStats::n\_\-boundary\_\-facets}}\label{structGtvVolumeStats_02f7ae6f8bbb36b62fadf11bc472baf9}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!n\+\_\+duplicate\+\_\+edges@{n\+\_\+duplicate\+\_\+edges}}
+\index{n\+\_\+duplicate\+\_\+edges@{n\+\_\+duplicate\+\_\+edges}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{n\+\_\+duplicate\+\_\+edges}]{\setlength{\rightskip}{0pt plus 5cm}guint Gtv\+Volume\+Stats\+::n\+\_\+duplicate\+\_\+edges}\label{structGtvVolumeStats_a441d19dd1d790f1a73f3c5dc6f650b4e}
+number of duplicate edges 
 
+Referenced by gtv\+\_\+volume\+\_\+print\+\_\+stats(), and gtv\+\_\+volume\+\_\+stats().
 
-number of facets on boundary of volume \index{GtvVolumeStats@{GtvVolumeStats}!n_duplicate_edges@{n\_\-duplicate\_\-edges}}
-\index{n_duplicate_edges@{n\_\-duplicate\_\-edges}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}guint {\bf GtvVolumeStats::n\_\-duplicate\_\-edges}}\label{structGtvVolumeStats_441d19dd1d790f1a73f3c5dc6f650b4e}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!n\+\_\+duplicate\+\_\+facets@{n\+\_\+duplicate\+\_\+facets}}
+\index{n\+\_\+duplicate\+\_\+facets@{n\+\_\+duplicate\+\_\+facets}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{n\+\_\+duplicate\+\_\+facets}]{\setlength{\rightskip}{0pt plus 5cm}guint Gtv\+Volume\+Stats\+::n\+\_\+duplicate\+\_\+facets}\label{structGtvVolumeStats_ad3d67f8e1ccff85ddb27fb03bb3920ec}
+number of duplicate facets 
 
+Referenced by gtv\+\_\+volume\+\_\+print\+\_\+stats(), and gtv\+\_\+volume\+\_\+stats().
 
-number of duplicate edges \index{GtvVolumeStats@{GtvVolumeStats}!edges_per_vertex@{edges\_\-per\_\-vertex}}
-\index{edges_per_vertex@{edges\_\-per\_\-vertex}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GtsRange {\bf GtvVolumeStats::edges\_\-per\_\-vertex}}\label{structGtvVolumeStats_a66f480592fe3ed4d57f3cf3713a5a8e}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!n\+\_\+facets@{n\+\_\+facets}}
+\index{n\+\_\+facets@{n\+\_\+facets}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{n\+\_\+facets}]{\setlength{\rightskip}{0pt plus 5cm}guint Gtv\+Volume\+Stats\+::n\+\_\+facets}\label{structGtvVolumeStats_acbd4d1867476cf7f7626f64fa227eb23}
+number of facets 
 
+Referenced by gtv\+\_\+volume\+\_\+stats().
 
-statistics for edges per vertex \index{GtvVolumeStats@{GtvVolumeStats}!facets_per_edge@{facets\_\-per\_\-edge}}
-\index{facets_per_edge@{facets\_\-per\_\-edge}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GtsRange {\bf GtvVolumeStats::facets\_\-per\_\-edge}}\label{structGtvVolumeStats_5fae3df6c1aa5662adb167a2c28818d9}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!n\+\_\+incompatible\+\_\+cells@{n\+\_\+incompatible\+\_\+cells}}
+\index{n\+\_\+incompatible\+\_\+cells@{n\+\_\+incompatible\+\_\+cells}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{n\+\_\+incompatible\+\_\+cells}]{\setlength{\rightskip}{0pt plus 5cm}guint Gtv\+Volume\+Stats\+::n\+\_\+incompatible\+\_\+cells}\label{structGtvVolumeStats_a798b602c3156b11b457a934c8c402cfd}
+number of incompatible cells 
 
+Referenced by gtv\+\_\+volume\+\_\+print\+\_\+stats(), and gtv\+\_\+volume\+\_\+stats().
 
-statistics for facets per edge \index{GtvVolumeStats@{GtvVolumeStats}!cells_per_facet@{cells\_\-per\_\-facet}}
-\index{cells_per_facet@{cells\_\-per\_\-facet}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}GtsRange {\bf GtvVolumeStats::cells\_\-per\_\-facet}}\label{structGtvVolumeStats_a3863493adc58796515865138ae9e012}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!n\+\_\+incompatible\+\_\+facets@{n\+\_\+incompatible\+\_\+facets}}
+\index{n\+\_\+incompatible\+\_\+facets@{n\+\_\+incompatible\+\_\+facets}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{n\+\_\+incompatible\+\_\+facets}]{\setlength{\rightskip}{0pt plus 5cm}guint Gtv\+Volume\+Stats\+::n\+\_\+incompatible\+\_\+facets}\label{structGtvVolumeStats_a7f90c933fce2c9a9866048fce0c313d1}
+number of incompatible facets 
 
+Referenced by gtv\+\_\+volume\+\_\+stats().
 
-statistics for cells per facet \index{GtvVolumeStats@{GtvVolumeStats}!parent@{parent}}
-\index{parent@{parent}!GtvVolumeStats@{GtvVolumeStats}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf GtvVolume}$\ast$ {\bf GtvVolumeStats::parent}}\label{structGtvVolumeStats_0e5bd4e9ddc1ad70230d6ffabbd5ec65}
+\index{Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}!parent@{parent}}
+\index{parent@{parent}!Gtv\+Volume\+Stats@{Gtv\+Volume\+Stats}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gtv\+Volume}$\ast$ Gtv\+Volume\+Stats\+::parent}\label{structGtvVolumeStats_a0e5bd4e9ddc1ad70230d6ffabbd5ec65}
+\doxyref{Gtv\+Volume}{p.}{structGtvVolume} from which these statistics have been derived 
 
+Referenced by gtv\+\_\+volume\+\_\+stats().
 
-\doxyref{GtvVolume}{p.}{structGtvVolume} from which these statistics have been derived 

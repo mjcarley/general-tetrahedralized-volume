@@ -1,5 +1,7 @@
-AC_INIT
+AC_INIT([gtv], 0.1)
 AC_CONFIG_SRCDIR([src/gtv.h])
+AC_CONFIG_MACRO_DIRS([m4])
+AM_INIT_AUTOMAKE
 
 # Making releases:
 #   GTV_MICRO_VERSION += 1;
@@ -37,8 +39,6 @@ PACKAGE=gtv
 
 AC_SUBST(PACKAGE)
 AC_SUBST(VERSION)
-
-AM_INIT_AUTOMAKE($PACKAGE, $VERSION, no-define)
 
 # Specify a configuration file
 AM_CONFIG_HEADER(config.h)

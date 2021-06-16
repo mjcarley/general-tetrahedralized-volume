@@ -92,7 +92,10 @@ build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
+	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(include_HEADERS) \
@@ -269,11 +272,11 @@ OTOOL =
 OTOOL64 = 
 PACKAGE = gtv
 PACKAGE_BUGREPORT = 
-PACKAGE_NAME = 
-PACKAGE_STRING = 
-PACKAGE_TARNAME = 
+PACKAGE_NAME = gtv
+PACKAGE_STRING = gtv 0.1
+PACKAGE_TARNAME = gtv
 PACKAGE_URL = 
-PACKAGE_VERSION = 
+PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
 RANLIB = ranlib
 SED = /usr/bin/sed
@@ -302,7 +305,7 @@ build_vendor = unknown
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
-docdir = ${datarootdir}/doc/${PACKAGE}
+docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
 gts_cflags = -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include
@@ -335,7 +338,7 @@ target_alias =
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
-INCLUDES = -I$(top_srcdir) -I$(includedir) -DG_LOG_DOMAIN=\"GTV\"
+AM_CPPFLAGS = -I$(top_srcdir) -I$(includedir) -DG_LOG_DOMAIN=\"GTV\"
 bin_SCRIPTS = gtv-config
 BUILT_SOURCES = \
 	gtv-config \

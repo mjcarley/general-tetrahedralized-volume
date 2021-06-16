@@ -667,6 +667,7 @@ gint gtv_volume_print_stats(GtvVolume *v, FILE *f) ;
 gint gtv_volume_boundary(GtvVolume *v, GtsSurface *s) ;
 gdouble gtv_volume_volume(GtvVolume *v) ;
 guint gtv_volume_vertex_number(GtvVolume *v) ;
+  guint gtv_volume_cell_number(GtvVolume *v) ;
   GtsVertex *gtv_volume_nearest_vertex(GtvVolume *v, GtsPoint *p) ;
   gint gtv_volume_write_tetgen(GtvVolume *v, gchar *stub) ;
 

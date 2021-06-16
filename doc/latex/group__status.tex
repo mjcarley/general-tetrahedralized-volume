@@ -1,90 +1,87 @@
 \section{Status codes}
 \label{group__status}\index{Status codes@{Status codes}}
 \subsection*{Enumerations}
-\begin{CompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-enum {\bf GtvStatus} \{ \par
-{\bf GTV\_\-FAILURE} =  -1, 
-{\bf GTV\_\-SUCCESS} =  0, 
-{\bf GTV\_\-NULL\_\-ARGUMENT} =  1, 
-{\bf GTV\_\-WRONG\_\-TYPE} =  2, 
-\par
-{\bf GTV\_\-VERTEX\_\-PRESENT} =  3, 
-{\bf GTV\_\-COINCIDENT\_\-VERTEX} =  4, 
-{\bf GTV\_\-VERTEX\_\-NOT\_\-IN\_\-CELL} =  5, 
-{\bf GTV\_\-REPEATED\_\-ARGUMENT} =  6, 
-\par
-{\bf GTV\_\-VERTEX\_\-ON\_\-HULL} =  7, 
-{\bf GTV\_\-VERTEX\_\-NOT\_\-IN\_\-VOLUME} =  8, 
-{\bf GTV\_\-UNKNOWN\_\-FORMAT} =  9, 
-{\bf GTV\_\-ARGUMENT\_\-OUT\_\-OF\_\-RANGE} =  10
+enum {\bf Gtv\+Status} \{ \\*
+{\bf G\+T\+V\+\_\+\+F\+A\+I\+L\+U\+R\+E} = -\/1, 
+{\bf G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S} = 0, 
+{\bf G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T} = 1, 
+{\bf G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E} = 2, 
+\\*
+{\bf G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+P\+R\+E\+S\+E\+N\+T} = 3, 
+{\bf G\+T\+V\+\_\+\+C\+O\+I\+N\+C\+I\+D\+E\+N\+T\+\_\+\+V\+E\+R\+T\+E\+X} = 4, 
+{\bf G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+C\+E\+L\+L} = 5, 
+{\bf G\+T\+V\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T} = 6, 
+\\*
+{\bf G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+O\+N\+\_\+\+H\+U\+L\+L} = 7, 
+{\bf G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+V\+O\+L\+U\+M\+E} = 8, 
+{\bf G\+T\+V\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+A\+T} = 9, 
+{\bf G\+T\+V\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+G\+E} = 10
  \}
 \item 
-enum {\bf GtvIntersect} \{ , \par
-{\bf GTV\_\-ON} =  0, 
-{\bf GTV\_\-IN} =  1, 
-{\bf GTV\_\-ON\_\-FACET} =  2, 
-{\bf GTV\_\-ON\_\-EDGE} =  3, 
-\par
-{\bf GTV\_\-ON\_\-VERTEX} =  4
+enum {\bf Gtv\+Intersect} \{ , \\*
+{\bf G\+T\+V\+\_\+\+O\+N} = 0, 
+{\bf G\+T\+V\+\_\+\+I\+N} = 1, 
+{\bf G\+T\+V\+\_\+\+O\+N\+\_\+\+F\+A\+C\+E\+T} = 2, 
+{\bf G\+T\+V\+\_\+\+O\+N\+\_\+\+E\+D\+G\+E} = 3, 
+\\*
+{\bf G\+T\+V\+\_\+\+O\+N\+\_\+\+V\+E\+R\+T\+E\+X} = 4
  \}
-\end{CompactItemize}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
 
 
 \subsection{Enumeration Type Documentation}
-\index{status@{status}!GtvIntersect@{GtvIntersect}}
-\index{GtvIntersect@{GtvIntersect}!status@{status}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GtvIntersect}}\label{group__status_gb1a7c0fd996feb29fd2412deb08ff573}
-
-
-Status codes returned by GTV functions which check if a vertex inside, outside or on the surface of a simplex, e.g. a tetrahedron. \begin{Desc}
-\item[Enumerator: ]\par
+\index{Status codes@{Status codes}!Gtv\+Intersect@{Gtv\+Intersect}}
+\index{Gtv\+Intersect@{Gtv\+Intersect}!Status codes@{Status codes}}
+\subsubsection[{Gtv\+Intersect}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gtv\+Intersect}}\label{group__status_gab1a7c0fd996feb29fd2412deb08ff573}
+Status codes returned by G\+T\+V functions which check if a vertex inside, outside or on the surface of a simplex, e.\+g. a tetrahedron. \begin{Desc}
+\item[Enumerator]\par
 \begin{description}
-\index{GTV_ON@{GTV\_\-ON}!status@{status}}\index{status@{status}!GTV_ON@{GTV\_\-ON}}\item[{\em 
-GTV\_\-ON\label{group__status_ggb1a7c0fd996feb29fd2412deb08ff5736a8fd3e68363fb62392bc22ca76a0f8c}
-}]vertex lies outside tetrahedron \index{GTV_IN@{GTV\_\-IN}!status@{status}}\index{status@{status}!GTV_IN@{GTV\_\-IN}}\item[{\em 
-GTV\_\-IN\label{group__status_ggb1a7c0fd996feb29fd2412deb08ff573ba23b5b7151d8eee3ce6b251a0d90cd1}
-}]vertex lies on tetrahedron surface \index{GTV_ON_FACET@{GTV\_\-ON\_\-FACET}!status@{status}}\index{status@{status}!GTV_ON_FACET@{GTV\_\-ON\_\-FACET}}\item[{\em 
-GTV\_\-ON\_\-FACET\label{group__status_ggb1a7c0fd996feb29fd2412deb08ff5737dcd577dd01f7de220eccfc92704ce22}
-}]vertex lies strictly inside tetrahedron \index{GTV_ON_EDGE@{GTV\_\-ON\_\-EDGE}!status@{status}}\index{status@{status}!GTV_ON_EDGE@{GTV\_\-ON\_\-EDGE}}\item[{\em 
-GTV\_\-ON\_\-EDGE\label{group__status_ggb1a7c0fd996feb29fd2412deb08ff573f4bb77bc3b387349720f91b338c8cc41}
-}]vertex lies on a facet of tetrahedron \index{GTV_ON_VERTEX@{GTV\_\-ON\_\-VERTEX}!status@{status}}\index{status@{status}!GTV_ON_VERTEX@{GTV\_\-ON\_\-VERTEX}}\item[{\em 
-GTV\_\-ON\_\-VERTEX\label{group__status_ggb1a7c0fd996feb29fd2412deb08ff5731a1783e49d5482d45376295e4701efbd}
+\index{G\+T\+V\+\_\+\+O\+N@{G\+T\+V\+\_\+\+O\+N}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+O\+N@{G\+T\+V\+\_\+\+O\+N}}\item[{\em 
+G\+T\+V\+\_\+\+O\+N\label{group__status_ggab1a7c0fd996feb29fd2412deb08ff573a6a8fd3e68363fb62392bc22ca76a0f8c}
+}]vertex lies outside tetrahedron \index{G\+T\+V\+\_\+\+I\+N@{G\+T\+V\+\_\+\+I\+N}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+I\+N@{G\+T\+V\+\_\+\+I\+N}}\item[{\em 
+G\+T\+V\+\_\+\+I\+N\label{group__status_ggab1a7c0fd996feb29fd2412deb08ff573aba23b5b7151d8eee3ce6b251a0d90cd1}
+}]vertex lies on tetrahedron surface \index{G\+T\+V\+\_\+\+O\+N\+\_\+\+F\+A\+C\+E\+T@{G\+T\+V\+\_\+\+O\+N\+\_\+\+F\+A\+C\+E\+T}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+O\+N\+\_\+\+F\+A\+C\+E\+T@{G\+T\+V\+\_\+\+O\+N\+\_\+\+F\+A\+C\+E\+T}}\item[{\em 
+G\+T\+V\+\_\+\+O\+N\+\_\+\+F\+A\+C\+E\+T\label{group__status_ggab1a7c0fd996feb29fd2412deb08ff573a7dcd577dd01f7de220eccfc92704ce22}
+}]vertex lies strictly inside tetrahedron \index{G\+T\+V\+\_\+\+O\+N\+\_\+\+E\+D\+G\+E@{G\+T\+V\+\_\+\+O\+N\+\_\+\+E\+D\+G\+E}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+O\+N\+\_\+\+E\+D\+G\+E@{G\+T\+V\+\_\+\+O\+N\+\_\+\+E\+D\+G\+E}}\item[{\em 
+G\+T\+V\+\_\+\+O\+N\+\_\+\+E\+D\+G\+E\label{group__status_ggab1a7c0fd996feb29fd2412deb08ff573af4bb77bc3b387349720f91b338c8cc41}
+}]vertex lies on a facet of tetrahedron \index{G\+T\+V\+\_\+\+O\+N\+\_\+\+V\+E\+R\+T\+E\+X@{G\+T\+V\+\_\+\+O\+N\+\_\+\+V\+E\+R\+T\+E\+X}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+O\+N\+\_\+\+V\+E\+R\+T\+E\+X@{G\+T\+V\+\_\+\+O\+N\+\_\+\+V\+E\+R\+T\+E\+X}}\item[{\em 
+G\+T\+V\+\_\+\+O\+N\+\_\+\+V\+E\+R\+T\+E\+X\label{group__status_ggab1a7c0fd996feb29fd2412deb08ff573a1a1783e49d5482d45376295e4701efbd}
 }]vertex lies on an edge of tetrahedron \end{description}
 \end{Desc}
-
-\index{status@{status}!GtvStatus@{GtvStatus}}
-\index{GtvStatus@{GtvStatus}!status@{status}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GtvStatus}}\label{group__status_gfb23c4ddc35e1ea652487a43f9a0f8a9}
-
-
-Status codes returned by GTV functions. \begin{Desc}
-\item[Enumerator: ]\par
+\index{Status codes@{Status codes}!Gtv\+Status@{Gtv\+Status}}
+\index{Gtv\+Status@{Gtv\+Status}!Status codes@{Status codes}}
+\subsubsection[{Gtv\+Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gtv\+Status}}\label{group__status_gafb23c4ddc35e1ea652487a43f9a0f8a9}
+Status codes returned by G\+T\+V functions. \begin{Desc}
+\item[Enumerator]\par
 \begin{description}
-\index{GTV_FAILURE@{GTV\_\-FAILURE}!status@{status}}\index{status@{status}!GTV_FAILURE@{GTV\_\-FAILURE}}\item[{\em 
-GTV\_\-FAILURE\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d1a828d7dbe396eb058be34e2e614e3f}
-}]unspecified failure \index{GTV_SUCCESS@{GTV\_\-SUCCESS}!status@{status}}\index{status@{status}!GTV_SUCCESS@{GTV\_\-SUCCESS}}\item[{\em 
-GTV\_\-SUCCESS\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9d86eb3314eb116aa31f1ef794fbfd732}
-}]function succeeded \index{GTV_NULL_ARGUMENT@{GTV\_\-NULL\_\-ARGUMENT}!status@{status}}\index{status@{status}!GTV_NULL_ARGUMENT@{GTV\_\-NULL\_\-ARGUMENT}}\item[{\em 
-GTV\_\-NULL\_\-ARGUMENT\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a967f69a81ccab47beb0e5c0d997ebef2f}
-}]an argument was NULL \index{GTV_WRONG_TYPE@{GTV\_\-WRONG\_\-TYPE}!status@{status}}\index{status@{status}!GTV_WRONG_TYPE@{GTV\_\-WRONG\_\-TYPE}}\item[{\em 
-GTV\_\-WRONG\_\-TYPE\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9a7da7ff50d93f21d4ca1cd53c1f8985d}
-}]an argument was of the wrong type \index{GTV_VERTEX_PRESENT@{GTV\_\-VERTEX\_\-PRESENT}!status@{status}}\index{status@{status}!GTV_VERTEX_PRESENT@{GTV\_\-VERTEX\_\-PRESENT}}\item[{\em 
-GTV\_\-VERTEX\_\-PRESENT\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9055f481a1d82388ea04a98f377824a25}
-}]vertex already present in tetrahedralization \index{GTV_COINCIDENT_VERTEX@{GTV\_\-COINCIDENT\_\-VERTEX}!status@{status}}\index{status@{status}!GTV_COINCIDENT_VERTEX@{GTV\_\-COINCIDENT\_\-VERTEX}}\item[{\em 
-GTV\_\-COINCIDENT\_\-VERTEX\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9093769f750d7332bd1a438cb969cfb2e}
-}]vertex in tetrahedralization has the same coordinates \index{GTV_VERTEX_NOT_IN_CELL@{GTV\_\-VERTEX\_\-NOT\_\-IN\_\-CELL}!status@{status}}\index{status@{status}!GTV_VERTEX_NOT_IN_CELL@{GTV\_\-VERTEX\_\-NOT\_\-IN\_\-CELL}}\item[{\em 
-GTV\_\-VERTEX\_\-NOT\_\-IN\_\-CELL\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9e1f42c74a05ca03bddb0bfd15fabb188}
-}]the vertex to be added is not inside the cell \index{GTV_REPEATED_ARGUMENT@{GTV\_\-REPEATED\_\-ARGUMENT}!status@{status}}\index{status@{status}!GTV_REPEATED_ARGUMENT@{GTV\_\-REPEATED\_\-ARGUMENT}}\item[{\em 
-GTV\_\-REPEATED\_\-ARGUMENT\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a97b9a5a62482ecd7dbcd11dc55e529ac5}
-}]two or more input arguments are identical \index{GTV_VERTEX_ON_HULL@{GTV\_\-VERTEX\_\-ON\_\-HULL}!status@{status}}\index{status@{status}!GTV_VERTEX_ON_HULL@{GTV\_\-VERTEX\_\-ON\_\-HULL}}\item[{\em 
-GTV\_\-VERTEX\_\-ON\_\-HULL\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9da984c5f7fbaec5f872fccff8d2e79c9}
-}]vertex lies on the convex hull of a tetrahedralization \index{GTV_VERTEX_NOT_IN_VOLUME@{GTV\_\-VERTEX\_\-NOT\_\-IN\_\-VOLUME}!status@{status}}\index{status@{status}!GTV_VERTEX_NOT_IN_VOLUME@{GTV\_\-VERTEX\_\-NOT\_\-IN\_\-VOLUME}}\item[{\em 
-GTV\_\-VERTEX\_\-NOT\_\-IN\_\-VOLUME\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9792fd97f17705dea5f25f5b0a464c178}
-}]vertex is not contained in volume \index{GTV_UNKNOWN_FORMAT@{GTV\_\-UNKNOWN\_\-FORMAT}!status@{status}}\index{status@{status}!GTV_UNKNOWN_FORMAT@{GTV\_\-UNKNOWN\_\-FORMAT}}\item[{\em 
-GTV\_\-UNKNOWN\_\-FORMAT\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a91700209863555fdde7857fb373aabebe}
-}]unrecognized file format \index{GTV_ARGUMENT_OUT_OF_RANGE@{GTV\_\-ARGUMENT\_\-OUT\_\-OF\_\-RANGE}!status@{status}}\index{status@{status}!GTV_ARGUMENT_OUT_OF_RANGE@{GTV\_\-ARGUMENT\_\-OUT\_\-OF\_\-RANGE}}\item[{\em 
-GTV\_\-ARGUMENT\_\-OUT\_\-OF\_\-RANGE\label{group__status_ggfb23c4ddc35e1ea652487a43f9a0f8a9c82cb106747883a1a29a2971bbc78899}
+\index{G\+T\+V\+\_\+\+F\+A\+I\+L\+U\+R\+E@{G\+T\+V\+\_\+\+F\+A\+I\+L\+U\+R\+E}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+F\+A\+I\+L\+U\+R\+E@{G\+T\+V\+\_\+\+F\+A\+I\+L\+U\+R\+E}}\item[{\em 
+G\+T\+V\+\_\+\+F\+A\+I\+L\+U\+R\+E\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9ad1a828d7dbe396eb058be34e2e614e3f}
+}]unspecified failure \index{G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S@{G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S@{G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S}}\item[{\em 
+G\+T\+V\+\_\+\+S\+U\+C\+C\+E\+S\+S\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9ad86eb3314eb116aa31f1ef794fbfd732}
+}]function succeeded \index{G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T@{G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T@{G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T}}\item[{\em 
+G\+T\+V\+\_\+\+N\+U\+L\+L\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9a67f69a81ccab47beb0e5c0d997ebef2f}
+}]an argument was N\+U\+L\+L \index{G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E@{G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E@{G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+G\+T\+V\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+Y\+P\+E\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9aa7da7ff50d93f21d4ca1cd53c1f8985d}
+}]an argument was of the wrong type \index{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+P\+R\+E\+S\+E\+N\+T@{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+P\+R\+E\+S\+E\+N\+T}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+P\+R\+E\+S\+E\+N\+T@{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+P\+R\+E\+S\+E\+N\+T}}\item[{\em 
+G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+P\+R\+E\+S\+E\+N\+T\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9a055f481a1d82388ea04a98f377824a25}
+}]vertex already present in tetrahedralization \index{G\+T\+V\+\_\+\+C\+O\+I\+N\+C\+I\+D\+E\+N\+T\+\_\+\+V\+E\+R\+T\+E\+X@{G\+T\+V\+\_\+\+C\+O\+I\+N\+C\+I\+D\+E\+N\+T\+\_\+\+V\+E\+R\+T\+E\+X}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+C\+O\+I\+N\+C\+I\+D\+E\+N\+T\+\_\+\+V\+E\+R\+T\+E\+X@{G\+T\+V\+\_\+\+C\+O\+I\+N\+C\+I\+D\+E\+N\+T\+\_\+\+V\+E\+R\+T\+E\+X}}\item[{\em 
+G\+T\+V\+\_\+\+C\+O\+I\+N\+C\+I\+D\+E\+N\+T\+\_\+\+V\+E\+R\+T\+E\+X\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9a093769f750d7332bd1a438cb969cfb2e}
+}]vertex in tetrahedralization has the same coordinates \index{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+C\+E\+L\+L@{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+C\+E\+L\+L}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+C\+E\+L\+L@{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+C\+E\+L\+L}}\item[{\em 
+G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+C\+E\+L\+L\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9ae1f42c74a05ca03bddb0bfd15fabb188}
+}]the vertex to be added is not inside the cell \index{G\+T\+V\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T@{G\+T\+V\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T@{G\+T\+V\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T}}\item[{\em 
+G\+T\+V\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9a7b9a5a62482ecd7dbcd11dc55e529ac5}
+}]two or more input arguments are identical \index{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+O\+N\+\_\+\+H\+U\+L\+L@{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+O\+N\+\_\+\+H\+U\+L\+L}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+O\+N\+\_\+\+H\+U\+L\+L@{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+O\+N\+\_\+\+H\+U\+L\+L}}\item[{\em 
+G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+O\+N\+\_\+\+H\+U\+L\+L\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9ada984c5f7fbaec5f872fccff8d2e79c9}
+}]vertex lies on the convex hull of a tetrahedralization \index{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+V\+O\+L\+U\+M\+E@{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+V\+O\+L\+U\+M\+E}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+V\+O\+L\+U\+M\+E@{G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+V\+O\+L\+U\+M\+E}}\item[{\em 
+G\+T\+V\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+V\+O\+L\+U\+M\+E\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9a792fd97f17705dea5f25f5b0a464c178}
+}]vertex is not contained in volume \index{G\+T\+V\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+A\+T@{G\+T\+V\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+A\+T}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+A\+T@{G\+T\+V\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+A\+T}}\item[{\em 
+G\+T\+V\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+A\+T\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9a1700209863555fdde7857fb373aabebe}
+}]unrecognized file format \index{G\+T\+V\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+G\+E@{G\+T\+V\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+G\+E}!Status codes@{Status codes}}\index{Status codes@{Status codes}!G\+T\+V\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+G\+E@{G\+T\+V\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+G\+E}}\item[{\em 
+G\+T\+V\+\_\+\+A\+R\+G\+U\+M\+E\+N\+T\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+G\+E\label{group__status_ggafb23c4ddc35e1ea652487a43f9a0f8a9ac82cb106747883a1a29a2971bbc78899}
 }]argument outside valid range \end{description}
 \end{Desc}
-

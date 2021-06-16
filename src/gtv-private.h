@@ -1,5 +1,5 @@
 /* GTV - Library for the manipulation of tetrahedralized volumes
- * Copyright (C) 2007, 2008 Michael Carley
+ * Copyright (C) 2007, 2008, 2021 Michael Carley
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -45,19 +45,6 @@
 #define GTV_GMSH_ELEMENT_PRISM_2       13
 #define GTV_GMSH_ELEMENT_PYRAMID_2     14
 #define GTV_GMSH_ELEMENT_POINT         15
-
-#define GTV_AMM_DATA_WIDTH     16
-#define GTV_AMM_DATA_POINT      0
-#define GTV_AMM_DATA_FUNC       1
-#define GTV_AMM_DATA_HMAX       2
-#define GTV_AMM_DATA_TOL        3
-#define GTV_AMM_DATA_RESULT     4
-#define GTV_AMM_DATA_RULE       5
-#define GTV_AMM_DATA_DATA       6
-#define GTV_AMM_DATA_STATS      7
-#define GTV_AMM_DATA_POWER      8
-#define GTV_AMM_DATA_QUAD_PNT   9
-#define GTV_AMM_DATA_DISTANCES 10
 
 #ifndef g_debug
 #define g_debug(format...) g_log(G_LOG_DOMAIN, G_LOG_LEVEL_DEBUG, format)
@@ -111,8 +98,5 @@ void invert4x4(gdouble *Ai, gdouble *A) ;
 #define box_diagonal(box) (sqrt((box->x1-box->x2)*(box->x1-box->x2) + \
 				(box->y1-box->y2)*(box->y1-box->y2) + \
 				(box->z1-box->z2)*(box->z1-box->z2)))
-
-/* void amm_evaluate_scalar(GNode *tree, gpointer data[]) ; */
-/* void amm_evaluate_curl(GNode *tree, gpointer data[]) ; */
 
 #endif /* GTV_PRIVATE_INCLUDED*/

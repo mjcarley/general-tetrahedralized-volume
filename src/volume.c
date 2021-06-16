@@ -1,6 +1,6 @@
 /* GTV - Library for the manipulation of tetrahedralized volumes
  *
- * Copyright (C) 2007, 2008 Michael Carley
+ * Copyright (C) 2007, 2008, 2021 Michael Carley
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -1146,6 +1146,25 @@ guint gtv_volume_vertex_number(GtvVolume *v)
   g_return_val_if_fail(GTV_IS_VOLUME(v), GTV_WRONG_TYPE) ;
 
   gtv_volume_foreach_vertex(v, (GtsFunc)count_vertices, &n) ;
+
+  return n ;
+}
+
+static void count_cells(GtsVertex *v, guint *n) 
+
+{
+  (*n) ++ ;
+}
+
+guint gtv_volume_cell_number(GtvVolume *v)
+
+{
+  guint n = 0 ;
+
+  g_return_val_if_fail(v != NULL, GTV_NULL_ARGUMENT) ;
+  g_return_val_if_fail(GTV_IS_VOLUME(v), GTV_WRONG_TYPE) ;
+
+  gtv_volume_foreach_vertex(v, (GtsFunc)count_cells, &n) ;
 
   return n ;
 }

@@ -1,0 +1,4 @@
+GTV is a library for the handling and generation of tetrahedralized
+volumes, based on the GNU Triangulated Surface library and the
+Delaunay tetrahedralization described by Ledoux in `Computing the 3D
+Voronoi diagram robustly: An easy explanation'
