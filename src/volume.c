@@ -1105,7 +1105,7 @@ gint gtv_volume_boundary(GtvVolume *v, GtsSurface *s)
 static void volume_volume(GtvCell *c, gdouble *V)
 
 {
-  *V += gtv_tetrahedron_volume(GTV_TETRAHEDRON(c)) ;
+  *V += ABS(gtv_tetrahedron_volume(GTV_TETRAHEDRON(c))) ;
 
   return ;
 }
