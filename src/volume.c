@@ -1164,7 +1164,7 @@ guint gtv_volume_cell_number(GtvVolume *v)
   g_return_val_if_fail(v != NULL, GTV_NULL_ARGUMENT) ;
   g_return_val_if_fail(GTV_IS_VOLUME(v), GTV_WRONG_TYPE) ;
 
-  gtv_volume_foreach_vertex(v, (GtsFunc)count_cells, &n) ;
+  gtv_volume_foreach_cell(v, (GtsFunc)count_cells, &n) ;
 
   return n ;
 }
