@@ -39,8 +39,7 @@
 #define M443 14
 #define M444 15
 
-
-inline void invert3x3(gdouble *Ai, gdouble *A)
+void invert3x3(gdouble *Ai, gdouble *A)
 
 {
   gdouble det ;
@@ -179,4 +178,3 @@ void invert4x4(gdouble *Ai, gdouble *A)
 
   return ;
 }
-

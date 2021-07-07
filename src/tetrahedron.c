@@ -1,6 +1,6 @@
 /* GTV - Library for the manipulation of tetrahedralized volumes
  *
- * Copyright (C) 2007, 2008 Michael Carley
+ * Copyright (C) 2007, 2008, 2021 Michael Carley
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -840,7 +840,7 @@ GtvTetrahedron *gtv_tetrahedron_opposite(GtvTetrahedron *t,
 
 /** 
  * Find the orientation of the vertices of a tetrahedron. This is an
- * approximation of six times the signed volume of the the tetrahedron. 
+ * approximation of six times the signed volume of the tetrahedron. 
  * 
  * @param t a ::GtvTetrahedron.
  * 
@@ -1576,7 +1576,7 @@ gdouble gtv_tetrahedron_quality_radius_ratio(GtvTetrahedron *t)
 }
 
 /** 
- * Generate a bounding box a list of tetrahedra
+ * Generate a bounding box for a list of tetrahedra
  * 
  * @param klass a ::GtsBBoxClass;
  * @param tetrahedra a ::GSlist of ::GtvTetrahedrons.
@@ -1742,6 +1742,46 @@ gdouble gtv_tetrahedron_radius_ratio(GtvTetrahedron *t)
   q = 216.0*v*v/(sqrt((a+b+c)*(a+b-c)*(a+c-b)*(b+c-a))*(s1+s2+s3+s4)) ;
 
   return q ;
+}
+
+
+gint gtv_tetrahedron_point_barycentric(GtvTetrahedron *t, GtsPoint *p,
+				       gdouble *w)
+
+{
+  gdouble A[9], Ai[9], r[3] ;
+  GtsVertex *v1, *v2, *v3, *v4 ;
+  
+  if ( gtv_point_in_tetrahedron(p, t, NULL) == GTV_OUT ) {
+    w[0] = w[1] = w[2] = w[3] = 0.0 ;
+    return -1 ;
+  }
+
+  gtv_tetrahedron_vertices(t, &v1, &v2, &v3, &v4) ;
+  
+  A[0] = GTS_POINT(v1)->x - GTS_POINT(v4)->x ; 
+  A[1] = GTS_POINT(v2)->x - GTS_POINT(v4)->x ; 
+  A[2] = GTS_POINT(v3)->x - GTS_POINT(v4)->x ; 
+  A[3] = GTS_POINT(v1)->y - GTS_POINT(v4)->y ; 
+  A[4] = GTS_POINT(v2)->y - GTS_POINT(v4)->y ; 
+  A[5] = GTS_POINT(v3)->y - GTS_POINT(v4)->y ; 
+  A[6] = GTS_POINT(v1)->z - GTS_POINT(v4)->z ; 
+  A[7] = GTS_POINT(v2)->z - GTS_POINT(v4)->z ; 
+  A[8] = GTS_POINT(v3)->z - GTS_POINT(v4)->z ; 
+
+  invert3x3(Ai, A) ;
+
+  r[0] = p->x - GTS_POINT(v4)->x ; 
+  r[1] = p->y - GTS_POINT(v4)->y ; 
+  r[2] = p->z - GTS_POINT(v4)->z ; 
+
+  w[0] = Ai[0]*r[0] + Ai[1]*r[1] + Ai[2]*r[2] ;
+  w[1] = Ai[3]*r[0] + Ai[4]*r[1] + Ai[5]*r[2] ;
+  w[2] = Ai[6]*r[0] + Ai[7]*r[1] + Ai[8]*r[2] ;
+
+  w[3] = 1.0 - w[0] - w[1] - w[2] ;
+  
+  return 0 ;
 }
 
 /**

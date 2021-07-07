@@ -307,10 +307,11 @@ static inline GtvFacet *next_facet(GtvTetrahedron *t, GtvFacet *f)
 }
 
 /** 
- * Locate a point in a triangulation using a remembering stochastic
- * walk (Olivier Devillers, Sylvain Pion and Monique Teillaud, 2002,
- * <a href="http://hal.inria.fr/docs/00/10/21/94/PDF/hal.pdf">`Walking
- * in a triangulation'</a>, International Journal of Foundations in
+ * Locate a point in a tetrahedralization using a remembering
+ * stochastic walk (Olivier Devillers, Sylvain Pion and Monique
+ * Teillaud, 2002, <a
+ * href="http://hal.inria.fr/docs/00/10/21/94/PDF/hal.pdf">`Walking in
+ * a triangulation'</a>, International Journal of Foundations in
  * Computer Science, 13:181--199). Note that at present this will not
  * work for volumes with holes in their interior.
  * 

@@ -54,3 +54,7 @@ dkms.conf
 *.gz
 *.tar
 RCS/
+
+## various generated data files
+*.gtv
+*.msh

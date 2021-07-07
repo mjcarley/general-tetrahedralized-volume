@@ -89,6 +89,7 @@ gchar *intersection_status(GtvIntersect status) ;
 /* inline void invert3x3(gdouble *Ai, gdouble *A) ; */
 /* inline void multiply3x1(gdouble y[], gdouble *A, gdouble x[]) ; */
 void invert4x4(gdouble *Ai, gdouble *A) ;
+void invert3x3(gdouble *Ai, gdouble *A) ;
 
 #define multiply3x1(_y,_A,_x)						\
   ((_y)[0] = (_A)[0]*(_x)[0] + (_A)[1]*(_x)[1] + (_A)[2]*(_x)[2],	\
